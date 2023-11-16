@@ -4,6 +4,7 @@ import { MainContainer } from './solv-24-card-styles'
 const Solv24Card = ({img, title, description}) => {
   return (
     <MainContainer>
+      <br/>
         <img src={img}/>
         <br/>
         <div className='flex flex-col p-6'>

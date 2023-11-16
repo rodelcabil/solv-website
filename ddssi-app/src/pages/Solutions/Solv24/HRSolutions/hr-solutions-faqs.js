@@ -1,9 +1,9 @@
 export const hr_solutions_faqs = [
     {
         "question": "Is Hr Solution a subscription?",
-        "answer": "No. Our software is sold two (2) ways: " +
-        "1. 24 months installment (SOLV 24)\n" +
-        "2. One-time payment \n"
+        "answer": "No. Our software is sold two (2) ways: <br/>" +
+        "1. 24 months installment (SOLV 24)<br/>" +
+        "2. One-time payment"
     },
     {
         "question": "Is there a trial version of Hr Solution?",
@@ -11,28 +11,28 @@ export const hr_solutions_faqs = [
     },
     {
         "question": "Where can we buy Hr Solution?",
-        "answer": "You can get Hr Solution three (3) ways:  <br/>" +
-        "1. Go to one of our partner stores (Accenthub, PC Live, HP Concept Store and G-Hub). We will announce new partner stores soon." +
-        "2. Contact Digital Doors and speak to one of our agents." +
+        "answer": "You can get Hr Solution three (3) ways:  <br/><br/>" +
+        "1. Go to one of our partner stores (Accenthub, PC Live, HP Concept Store and G-Hub). We will announce new partner stores soon. <br/>" +
+        "2. Contact Digital Doors and speak to one of our agents.<br/>" +
         "3. Log-in to SOLVdesk and complete the registration."
     },
     {
         "question": "How do we pay 24 months installment?",
-        "answer": "We made it easy for customers to monitor the due date and pay the 24 months installment. Just log-in to SOLVdesk (https://solvdesk.digitaldoorssoftware.com). In the homepage, you will see the license/s and amortization status (e.g. 4 months of 24 months) and if payment is already due. The “Pay Now” button will appear 7 days before the due date to give you ample time to arrange payment. To pay, click on the “Pay Now” button, choose mode of payment (bank transfer, credit card, debit card) and proceed to attach proof of payment. Click “Save” button to submit. We will promptly verify and process the payment. The status should be updated soon after."
+        "answer": "We made it easy for customers to monitor the due date and pay the 24 months installment. Just log-in to SOLVdesk <a href='https://solvdesk.digitaldoorssoftware.com' target='_blank'>(https://solvdesk.digitaldoorssoftware.com)</a>. In the homepage, you will see the license/s and amortization status (e.g. 4 months of 24 months) and if payment is already due. The “Pay Now” button will appear 7 days before the due date to give you ample time to arrange payment. To pay, click on the “Pay Now” button, choose mode of payment (bank transfer, credit card, debit card) and proceed to attach proof of payment. Click “Save” button to submit. We will promptly verify and process the payment. The status should be updated soon after."
     },
     {
         "question": "How to we avail of support?",
-        "answer": "SOLV 24 comes with support for bugs and fixes for the duration of the installment period (24 months). To avail of support, log-in to SOLVdesk (https://solvdesk.digitaldoorssoftware.com) then go to “Transactions” and click “Support”. Proceed to key-in information regarding the support needed and attach supporting documents/images. A support ticket number will be generated and we will get in touch with you within 24 hours (except Saturdays, Sundays and holidays). Our support is available weekdays (5X8) 9AM to 5PM." +
+        "answer": "SOLV 24 comes with support for bugs and fixes for the duration of the installment period (24 months). To avail of support, log-in to SOLVdesk <a href='https://solvdesk.digitaldoorssoftware.com' target='_blank'>(https://solvdesk.digitaldoorssoftware.com)</a> then go to “Transactions” and click “Support”. Proceed to key-in information regarding the support needed and attach supporting documents/images. A support ticket number will be generated and we will get in touch with you within 24 hours (except Saturdays, Sundays and holidays). Our support is available weekdays (5X8) 9AM to 5PM." +
         "After 24 months, an annual support pack/maintenance agreement is available to give you continued access to support. With an active support/maintenance agreement, you will have access to our support ticketing system and therefore prioritized. It also comes with annual re-training, back-up and system maintenance."
     },
     {
         "question": "How many user licenses come with Hr Solution?",
         "answer": "Hr Solution comes with unlimited user licenses. However, price is tiered based on the number of employees that will be managed in the system. It is also possible to upgrade from one tier to the next should the need arise. Here are the Hr Solution tiers: " +
-        "<br/>Starter - up to 50 employees <br/>" +
-        "Basic - 51 to 150 employees <br/>" +
-        "Intermediate - 151 to 300 employees <br/>" +
-        "Professional - 301 to 500 employees <br/>" +
-        "Enterprise - 501 t0 100 employees"
+        "<br/><br/>- Starter - up to 50 employees <br/>" +
+        "- Basic - 51 to 150 employees <br/>" +
+        "- Intermediate - 151 to 300 employees <br/>" +
+        "- Professional - 301 to 500 employees <br/>" +
+        "- Enterprise - 501 t0 100 employees"
     },
     {
         "question": "Is Hr Solution a local product?",
@@ -40,13 +40,13 @@ export const hr_solutions_faqs = [
     },
     {
         "question": "What are the minimum server specification for Hr Solution?",
-        "answer": "It is your choice to install SOLV Sales and Inventory On-Premise or On-Cloud (server not included) with the following minimum specifications: <br/>" +
-        "Processor: Multi Core x64 Processor </br>" +
-        "Memory: 4GB <br/>" +
-        "Storage: 128GB </br>" +
-        "Operating System: Microsoft Windows 10 or higher </br>" +
-        "Application: Latest Chrome Browser </br>" +
-        "Network: Internet Connection </br>"
+        "answer": "It is your choice to install SOLV Sales and Inventory On-Premise or On-Cloud (server not included) with the following minimum specifications: <br/></br>" +
+        "- Processor: Multi Core x64 Processor </br>" +
+        "- Memory: 4GB <br/>" +
+        "- Storage: 128GB </br>" +
+        "- Operating System: Microsoft Windows 10 or higher </br>" +
+        "- Application: Latest Chrome Browser </br>" +
+        "- Network: Internet Connection </br>"
     },
     {
         "question": "How do I access Hr Solution?",
@@ -58,14 +58,14 @@ export const hr_solutions_faqs = [
     },
     {
         "question": "How do we add more branches or nodes? Features?",
-        "answer": "SOLV Business Solution was designed to be scalable and expandable using SOLV Add-ons. The following Add-ons are available: <br/>" +
-        "Zenith for additional branch/node <br/>" +
-        "Assets to add Asset Management <br/>" +
-        "Hr Solution to add Payroll + HRIS + System Timekeeping <br/>" +
-        "Support Pack to add 1 year Maintenance Agreement <br/>" +
-        "Accounting Books to add Accounting Suite <br/>" +
-        "POS for additional Point of Sale <br/>" +
-        "Custom for minor to complex software customization" 
+        "answer": "SOLV Business Solution was designed to be scalable and expandable using SOLV Add-ons. The following Add-ons are available: <br/></br>" +
+        "- Zenith for additional branch/node <br/>" +
+        "- Assets to add Asset Management <br/>" +
+        "- Hr Solution to add Payroll + HRIS + System Timekeeping <br/>" +
+        "- Support Pack to add 1 year Maintenance Agreement <br/>" +
+        "- Accounting Books to add Accounting Suite <br/>" +
+        "- POS for additional Point of Sale <br/>" +
+        "- Custom for minor to complex software customization" 
     },
     {
         "question": "How do I access Hr Solution?",
@@ -97,9 +97,9 @@ export const hr_solutions_faqs = [
     },
     {
         "question": "What are the prerequisites for processing payroll?",
-        "answer": "To process payroll, the following is required: " +
-        "1. Employee/s  enrolled into the system with salary information" +
-        "2. Daily time record for the period" +
+        "answer": "To process payroll, the following is required: </br></br>" +
+        "1. Employee/s  enrolled into the system with salary information </br>" +
+        "2. Daily time record for the period</br>" +
         "3. Employee schedule for the period."
     },
     {
@@ -124,21 +124,10 @@ export const hr_solutions_faqs = [
     },
     {
         "question": "Can I access Hr Solution when I am away from the office?",
-        "answer": "It depends and there are several ways to do this." +
-        "1. Hr Solution on a cloud server and all you need is your user name and password to access" +
-        "2. Hr Solution on an on-premise physical server connected via static IP using a router with port forwarding (set-up needed)" +
-        "3. Hr Solution on an on-premise physical server connected to a VPN (virtual private network)"
-    },
-    {
-        "question": "Can I access Hr Solution when I am away from the office?",
-        "answer": "It depends and there are several ways to do this: <br/>" +
-        "SOLV HQ and SOLV nodes/branches on a cloud server and all you need is your user name and password to access, <br/>" +
-        "SOLV on an on-premise physical server connected via static IP using a router with port forwarding (set-up needed), <br/>" +
-        "SOLV on an on-premise physical server connected to a VPN (virtual private network). <br/>" +
-        "<br/>" +
-        "Consider getting a domain name with SSL (secure sockets layer, an encryption based internet security protocol) for additional layer of protection."
-
-        
+        "answer": "It depends and there are several ways to do this.</br></br>" +
+        "1. Hr Solution on a cloud server and all you need is your user name and password to access.</br>" +
+        "2. Hr Solution on an on-premise physical server connected via static IP using a router with port forwarding (set-up needed).</br>" +
+        "3. Hr Solution on an on-premise physical server connected to a VPN (virtual private network)."
     },
     {
         "question": "Can I mass upload employee data?",

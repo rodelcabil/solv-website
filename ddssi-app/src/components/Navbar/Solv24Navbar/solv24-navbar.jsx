@@ -19,6 +19,7 @@ import {
 } from './solv24-navbar-styles';
 import Logo from '/public/ddssi.png' 
 import SolvLogo from '../../../assets/solv_logo.png'
+import Solv24Logo from '../../../assets/solv.png'
 const Solv24Navbar = () => {
 
     
@@ -44,7 +45,7 @@ const Solv24Navbar = () => {
             <style type="text/css">{`
                 .active{
                     color: #1595FF;
-                    font-weight: 600;
+                    font-weight: 500;
                     border-radius: 5px;
                 }
                 
@@ -77,9 +78,11 @@ const Solv24Navbar = () => {
                     <NavbarContainer>
                         <NavLogo to="/" onClick={closeMobileMenu}>
                             <div className="logoContainer">
-                                <img src={Logo} className="logo" alt="Logo"/> 
-                                <span>Digital Doors Software <br/>Solutions Inc.</span>
-                              
+                                <img src={Solv24Logo} className="logo" alt="Logo"/> 
+                                <div>
+                                    <span className="text-[#BD3200] italic text-sm">SOLV</span>
+                                    <span className="text-[#001E5A] text-lg">24</span> 
+                                </div>
                                 {/* <FaLaptopCode size="40" color="#2988B4" /> */}
                                 {/* <span>PORTFOLIO</span> */}
                             </div>
@@ -100,6 +103,12 @@ const Solv24Navbar = () => {
                                 </NavItem>
                                 <NavItem>
                                     <NavLinks  exact to="/solution/solv-24/point-of-sale" onClick={closeMobileMenu} activeClassName="active">Point Of Sales</NavLinks>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLinks  exact to="/solution/add-ons" onClick={closeMobileMenu} activeClassName="active">Add-ons</NavLinks>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLinks  exact to="/solution/custom" onClick={closeMobileMenu} activeClassName="active">Custom</NavLinks>
                                 </NavItem>
                                 <NavItem>
                                     <NavLinks  exact to="/" onClick={closeMobileMenu}  activeClassName="active">

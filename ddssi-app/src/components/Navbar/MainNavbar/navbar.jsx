@@ -26,7 +26,13 @@ const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
     const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);
-    
+
+    const [homeActive, setHomeActive] = useState(true);
+    const [aboutActive, setAboutActive] = useState(false);
+    const [serviceActive, setServiceActive] = useState(false);
+    const [solutionActive, setSolutionActive] = useState(false);
+    const [testimonialActive, setTestimonialActive] = useState(false);
+    const [contactActive, setContactActive] = useState(false);
 
     useEffect(() => {
       window.onscroll = function () {
@@ -37,6 +43,24 @@ const Navbar = () => {
           }
       };
   }, []);
+
+ const setActive = (home, about, service, solution, testimonial, contact) => {
+    setHomeActive(home);
+    setAboutActive(about);
+    setServiceActive(service);
+    setSolutionActive(solution);
+    setTestimonialActive(testimonial);
+    setContactActive(contact);
+    closeMobileMenu();
+  };
+
+  const activeHome = () => setActive(true, false, false, false, false, false);
+  const activeAbout = () => setActive(false, true, false, false, false, false);
+  const activeService = () => setActive(false, false, true, false, false, false);
+  const activeSolution = () => setActive(false, false, false, true, false, false);
+  const activeTestimonial = () => setActive(false, false, false, false, true, false);
+  const activeContact = () => setActive(false, false, false, false, false, true);
+  
 
     return (
 
@@ -90,22 +114,25 @@ const Navbar = () => {
                         <div>
                             <NavMenu onClick={handleClick} >
                                 <NavItem >
-                                    <NavLinks exact to="/" onClick={closeMobileMenu} activeClassName="active">Home</NavLinks>
+                                    <NavLinks href="#home" onClick={activeHome} className={homeActive ? "isActive" : "isInActive"}>Home</NavLinks>
+                                </NavItem> 
+                                <NavItem>
+                                    <NavLinks href="#service" onClick={activeService} className={serviceActive ? "isActive" : "isInActive"}>Services</NavLinks>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLinks exact to="/test" onClick={closeMobileMenu} activeClassName="active">Services</NavLinks>
+                                    <NavLinks href="#solution" onClick={activeSolution} className={solutionActive ? "isActive" : "isInActive"}>Solutions</NavLinks>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLinks  exact to="/about" onClick={closeMobileMenu} activeClassName="active">Solutions</NavLinks>
+                                    <NavLinks href="#about" onClick={activeAbout} className={aboutActive ? "isActive" : "isInActive"}>About</NavLinks>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLinks  exact to="/contact" onClick={closeMobileMenu} activeClassName="active">Testimonials</NavLinks>
+                                    <NavLinks href="#testimonial" onClick={activeTestimonial} className={testimonialActive ? "isActive" : "isInActive"}>Testimonials</NavLinks>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLinks  exact to="/contact" onClick={closeMobileMenu} activeClassName="active">Contact Us</NavLinks>
+                                    <NavLinks  href="#contact" onClick={activeContact} className={contactActive ? "isActive" : "isInActive"}>Contact Us</NavLinks>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLinks  exact to="/contact" onClick={closeMobileMenu}  activeClassName="active">
+                                    <NavLinks  href="http://solvdesk.digitaldoorssoftware.com:8023/" target="_blank" >
                                       <div className='flex items-center gap-1'>
                                         <img src={SolvLogo} className="solv_logo" alt="Solv Logo"/>  
                                         <span className='font-bold'>SOLV Desk</span>

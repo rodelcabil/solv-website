@@ -14,7 +14,6 @@ export const MainContainer = styled.div`
 
 export const BodyContainer = styled.div`
     width: 450px;
-    padding: 30px;
     background: var(--bg-light);
     display: flex;
     gap: 20px;

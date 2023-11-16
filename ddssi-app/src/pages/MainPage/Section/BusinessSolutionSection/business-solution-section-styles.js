@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const MainContainer = styled.div`
     
-    padding: 60px;
+    padding: 120px 60px;
     background: var(--bg-light);
 
 `;
@@ -14,4 +14,5 @@ export const BodyContainer = styled.div`
     justify-content: center;
     align-content: center;
     align-items: start;
+    gap: 40px 15px;
 `;

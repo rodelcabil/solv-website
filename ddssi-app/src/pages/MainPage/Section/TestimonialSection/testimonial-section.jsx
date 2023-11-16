@@ -4,17 +4,23 @@ import TestimonialCard from '../../../../components/TestimonialCard/testimonial-
 
 const TestimonialSection = () => {
   return (
-    <MainContainer>
-        <div className='flex flex-col items-center justify-center'>
-            <span className='text-3xl text-[#343434] font-semibold mb-2'>CLIENT’S TESTIMONIALS</span>
-            <span className='text-1xl text-[#7A7A7A] font-semibold text-center'>What our other clients share.</span>
+    <MainContainer id="testimonial">
+      <div className='flex flex-col items-center justify-center'>
+        <span className='text-4xl text-[#343434] font-normal mb-2'>CLIENT’S TESTIMONIALS</span>
+        <span className='text-1xl text-[#7A7A7A] font-normal text-center'>What our other clients share.</span>
+      </div>
+      <br /><br />
+      <BodyContainer>
+        <div data-aos="fade-up" data-aos-delay="100">
+          <TestimonialCard name="Accenthub" comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore." />
         </div>
-        <br/><br/>
-        <BodyContainer>
-            <TestimonialCard name="Accenthub" comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore." />
-            <TestimonialCard name="Twin Rich" comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore." />
-            <TestimonialCard name="Thinkerbox Enterprises" comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore." />
-        </BodyContainer>
+        <div data-aos="fade-up" data-aos-delay="200">
+          <TestimonialCard name="Twin Rich" comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore." />
+        </div>
+        <div data-aos="fade-up" data-aos-delay="300">
+          <TestimonialCard name="Thinkerbox Enterprises" comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore." />
+        </div>
+      </BodyContainer>
     </MainContainer>
   )
 }

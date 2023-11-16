@@ -201,6 +201,15 @@ text-align: center;
     
 } */
 
+.isInActive{
+    color: var(--text-secondary);
+   
+}
+
+.isActive{
+    color: var(--bg-primary);
+}
+
 @media screen and (max-width: 910px){
     width: 100%;
     /* &:hover{
@@ -209,7 +218,7 @@ text-align: center;
 }
 `;
 
-export const NavLinks = styled(NavLink)`
+export const NavLinks = styled.a`
 
 display: flex;
 align-items: center;

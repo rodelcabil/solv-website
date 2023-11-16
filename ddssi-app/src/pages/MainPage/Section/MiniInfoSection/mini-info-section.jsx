@@ -6,17 +6,17 @@ import {FaEnvelope, FaFacebook, FaTwitter, FaInstagram, FaYoutube, FaLinkedin} f
 const MiniInfoSection = () => {
 
   return (
-    <MainContainer>
+    <MainContainer id="home">
         <BodyContainer>
         <div className='flex items-center gap-3'>
             <FaEnvelope size={20}/> <span>info@digitaldoorssoftware.com</span>
         </div>
         <div className='flex items-center gap-3'>
-            <FaFacebook size={20} className='cursor-pointer'/>
-            <FaTwitter size={20} className='cursor-pointer'/>
-            <FaInstagram size={20} className='cursor-pointer'/>
-            <FaYoutube size={20} className='cursor-pointer'/>
-            <FaLinkedin size={20} className='cursor-pointer'/>
+            <a href="https://www.facebook.com/DDSSI/" target="_blank"><FaFacebook size={25} className='cursor-pointer'/></a>
+            <a href="" target="_blank"><FaTwitter size={25} className='cursor-pointer'/></a>
+            <a href="www.instagram.com/solvbiz" target="_blank"><FaInstagram size={25} className='cursor-pointer'/></a>
+            <a href="https://www.youtube.com/channel/UCr5GylGgZ5lrJ1Ewc6JCVEw" target="_blank"><FaYoutube size={25} className='cursor-pointer'/></a>
+            <a href="https://www.linkedin.com/company/digital-doors-software-systems-inc" target="_blank"><FaLinkedin size={25} className='cursor-pointer'/></a>
         </div>
         </BodyContainer>
     </MainContainer>

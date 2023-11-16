@@ -79,12 +79,7 @@ align-items: center;
     }
   
 
-    span{
-        color: #343434;
-        text-transform: uppercase;
-        font-weight: bold;
-        font-size: 14px;
-    }
+    
 
     @media screen and (max-width: 910px){
        

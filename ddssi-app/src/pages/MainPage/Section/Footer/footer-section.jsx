@@ -2,6 +2,7 @@ import React from 'react'
 import { BodyContainer, MainContainer, Row } from './footer-section-styles'
 import Logo from '/public/ddssi.png'
 import Map from '../../../../assets/map.png'
+import QR from '../../../../assets/QR.jpg'
 import {MdLocationPin,MdEmail,MdLocalPhone} from "react-icons/md"
 import {FaEnvelope, FaFacebook, FaTwitter, FaInstagram, FaYoutube, FaLinkedin} from "react-icons/fa"
 
@@ -23,22 +24,30 @@ const FooterSection = () => {
                     <div className='flex flex-col'>
                         <span className='text-white font-bold text-sm'>Site Links</span>
                         <br/>
-                        <a className='no-underline mb-1 text-[#7a7a7a] cursor-pointer hover:text-white'>Home</a>
-                        <a className='no-underline mb-1 text-[#7a7a7a] cursor-pointer hover:text-white'>Services</a>
-                        <a className='no-underline mb-1 text-[#7a7a7a] cursor-pointer hover:text-white'>Solutions</a>
-                        <a className='no-underline mb-1 text-[#7a7a7a] cursor-pointer hover:text-white'>Testimonials</a>
-                        <a className='no-underline mb-1 text-[#7a7a7a] cursor-pointer hover:text-white'>Contact Us</a>
+                        <a href="#home" className='no-underline mb-1 text-[#7a7a7a] cursor-pointer hover:text-white'>Home</a>
+                        <a href="#service" className='no-underline mb-1 text-[#7a7a7a] cursor-pointer hover:text-white'>Services</a>
+                        <a href="#solution" className='no-underline mb-1 text-[#7a7a7a] cursor-pointer hover:text-white'>Solutions</a>
+                        <a href="#about" className='no-underline mb-1 text-[#7a7a7a] cursor-pointer hover:text-white'>About</a>
+                        <a href="#testimonial" className='no-underline mb-1 text-[#7a7a7a] cursor-pointer hover:text-white'>Testimonials</a>
+                        <a href="#contact" className='no-underline mb-1 text-[#7a7a7a] cursor-pointer hover:text-white'>Contact Us</a>
                     </div>
                 </Row>
                 <Row>
-                    <span className='text-white font-bold text-sm'>Follow us</span>
-                    <br /><br />
-                    <div className='flex items-center gap-3'>
-                        <FaFacebook size={25} className='cursor-pointer text-[#7a7a7a] hover:text-white'/>
-                        <FaTwitter size={25} className='cursor-pointer text-[#7a7a7a] hover:text-white'/>
-                        <FaInstagram size={25} className='cursor-pointer text-[#7a7a7a] hover:text-white'/>
-                        <FaYoutube size={25} className='cursor-pointer text-[#7a7a7a] hover:text-white'/>
-                        <FaLinkedin size={25} className='cursor-pointer text-[#7a7a7a] hover:text-white'/>
+                    <div className='flex flex-col gap-5'>
+                        <div className='flex flex-col'>
+                            <span className='text-white font-bold text-sm'>Follow us</span>
+                            <br />
+                            <div className='flex items-center gap-3'>
+                                <a href="https://www.facebook.com/DDSSI/" target="_blank"><FaFacebook size={25} className='cursor-pointer text-[#7a7a7a] hover:text-white'/></a>
+                                <a href="" target="_blank"><FaTwitter size={25} className='cursor-pointer text-[#7a7a7a] hover:text-white'/></a>
+                                <a href="www.instagram.com/solvbiz" target="_blank"><FaInstagram size={25} className='cursor-pointer text-[#7a7a7a] hover:text-white'/></a>
+                                <a href="https://www.youtube.com/channel/UCr5GylGgZ5lrJ1Ewc6JCVEw" target="_blank"><FaYoutube size={25} className='cursor-pointer text-[#7a7a7a] hover:text-white'/></a>
+                                <a href="https://www.linkedin.com/company/digital-doors-software-systems-inc" target="_blank"><FaLinkedin size={25} className='cursor-pointer text-[#7a7a7a] hover:text-white'/></a>
+                            </div>
+                        </div>
+                        <div className='flex'>
+                            <img src={QR} />
+                        </div>
                     </div>
                 </Row>
                 <Row>

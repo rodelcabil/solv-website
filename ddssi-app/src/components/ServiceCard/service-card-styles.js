@@ -10,8 +10,11 @@ export const MainContainer = styled.div`
     filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.25));
     display: flex;
     flex-direction: column;
-
+    flex: 1;
     
+    @media screen and (max-width: 450px){
+        width: 100%;
+    }
 `;
 
 export const Title = styled.span`

@@ -1,9 +1,9 @@
 export const sales_inventory_faqs = [
     {
         "question": "Is SOLV Sales and Inventory a subscription?",
-        "answer": "No. Our software is sold two (2) ways: " +
-        "1. 24 months installment (SOLV 24)\n" +
-        "2. One-time payment \n"
+        "answer": "<p>No. Our software is sold two (2) ways: </p>" +
+        "<p>1. 24 months installment (SOLV 24)</p>" +
+        "<p>2. One-time payment</p>"
     },
     {
         "question": "Is there a trial version of SOLV Sales and Inventory?",
@@ -12,13 +12,13 @@ export const sales_inventory_faqs = [
     {
         "question": "Where can we buy SOLV Sales and Inventory?",
         "answer": "You can get SOLV Sales and Inventory three (3) ways:  <br/>" +
-        "1. Go to one of our partner stores (Accenthub, PC Live, HP Concept Store and G-Hub). We will announce new partner stores soon." +
-        "2. Contact Digital Doors and speak to one of our agents." +
+        "1. Go to one of our partner stores (Accenthub, PC Live, HP Concept Store and G-Hub). We will announce new partner stores soon. <br/>" +
+        "2. Contact Digital Doors and speak to one of our agents.<br/>" +
         "3. Log-in to SOLVdesk and complete the registration."
     },
     {
         "question": "How do we pay 24 months installment?",
-        "answer": "We made it easy for customers to monitor the due date and pay the 24 months installment. Just log-in to SOLVdesk (https://solvdesk.digitaldoorssoftware.com). In the homepage, you will see the license/s and amortization status (e.g. 4 months of 24 months) and if payment is already due. The “Pay Now” button will appear 7 days before the due date to give you ample time to arrange payment. To pay, click on the “Pay Now” button, choose mode of payment (bank transfer, credit card, debit card) and proceed to attach proof of payment. Click “Save” button to submit. We will promptly verify and process the payment. The status should be updated soon after."
+        "answer": "We made it easy for customers to monitor the due date and pay the 24 months installment. Just log-in to SOLVdesk <a href='https://solvdesk.digitaldoorssoftware.com' target='_blank'>(https://solvdesk.digitaldoorssoftware.com)</a>. In the homepage, you will see the license/s and amortization status (e.g. 4 months of 24 months) and if payment is already due. The “Pay Now” button will appear 7 days before the due date to give you ample time to arrange payment. To pay, click on the “Pay Now” button, choose mode of payment (bank transfer, credit card, debit card) and proceed to attach proof of payment. Click “Save” button to submit. We will promptly verify and process the payment. The status should be updated soon after."
     },
     {
         "question": "How to we avail of support?",
@@ -35,17 +35,13 @@ export const sales_inventory_faqs = [
     },
     {
         "question": "What are the minimum server specification for SOLV Sales and Inventory?",
-        "answer": "It is your choice to install SOLV Sales and Inventory On-Premise or On-Cloud (server not included) with the following minimum specifications: <br/>" +
-        "Processor: Multi Core x64 Processor </br>" +
-        "Memory: 4GB <br/>" +
-        "Storage: 128GB </br>" +
-        "Operating System: Microsoft Windows 10 or higher </br>" +
-        "Application: Latest Chrome Browser </br>" +
-        "Network: Internet Connection </br>"
-    },
-    {
-        "question": "Tomasa Dietrich DVM",
-        "answer": "Geoffrey Morar DVM"
+        "answer": "It is your choice to install SOLV Sales and Inventory On-Premise or On-Cloud (server not included) with the following minimum specifications: <br/><br/>" +
+        "- Processor: Multi Core x64 Processor </br>" +
+        "- Memory: 4GB <br/>" +
+        "- Storage: 128GB </br>" +
+        "- Operating System: Microsoft Windows 10 or higher </br>" +
+        "- Application: Latest Chrome Browser </br>" +
+        "- Network: Internet Connection </br>"
     },
     {
         "question": "How do I access SOLV?",
@@ -57,14 +53,14 @@ export const sales_inventory_faqs = [
     },
     {
         "question": "How do we add more branches or nodes? Features?",
-        "answer": "SOLV Business Solution was designed to be scalable and expandable using SOLV Add-ons. The following Add-ons are available: <br/>" +
-        "Zenith for additional branch/node <br/>" +
-        "Assets to add Asset Management <br/>" +
-        "Hr Solution to add Payroll + HRIS + System Timekeeping <br/>" +
-        "Support Pack to add 1 year Maintenance Agreement <br/>" +
-        "Accounting Books to add Accounting Suite <br/>" +
-        "POS for additional Point of Sale <br/>" +
-        "Custom for minor to complex software customization" 
+        "answer": "SOLV Business Solution was designed to be scalable and expandable using SOLV Add-ons. The following Add-ons are available: <br/><br/>" +
+        "- Zenith for additional branch/node <br/>" +
+        "- Assets to add Asset Management <br/>" +
+        "- Hr Solution to add Payroll + HRIS + System Timekeeping <br/>" +
+        "- Support Pack to add 1 year Maintenance Agreement <br/>" +
+        "- Accounting Books to add Accounting Suite <br/>" +
+        "- POS for additional Point of Sale <br/>" +
+        "- Custom for minor to complex software customization" 
     },
     {
         "question": "How do I access SOLV?",
@@ -84,10 +80,10 @@ export const sales_inventory_faqs = [
     },
     {
         "question": "Can I access SOLV when I am away from the office?",
-        "answer": "It depends and there are several ways to do this: <br/>" +
-        "SOLV HQ and SOLV nodes/branches on a cloud server and all you need is your user name and password to access, <br/>" +
-        "SOLV on an on-premise physical server connected via static IP using a router with port forwarding (set-up needed), <br/>" +
-        "SOLV on an on-premise physical server connected to a VPN (virtual private network). <br/>" +
+        "answer": "It depends and there are several ways to do this: <br/><br/>" +
+        "1. SOLV HQ and SOLV nodes/branches on a cloud server and all you need is your user name and password to access, <br/>" +
+        "2. SOLV on an on-premise physical server connected via static IP using a router with port forwarding (set-up needed), <br/>" +
+        "3. SOLV on an on-premise physical server connected to a VPN (virtual private network). <br/>" +
         "<br/>" +
         "Consider getting a domain name with SSL (secure sockets layer, an encryption based internet security protocol) for additional layer of protection."
 
@@ -95,7 +91,7 @@ export const sales_inventory_faqs = [
     },
     {
         "question": "How do we upload existing inventory to our new SOLV system?",
-        "answer": "There are several ways to add inventory into SOLV: <br/>" +
+        "answer": "There are several ways to add inventory into SOLV: <br/><br/>" +
         "1. Order new inventory, go to Transactions/Purchase/PRS  and receive the inventory into the system when it arrives. <br/>" +
         "2. Insert inventory, go to Transactions/Import Inventory. Click on “Download Template” and fill it up with data of inventory. Click on “Import File” button and select the file to upload. <br/>" +
         "3. Return Inventory, go to Transactions/Return/Create RMA, follow RMA process. <br/>" +
