@@ -10,8 +10,8 @@ export const Divider = styled.div`
     svg {
         position: relative;
         display: block;
-        width: calc(108% + 1.3px);
-        height: 118px;
+        width: calc(123% + 1.3px);
+        height: 129px;
     }
 
     .shape-fill {

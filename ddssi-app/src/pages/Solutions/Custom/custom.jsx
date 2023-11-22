@@ -18,7 +18,7 @@ const Custom = () => {
             <Solv24Navbar />
             <Banner>
                 <div data-aos="fade-up">
-                    <p className='text-5xl text-[#fff] font-normal'>SOLV24 Custom</p><br />
+                    <p className='custom-header text-5xl text-[#fff] font-normal text-center'>SOLV24 Custom</p><br />
                 </div>
                 <div data-aos="fade-up" data-aos-delay="100" className='flex max-w-3xl'>
                     <span className='text-1xl text-[#fff] max-w-3xl font-light text-center'>Our SOLV business solution software are already packed with features and functionality. We
@@ -31,7 +31,6 @@ const Custom = () => {
                 </div>
             </Banner>
             <MainContainer id="read-more">
-
                 <BodyContainer>
                     <div data-aos="fade-up" data-aos-delay="100">
                         <CustomCard description="15 man-days" img={Custom1} />
@@ -47,8 +46,8 @@ const Custom = () => {
                     </div>
                 </BodyContainer>
                 <br />
-                <div className='justify-center flex-1 max-w-[1500px] m-auto'>
-                    <span className='text-2xl text-[#343434] max-w-2xl font-light text-center'>We have four discounted packages that have varying number of man-days for software customization.</span>
+                <div className='flex justify-center flex-1 max-w-[1500px] m-auto'>
+                    <span className='w-full text-2xl text-[#343434] max-w-2xl font-light text-center'>We have four discounted packages that have varying number of man-days for software customization.</span>
                 </div>
             </MainContainer>
             <ContactSection />

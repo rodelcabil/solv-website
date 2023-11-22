@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle, css } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
     :root{
@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         scroll-behavior: smooth;
-        font-family: Poppins;
+        font-family: 'Poppins', sans-serif;
     }
 
     a{
@@ -57,4 +57,9 @@ margin-left: 0;
 }
 `;
 
+export const responsive = () => css`
+  @media screen and (max-width: 910px) {
+    padding: 100px 30px;
+  }
+`;
 export default GlobalStyle

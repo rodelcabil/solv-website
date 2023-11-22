@@ -9,25 +9,27 @@ export const Nav = styled.nav`
 ${'' /* background: rgb(4, 10, 14, 0.9); */}
 ${'' /*background:  ${({ theme, scrolled }) => (scrolled ? theme.navBg : 'none' )};*/}
 background: white;
-display: flex;
-${'' /*transition: ${({ theme }) => theme.transition};*/}
+display: flex
+transition: all 0.3s ease;
 align-items: center;
 font-size: 16px;
 top: 0;
-position: sticky;
-position: -webkit-sticky;
+position: sticky !important;
+-webkit-position: -webkit-sticky !important;
 z-index: 999;
 width: 100%;
 margin: auto;
-padding: 15px 60px;
-justify-content: center;
+padding: ${({ scrolled }) => (scrolled === 1 ? '0 60px' : '15px 60px')};
+justify-content: center; 
 -webkit-backdrop-filter: blur(1px);
-${'' /*box-shadow: ${({ scrolled }) => (scrolled ? '0 10px 15px -3px rgb(0 0 0 / 0.1)' : 'none')}; */}
+box-shadow: ${({ scrolled }) => (scrolled === 1 ? '0 10px 15px -3px rgb(0 0 0 / 0.1)' : 'none')}; 
 ${'' /*backdrop-filter: blur(1px);*/}
 
-@media screen and (max-width: 910px){
+@media screen and (max-width: 1200px){
     width: 100%;
     padding: 0 20px ;
+    position: sticky !important;
+    -webkit-position: -webkit-sticky !important;
 }
 
 `;
@@ -42,7 +44,7 @@ justify-content: space-between;
 ${Container}
 
 
-@media (min-width: 250px) and (max-width: 910px){
+@media (min-width: 250px) and (max-width: 1200px){
     padding: 0;
 
 }
@@ -79,7 +81,14 @@ align-items: center;
     }
   
 
-    
+    .page-name-container{
+        display: ${({ scrolled }) => (scrolled === 1 ? 'none' : 'block')};
+        
+        
+        @media screen and (max-width: 1100px){
+            display: none;
+        }
+    }
 
     @media screen and (max-width: 910px){
        
@@ -103,7 +112,7 @@ export const NavIcon = styled(FaMagento)`
 margin: 0.5rem;
 color: #fff;
 
-@media screen and (max-width: 910px){
+@media screen and (max-width: 1200px){
     margin-left: 3rem;
    
 }
@@ -118,7 +127,7 @@ export const MobileIcon = styled.div`
     }
     
 
-    @media screen and (max-width: 910px){
+    @media screen and (max-width: 1200px){
         display: flex;
         position: absolute;
         top: 0; 
@@ -162,24 +171,23 @@ text-align: center;
     background: ${({ theme }) => theme.iconBg} !important;
     transition: ${({ theme }) => theme.transition};
     
-    @media screen and (max-width: 910px){
+    @media screen and (max-width: 1200px){
        display: none;
     }
 }
 
-@media screen and (max-width: 910px){
-    display: flex; 
+@media screen and (max-width: 1100px){
+    display: ${({ click }) => (click ? 'flex' : 'none')} ; 
     flex-direction: column;
-    width: 50%;
-    height: calc(100vh - 60px);
+    width: 100%;
     position: absolute;
-    right: ${({ click }) => (click ? '0' : '-100%')};
+    height: calc(100vh - 60px);
+    left: 0;
     top: 60px;
     opacity: 1;
-    transition: all 0.5s ease;
-    background: ${({ theme }) => theme.backgroundColor} !important;
+    transition: height 0.5s ease;
+    background: var(--bg-light);
     padding-left: 0px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19);
 }
 `;
 
@@ -197,7 +205,7 @@ text-align: center;
     
 } */
 
-@media screen and (max-width: 910px){
+@media screen and (max-width: 1200px){
     width: 100%;
     /* &:hover{
         border: none;
@@ -228,11 +236,12 @@ color:  var(--text-secondary);
 }
 
 
-@media screen and (max-width: 910px){
+@media screen and (max-width: 1200px){
     text-align: center;
     padding: 1rem;
     width: 100%;
-    display: table;
+    display: flex;
+    justify-content: center;
   
     &:hover{
         color: #2988B4;
@@ -247,7 +256,7 @@ color:  var(--text-secondary);
 export const NavItemBtn = styled.li`
    display: flex;
    
-@media screen and (max-width: 910px){
+@media screen and (max-width: 1200px){
     display: none;
     justify-content: center;
     align-items: center;
@@ -262,7 +271,7 @@ export const NavItemBtn2 = styled.li`
    .theme-icon-container-mobile{
         display: none;
 
-        @media screen and (max-width: 910px){
+        @media screen and (max-width: 1200px){
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -276,7 +285,7 @@ export const NavItemBtn2 = styled.li`
         }
     }
    
-@media screen and (max-width: 910px){
+@media screen and (max-width: 1200px){
     display: flex;
     justify-content: center;
     align-items: center;

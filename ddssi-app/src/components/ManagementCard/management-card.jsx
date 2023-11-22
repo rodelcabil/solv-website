@@ -7,7 +7,7 @@ const ManagementCard = ({img, name, position}) => {
         <img src={img} height="300"/>
         <br/>
         <p className='text-[#343434] font-bold'>{name}</p>
-        <span className='text-[#7A7A7A]'>{position}</span>
+        <span className='text-[#7A7A7A] text-center'>{position}</span>
     </MainContainer>
   )
 }

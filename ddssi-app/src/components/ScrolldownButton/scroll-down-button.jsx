@@ -5,7 +5,7 @@ import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 const ScrollDownButton = ({href}) => {
   return (
     <Anchor href={href}>
-        <p className='text-1xl text-white'>Read more</p>
+        <p className='text-1xl text-white'>Scroll for more details</p>
         <MdOutlineKeyboardArrowDown color='#fff'/>
     </Anchor>
   )

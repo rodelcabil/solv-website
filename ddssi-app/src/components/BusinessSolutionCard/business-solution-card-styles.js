@@ -6,16 +6,22 @@ export const MainContainer = styled.div`
     display: flex;
     gap: 15px;
     justify-content: center;
+    cursor: pointer;
+
     .desciption{
         max-width: 400px;
     }
+
+    
     
 `;
 
 export const BodyContainer = styled.div`
-    width: 450px;
+    width: 400px;
     background: var(--bg-light);
     display: flex;
+    border-radius: 10px;
+    padding: 15px;
     gap: 20px;
 
     img{
@@ -24,5 +30,17 @@ export const BodyContainer = styled.div`
 
     .desciption{
         max-width: 400px;
+    }
+
+    &:hover{
+        background: #f2f2f2;
+    }
+
+    @media screen and (max-width: 900px){
+        width: 300px;
+    }
+
+    @media screen and (max-width: 650px){
+        width: 100%;
     }
 `;

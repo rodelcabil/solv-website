@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { responsive } from '../../../../globalStyles';
 
 
 export const MainContainer = styled.div`
@@ -6,10 +7,7 @@ export const MainContainer = styled.div`
     padding: 120px 60px 60px 60px;
     background: var(--bg-light);
 
-    @media screen and (max-width: 910px){
-        padding: 30px;
-    }
-
+    ${responsive}
 `;
 
 export const BodyContainer = styled.div`
@@ -17,7 +15,7 @@ export const BodyContainer = styled.div`
     max-width: 1500px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 15px;
 

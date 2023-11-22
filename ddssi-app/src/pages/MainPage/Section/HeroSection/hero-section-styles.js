@@ -1,13 +1,12 @@
 import styled from "styled-components"
+import { responsive } from "../../../../globalStyles";
 
 export const MainContainer = styled.div`
     
     padding: 60px;
     background: var(--bg-primary);
 
-    @media screen and (max-width: 910px){
-        padding: 30px;
-    }
+    ${responsive}
     
 `;
 
@@ -26,14 +25,17 @@ export const BodyContainer = styled.div`
     }
 
     @media screen and (max-width: 600px){
+        #hero-img{
+            height: 300px;
+        }
         .header{
             font-size: 36px;
             text-align: center;
-            line-height: normal;
+            line-height: 40px;
         }
         .sub-header{
             text-align: center;
-            line-height: normal;
+            line-height: 28px;
         }
     }
 `;

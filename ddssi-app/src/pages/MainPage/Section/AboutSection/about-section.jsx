@@ -5,7 +5,7 @@ const AboutSection = () => {
     return (
         <>
         <p id="about"></p>
-        <br/><br/><br/><br/> 
+        <br/><br/>
         <MainContainer >
             <BodyContainer>
                 <div className='flex flex-col max-w-2xl' data-aos="zoom-in">

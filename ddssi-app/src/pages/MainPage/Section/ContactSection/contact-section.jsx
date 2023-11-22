@@ -1,21 +1,55 @@
-import React from 'react'
-import { BodyContainer, MainContainer, SubmitButton } from './contact-section-styles'
+import React, { useRef } from 'react'
+import { BodyContainer, MainContainer, SubmitButton, TextAreaMessage, TextInput } from './contact-section-styles'
 import { FaEnvelope, FaFacebook, FaTwitter, FaInstagram, FaYoutube, FaLinkedin } from "react-icons/fa"
+import { useForm } from 'react-hook-form';
+import emailjs from '@emailjs/browser';
+import { notification } from 'antd';
+
 
 const ContactSection = () => {
+
+    const myFormRef = useRef();
+    const { register, formState: { errors }, handleSubmit } = useForm({ mode: 'all' });
+
+    const sendEmail = (e) => {
+        e = e || window.event;
+        e.preventDefault();
+
+        emailjs.sendForm('service_85xusxj', 'template_sn9bv0k', myFormRef.current, 'C3wVW-jtxiYWD_d6f')
+            .then((result) => {
+
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+        openNotification();
+        myFormRef.current.reset();
+    };
+
+    const openNotification = () => {
+
+
+        notification.success({
+            message: `Email Sent Successfully`,
+            description:
+                'Your email has been sent successfully.',
+            placement: 'bottomLeft',
+        });
+    };
+
     return (
         <MainContainer id="contact">
             <p className='absolute hidden' id="contact">test</p>
             <BodyContainer>
                 <div className='flex flex-col  left-container'>
                     <div data-aos="zoom-in" className='flex flex-col '>
-                        <p className='text-[#FFF] text-5xl font-normal'>We would love to hear it from you.</p>
+                        <p className='left-header text-[#FFF] text-5xl font-normal'>We would love to hear it from you.</p>
                         <br />
-                        <span className='text-[#FFF]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cras semper auctor neque vitae tempus quam pellentesque nec nam.</span>
+                        <span className='left-description text-[#FFF]'>We’re here to help and answer any question you might have. We look forward to hearing from you. </span>
                         <br />
-                        <div className='flex items-center gap-3'>
+                        <div className='left-social-media-container flex items-center gap-3'>
                             <a href="https://www.facebook.com/DDSSI/" target="_blank"><FaFacebook size={25} className='cursor-pointer text-white ' /></a>
-                            <a href="" target="_blank"><FaTwitter size={25} className='cursor-pointer text-white ' /></a>
+                            
                             <a href="www.instagram.com/solvbiz" target="_blank"><FaInstagram size={25} className='cursor-pointer text-white' /></a>
                             <a href="https://www.youtube.com/channel/UCr5GylGgZ5lrJ1Ewc6JCVEw" target="_blank"><FaYoutube size={25} className='cursor-pointer text-white' /></a>
                             <a href="https://www.linkedin.com/company/digital-doors-software-systems-inc" target="_blank"><FaLinkedin size={25} className='cursor-pointer text-white' /></a>
@@ -24,20 +58,17 @@ const ContactSection = () => {
                 </div>
                 <div className='flex flex-col bg-[#1595FF] right-container p-10 h-full'>
                     <p className='text-[#fff] text-3xl font-normal' >Get in touch.</p>
-                    <form>
-                        <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                    <form onSubmit={handleSubmit(() => sendEmail())} ref={myFormRef}>
+                        <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-6">
                             <div className="sm:col-span-3">
                                 <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-white">
                                     First name
                                 </label>
                                 <div className="mt-2">
-                                    <input
-                                        type="text"
-                                        name="first-name"
-                                        id="first-name"
-                                        autoComplete="given-name"
-                                        className="block w-full rounded-md border-0 p-1.5 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                                    />
+                                    <TextInput hasError={errors.name} {...register("name", {
+                                        required: "Please input your full name!",
+                                    })} size="large" type="text" placeholder="Full Name" name="name" />
+                                    <p className='errorMessage text-sm text-[#990000]'>{errors.name?.message}</p>
                                 </div>
                             </div>
                             <div className="sm:col-span-3">
@@ -45,13 +76,14 @@ const ContactSection = () => {
                                     Email
                                 </label>
                                 <div className="mt-2">
-                                    <input
-                                        type="text"
-                                        name="last-name"
-                                        id="last-name"
-                                        autoComplete="family-name"
-                                        className="block w-full rounded-md border-0 p-1.5 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                                    />
+                                    <TextInput hasError={errors.email} {...register("email", {
+                                        required: "Please input your email!",
+                                        pattern: {
+                                            value: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                                            message: "Plase input a valid email!"
+                                        }
+                                    })} size="large" placeholder="Email" name="email" />
+                                    <p className='errorMessage text-sm text-[#990000]'>{errors.email?.message}</p>
                                 </div>
                             </div>
                             <div className="sm:col-span-3">
@@ -59,13 +91,10 @@ const ContactSection = () => {
                                     Contact Number
                                 </label>
                                 <div className="mt-2">
-                                    <input
-                                        type="text"
-                                        name="first-name"
-                                        id="first-name"
-                                        autoComplete="given-name"
-                                        className="block w-full rounded-md border-0 p-1.5 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                                    />
+                                <TextInput hasError={errors.contact} {...register("contact", {
+                                        required: "Please input your Contact Number!",
+                                    })} size="large" placeholder="Contact Number" name="contact" />
+                                    <p className='errorMessage text-sm text-[#990000]'>{errors.contact?.message}</p>
                                 </div>
                             </div>
                             <div className="sm:col-span-3">
@@ -73,13 +102,10 @@ const ContactSection = () => {
                                     Company Name
                                 </label>
                                 <div className="mt-2">
-                                    <input
-                                        type="text"
-                                        name="last-name"
-                                        id="last-name"
-                                        autoComplete="family-name"
-                                        className="block w-full rounded-md border-0 p-1.5 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                                    />
+                                <TextInput hasError={errors.company} {...register("company", {
+                                        required: "Please input your Company Name!",
+                                    })} size="large" placeholder="Company Name" name="company" />
+                                    <p className='errorMessage text-sm text-[#990000]'>{errors.company?.message}</p>
                                 </div>
                             </div>
                             <div className="col-span-full">
@@ -87,17 +113,23 @@ const ContactSection = () => {
                                     Message
                                 </label>
                                 <div className="mt-2">
-                                    <textarea
-                                        id="about"
-                                        name="about"
-                                        rows={3}
-                                        className="block w-full rounded-md border-0 p-1.5 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                                        defaultValue={''}
+                                    <TextAreaMessage
+                                        messageHasError={errors.message}
+                                        {...register("message", {
+                                            required: "Please input your message!",
+
+                                        })}
+                                        placeholder="Enter your Message"
+                                        type="text"
+                                        name="message"
+
+
                                     />
+                                    <p className='errorMessage text-sm text-[#990000]'>{errors.message?.message}</p>
                                 </div>
                             </div>
                             <div className="col-span-full">
-                                <SubmitButton>Send now</SubmitButton>
+                                <SubmitButton type="submit">Send Now</SubmitButton>
                             </div>
                         </div>
                     </form>

@@ -14,8 +14,8 @@ const AboutPage = () => {
       <OtherNavbar />
       <MainContainer>
         <Banner>
-          <p className='text-5xl text-[#fff] font-normal'>Digital Doors Software Solutions, Inc</p><br />
-          <span className='text-2xl text-[#fff] font-light'>We are more than web development.</span>
+          <p className='banner-header text-5xl text-[#fff] font-normal text-center'>Digital Doors Software Solutions, Inc</p><br />
+          <span className='banner-description text-2xl text-[#fff] font-light text-center'>We are more than web development.</span>
           <br/>
           <ScrollDownButton href="#read-more" />
         </Banner>
@@ -40,13 +40,13 @@ const AboutPage = () => {
             </span>
           </div>
           <div data-aos="zoom-in-up" className='flex justify-center flex-col flex-1'>
-            <img src={About} />
+            <img className='about-img' src={About} />
           </div>
         </BodyContainer>
         <BodyContainer>
           <div className='flex flex-col w-full'>
-            <p className='text-4xl text-[#1595FF] font-normal'>Our Management</p><br />
-            <div className='flex items-center justify-between'>
+            <p className='text-4xl text-[#1595FF] font-normal text-center'>Our Management</p><br />
+            <div className='management-card-container flex items-center justify-center gap-5 flex-wrap'>
               <div data-aos="fade-up" data-aos-delay="100">
                 <ManagementCard img={Employee} name="Melchor Cuartero" position="President & Chief Executive Officer" />
               </div>
@@ -60,9 +60,9 @@ const AboutPage = () => {
           </div>
         </BodyContainer>
         <GoalContainer>
-          <div data-aos="fade-down" className='flex bg-white p-14 rounded-lg drop-shadow-lg flex-col justify-center max-w-2xl m-auto goal'>
-            <p className='text-4xl text-[#1595FF] text-center font-normal'>Our goals</p><br />
-            <span className='text-1xl text-[#7a7a7a] text-center'>To provide software that will address the needs of
+          <div data-aos="fade-down" className='goal-container flex bg-white p-14 rounded-lg drop-shadow-lg flex-col justify-center max-w-2xl m-auto goal'>
+            <p className='goal-header text-4xl text-[#1595FF] text-center font-normal'>Our goals</p><br />
+            <span className='goal-description text-1xl text-[#7a7a7a] text-center'>To provide software that will address the needs of
               Micro, Small and Medium Enterprises (MSMEs) and
               help them take the leap to transform and elevate how
               their business operates.</span>

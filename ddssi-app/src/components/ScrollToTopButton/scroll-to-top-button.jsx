@@ -22,7 +22,7 @@ const ScrollToTopButton = () => {
   }
 
   return (
-    <Button onClick={backToTop} scrolled={scrolled}><LuArrowUpToLine  size="25" /></Button>
+    <Button onClick={backToTop} scrolled={scrolled} ><LuArrowUpToLine  size="25" /></Button>
   )
 }
 

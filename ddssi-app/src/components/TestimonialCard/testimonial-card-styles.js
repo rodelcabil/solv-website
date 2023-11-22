@@ -3,19 +3,23 @@ import styled from 'styled-components';
 
 export const MainContainer = styled.div`
     
-    width: 400px;
+    max-width: 400px;
     border-radius: 16px;
     padding: 30px;
     background: var(--bg-light);
-    filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.25));
+    //filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.25));
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    border: 1px solid #e2e2e2;
+    justify-content: center;
+
     .employee-img{
-        height: 80px;
-        width: 80px;
-        border-radius: 100%;
+        height: 100px;
+    }
+
+    @media screen and (max-width: 450px){
+        width: 100%;
     }
 `;
 

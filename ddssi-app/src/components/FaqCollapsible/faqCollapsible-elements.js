@@ -5,11 +5,8 @@ export const FAQCollapsibleContainer = styled.div`
     transition: all 0.5s ease !important;
     padding: 0 20px;
     border: ${({ theme }) => theme.border};
-   
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    align-items: stretch;
+    border-radius: 5px;
     display: flex;
     max-width: 1500px;
     margin: auto;
@@ -52,7 +49,7 @@ export const FAQCollapsibleContainer = styled.div`
         height: ${({ click }) => (click ? '100%' : '0')};
         padding: ${({ click }) => (click ? '15px 0' : '0')};
         overflow: hidden;
-        transition: 0.5s;
+        transition: all 0.5s ease;
 
         p{
             font-size: 16px;
@@ -61,17 +58,7 @@ export const FAQCollapsibleContainer = styled.div`
            
         }
 
-        @media (min-width: 751px) and (max-width: 1260px){
-            height: ${({ click }) => (click ? '90px' : '0')};
-        }
-        @media (min-width: 471px) and (max-width: 750px){
-            height: ${({ click }) => (click ? '120px' : '0')};
-        }
-        @media screen and (max-width: 470px){
-            height: ${({ click }) => (click ? '170px' : '0')};
-           
-        }
-
+        
     }
 
 

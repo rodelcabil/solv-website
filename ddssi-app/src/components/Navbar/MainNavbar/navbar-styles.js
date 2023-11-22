@@ -9,27 +9,25 @@ ${'' /* background: rgb(4, 10, 14, 0.9); */}
 ${'' /*background:  ${({ theme, scrolled }) => (scrolled ? theme.navBg : 'none' )};*/}
 background: white;
 display: flex;
-${'' /*transition: ${({ theme }) => theme.transition};*/}
+transition: all 0.3s ease;
 align-items: center;
 font-size: 16px;
 top: 0;
-position: sticky;
-position: -webkit-sticky;
+position: sticky !important;
+-webkit-position: -webkit-sticky !important;
 z-index: 999;
 width: 100%;
 margin: auto;
-padding: 15px 60px;
-justify-content: center;
+padding: ${({ scrolled }) => (scrolled === 1 ? '0 60px' : '15px 60px')};
+justify-content: center; 
 -webkit-backdrop-filter: blur(1px);
-${'' /*box-shadow: ${({ scrolled }) => (scrolled ? '0 10px 15px -3px rgb(0 0 0 / 0.1)' : 'none')}; */}
+box-shadow: ${({ scrolled }) => (scrolled === 1 ? '0 10px 15px -3px rgb(0 0 0 / 0.1)' : 'none')}; 
 ${'' /*backdrop-filter: blur(1px);*/}
 
-@media screen and (max-width: 910px){
+@media screen and (max-width: 1100px){
     width: 100%;
     padding: 0 20px ;
-}
-
-`;
+}`;
 
 export const NavbarContainer = styled(Container)`
 height: 60px;
@@ -43,7 +41,6 @@ ${Container}
 
 @media (min-width: 250px) and (max-width: 910px){
     padding: 0;
-
 }
 `;
 
@@ -54,17 +51,17 @@ cursor: pointer;
 text-decoration: none;
 font-weight: bold;
 font-size: 1.3rem;
-display: flex;
+display:  flex;
 align-items: center;
 
 .logoContainer{
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
 
     .logo{
-        height: 50px;
-        width: 60px;
+        height: 40px;
+        width: 40px;
     }
 
     h5{
@@ -83,6 +80,11 @@ align-items: center;
         text-transform: uppercase;
         font-weight: bold;
         font-size: 14px;
+        display: ${({ scrolled }) => (scrolled === 1 ? 'none' : 'flex')};
+
+        @media screen and (max-width: 1100px){
+            display: flex;
+        }
     }
 
     @media screen and (max-width: 910px){
@@ -109,7 +111,6 @@ color: #fff;
 
 @media screen and (max-width: 910px){
     margin-left: 3rem;
-   
 }
 `;
 
@@ -122,7 +123,7 @@ export const MobileIcon = styled.div`
     }
     
 
-    @media screen and (max-width: 910px){
+    @media screen and (max-width: 1100px){
         display: flex;
         position: absolute;
         top: 0; 
@@ -147,45 +148,22 @@ display: flex;
 align-items: center;
 list-style: none;
 text-align: center;
+background: var(--bg-light);
 
-.darkModeIcon{
-   
-    font-size: 20px;
-    &:hover{
-        cursor:pointer;
-    }
-}
-
-.theme-icon-container-web{
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    margin-left: 10px;
-    background: ${({ theme }) => theme.iconBg} !important;
-    transition: ${({ theme }) => theme.transition};
-    
-    @media screen and (max-width: 910px){
-       display: none;
-    }
-}
-
-@media screen and (max-width: 910px){
-    display: flex; 
+@media screen and (max-width: 1100px){
+    display: ${({ click }) => (click ? 'flex' : 'none')} ; 
     flex-direction: column;
-    width: 50%;
-    height: calc(100vh - 60px);
+    width: 100%;
     position: absolute;
-    right: ${({ click }) => (click ? '0' : '-100%')};
+    height: calc(100vh - 60px);
+    left: 0;
     top: 60px;
     opacity: 1;
-    transition: all 0.5s ease;
+    transition: height 0.5s ease;
     background: ${({ theme }) => theme.backgroundColor} !important;
     padding-left: 0px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19);
-}
-`;
+    // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19);
+}`;
 
 
 export const NavItem = styled.li`
@@ -210,7 +188,7 @@ text-align: center;
     color: var(--bg-primary);
 }
 
-@media screen and (max-width: 910px){
+@media screen and (max-width: 1100px){
     width: 100%;
     /* &:hover{
         border: none;
@@ -241,11 +219,12 @@ color:  var(--text-secondary);
 }
 
 
-@media screen and (max-width: 910px){
+@media screen and (max-width: 1100px){
     text-align: center;
     padding: 1rem;
     width: 100%;
-    display: table;
+    display: flex;
+    justify-content: center;
   
     &:hover{
         color: #2988B4;

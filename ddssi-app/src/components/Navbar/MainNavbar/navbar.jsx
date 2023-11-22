@@ -17,11 +17,11 @@ import {
     NavItemBtn2,
 
 } from './navbar-styles';
-import Logo from '/public/ddssi.png' 
+import Logo from '/public/ddssi-logo.png'
 import SolvLogo from '../../../assets/solv_logo.png'
 const Navbar = () => {
 
-    
+
     const [click, setClick] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const handleClick = () => setClick(!click);
@@ -34,33 +34,44 @@ const Navbar = () => {
     const [testimonialActive, setTestimonialActive] = useState(false);
     const [contactActive, setContactActive] = useState(false);
 
+
     useEffect(() => {
-      window.onscroll = function () {
-          if (window.scrollY > 50) {
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
               setScrolled(true);
-          } else {
+            } else {
               setScrolled(false);
-          }
-      };
-  }, []);
+            }
+          };
+      
+          // Attach the event listener
+          window.addEventListener('scroll', handleScroll);
+      
+          // Detach the event listener when the component is unmounted
+          return () => {
+            window.removeEventListener('scroll', handleScroll);
+          };
+     
+    }, [scrolled]);
 
- const setActive = (home, about, service, solution, testimonial, contact) => {
-    setHomeActive(home);
-    setAboutActive(about);
-    setServiceActive(service);
-    setSolutionActive(solution);
-    setTestimonialActive(testimonial);
-    setContactActive(contact);
-    closeMobileMenu();
-  };
+    const scrollValue = scrolled ? 1 : 0;
+    const setActive = (home, about, service, solution, testimonial, contact) => {
+        setHomeActive(home);
+        setAboutActive(about);
+        setServiceActive(service);
+        setSolutionActive(solution);
+        setTestimonialActive(testimonial);
+        setContactActive(contact);
+        closeMobileMenu();
+    };
 
-  const activeHome = () => setActive(true, false, false, false, false, false);
-  const activeAbout = () => setActive(false, true, false, false, false, false);
-  const activeService = () => setActive(false, false, true, false, false, false);
-  const activeSolution = () => setActive(false, false, false, true, false, false);
-  const activeTestimonial = () => setActive(false, false, false, false, true, false);
-  const activeContact = () => setActive(false, false, false, false, false, true);
-  
+    const activeHome = () => setActive(true, false, false, false, false, false);
+    const activeAbout = () => setActive(false, true, false, false, false, false);
+    const activeService = () => setActive(false, false, true, false, false, false);
+    const activeSolution = () => setActive(false, false, false, true, false, false);
+    const activeTestimonial = () => setActive(false, false, false, false, true, false);
+    const activeContact = () => setActive(false, false, false, false, false, true);
+
 
     return (
 
@@ -97,13 +108,13 @@ const Navbar = () => {
             }
             </style>
             <IconContext.Provider value={{ color: '#555' }}>
-                <Nav>
+                <Nav scrolled={scrollValue} click={click}>
                     <NavbarContainer>
-                        <NavLogo to="/" onClick={closeMobileMenu}>
+                        <NavLogo to="/" onClick={closeMobileMenu} scrolled={scrollValue}>
                             <div className="logoContainer">
-                                <img src={Logo} className="logo" alt="Logo"/> 
-                                <span>Digital Doors Software <br/>Solutions Inc.</span>
-                              
+                                <img src={Logo} className="logo" alt="Logo" />
+                                <span>Digital Doors Software <br />Solutions Inc.</span>
+
                                 {/* <FaLaptopCode size="40" color="#2988B4" /> */}
                                 {/* <span>PORTFOLIO</span> */}
                             </div>
@@ -112,10 +123,10 @@ const Navbar = () => {
                             {click ? <CgClose className="nav-icon" size="25" /> : <GiHamburgerMenu className="nav-icon" size="25" />}
                         </MobileIcon>
                         <div>
-                            <NavMenu onClick={handleClick} >
+                            <NavMenu onClick={handleClick} click={click}>
                                 <NavItem >
                                     <NavLinks href="#home" onClick={activeHome} className={homeActive ? "isActive" : "isInActive"}>Home</NavLinks>
-                                </NavItem> 
+                                </NavItem>
                                 <NavItem>
                                     <NavLinks href="#service" onClick={activeService} className={serviceActive ? "isActive" : "isInActive"}>Services</NavLinks>
                                 </NavItem>
@@ -129,18 +140,17 @@ const Navbar = () => {
                                     <NavLinks href="#testimonial" onClick={activeTestimonial} className={testimonialActive ? "isActive" : "isInActive"}>Testimonials</NavLinks>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLinks  href="#contact" onClick={activeContact} className={contactActive ? "isActive" : "isInActive"}>Contact Us</NavLinks>
+                                    <NavLinks href="#contact" onClick={activeContact} className={contactActive ? "isActive" : "isInActive"}>Contact Us</NavLinks>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLinks  href="http://solvdesk.digitaldoorssoftware.com:8023/" target="_blank" >
-                                      <div className='flex items-center gap-1'>
-                                        <img src={SolvLogo} className="solv_logo" alt="Solv Logo"/>  
-                                        <span className='font-bold'>SOLV Desk</span>
-                                      </div>
+                                    <NavLinks href="http://solvdesk.digitaldoorssoftware.com:8023/" target="_blank" >
+                                        <div className='flex items-center gap-1'>
+                                            <img src={SolvLogo} className="solv_logo" alt="Solv Logo" />
+                                            <span className='font-bold'>SOLV Desk</span>
+                                        </div>
                                     </NavLinks>
                                 </NavItem>
                             </NavMenu>
-                            
                         </div>
                     </NavbarContainer>
                 </Nav>

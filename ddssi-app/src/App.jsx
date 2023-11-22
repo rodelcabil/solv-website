@@ -16,6 +16,8 @@ import ScrollToTop from './scrollToTop';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 import Custom from './pages/Solutions/Custom/custom';
+import WarrantySecurity from './pages/WarrantySecurity/warranty-security';
+import TermsOfUse from './pages/TermsOfUse/terms-of-use';
 AOS.init();
 
 function App() {
@@ -36,6 +38,8 @@ function App() {
           <Route path="/solution/c-to-c-and-social-media-platform" component={C2CSocialMedia} />
           <Route path="/solution/other-services" component={OtherServices} />
           <Route path="/privacy-policy" component={PrivacyPolicy} />
+          <Route path="/warranty-and-security" component={WarrantySecurity} />
+          <Route path="/terms-of-use" component={TermsOfUse} />
         </Switch>
         
       </Router>

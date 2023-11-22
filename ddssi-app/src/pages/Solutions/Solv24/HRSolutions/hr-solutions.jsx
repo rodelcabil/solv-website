@@ -16,7 +16,7 @@ const HRSolutions = () => {
             <Solv24Navbar />
             <MainContainer>
                 <BodyContainer>
-                    <div data-aos="fade-right" className='flex flex-col flex-1'>
+                    <div data-aos="fade-right" className='flex flex-col max-w-[500px]'>
                         <TitleComponent title="Human Resource Information System Solution" /><br/>
                         <DescriptionComponent description="End to end software solution for the Human Resources Department designed to improve delivery of service, efficiency and productivity. Hr Solution includes payroll, Human Resources Information System (HRIS) and system timekeeping with geo tagging." />
                         {/* <p className='text-4xl text-[#343434] font-bold mb-7'></p> */}
@@ -37,13 +37,13 @@ const HRSolutions = () => {
                             </div>
                         </div>
                     </div>
-                    <div data-aos="fade-left" data-aos-delay="200" className='flex flex-1 p-2 justify-center '>
+                    <div data-aos="fade-left" data-aos-delay="200" className='flex max-w-[500px] p-2 justify-center '>
                         <img src={HRSolution} alt="" />
                     </div>
                 </BodyContainer>
                 <br/><br/>
-                <div className='flex flex-col py-10'>
-                    <span className='text-2xl font-normal text-[#343434] uppercase'>HR Solution Frequently Asked Questions</span>
+                <div className='flex flex-col py-10 max-w-[1500px] m-auto'>
+                    <span className='text-2xl font-normal text-[#343434]'>HR Solution Frequently Asked Questions</span>
                     <br/><br/>
                     <GridContainer>
                         {

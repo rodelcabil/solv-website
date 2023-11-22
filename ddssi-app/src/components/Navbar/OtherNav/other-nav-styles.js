@@ -10,19 +10,19 @@ ${'' /* background: rgb(4, 10, 14, 0.9); */}
 ${'' /*background:  ${({ theme, scrolled }) => (scrolled ? theme.navBg : 'none' )};*/}
 background: white;
 display: flex;
-${'' /*transition: ${({ theme }) => theme.transition};*/}
+transition: all 0.3s ease;
 align-items: center;
 font-size: 16px;
 top: 0;
-position: sticky;
-position: -webkit-sticky;
+position: sticky !important;
+-webkit-position: -webkit-sticky !important;
 z-index: 999;
 width: 100%;
 margin: auto;
-padding: 8px 60px;
-justify-content: center;
+padding: ${({ scrolled }) => (scrolled === 1 ? '0 60px' : '15px 60px')};
+justify-content: center; 
 -webkit-backdrop-filter: blur(1px);
-${'' /*box-shadow: ${({ scrolled }) => (scrolled ? '0 10px 15px -3px rgb(0 0 0 / 0.1)' : 'none')}; */}
+box-shadow: ${({ scrolled }) => (scrolled === 1 ? '0 10px 15px -3px rgb(0 0 0 / 0.1)' : 'none')}; 
 ${'' /*backdrop-filter: blur(1px);*/}
 
 @media screen and (max-width: 910px){
@@ -172,21 +172,20 @@ text-align: center;
     }
 }
 
-@media screen and (max-width: 910px){
-    display: flex; 
+@media screen and (max-width: 1100px){
+    display: ${({ click }) => (click ? 'flex' : 'none')} ; 
     flex-direction: column;
-    width: 50%;
-    height: calc(100vh - 60px);
+    width: 100%;
     position: absolute;
-    right: ${({ click }) => (click ? '0' : '-100%')};
+    height: calc(100vh - 60px);
+    left: 0;
     top: 60px;
     opacity: 1;
-    transition: all 0.5s ease;
+    transition: height 0.5s ease;
     background: ${({ theme }) => theme.backgroundColor} !important;
     padding-left: 0px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19);
-}
-`;
+}`;
 
 
 export const NavItem = styled.li`
@@ -237,7 +236,8 @@ color:  var(--text-secondary);
     text-align: center;
     padding: 1rem;
     width: 100%;
-    display: table;
+    display: flex;
+    justify-content: center;
   
     &:hover{
         color: #2988B4;

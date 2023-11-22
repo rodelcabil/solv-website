@@ -14,13 +14,13 @@ const PointOfSale = () => {
             <Solv24Navbar />
             <MainContainer>
                 <BodyContainer>
-                    <div data-aos="fade-right" className='flex flex-col flex-1'>
+                    <div data-aos="fade-right" className='flex flex-col max-w-[500px]'>
                         <TitleComponent title="Point Of Sale System"/><br/>
                         <DescriptionComponent description="A convenient way to accurately record sales and keep track of how your business is doing. It also integrates with POS devices. POS is an add-on or stand alone point of sale software for a Single Node with unlimited users." />
                         {/* <p className='text-5xl text-[#343434] font-bold mb-7'></p>
                         <span className='text-[#7a7a7a] text-1xl'></span> */}
                     </div>
-                    <div data-aos="fade-left" data-aos-delay="200" className='flex flex-1 p-2 justify-center '>
+                    <div data-aos="fade-left" data-aos-delay="200" className='flex max-w-[500px] p-2 justify-center '>
                         <img src={POSSolution} alt="" />
                     </div>
                 </BodyContainer>

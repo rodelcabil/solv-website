@@ -16,5 +16,5 @@ export const Button = styled.button`
     display:  ${({ scrolled }) => (scrolled ? 'flex' : 'none')};
     justify-content: center;
     align-items: center;
-    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.5);
 `;

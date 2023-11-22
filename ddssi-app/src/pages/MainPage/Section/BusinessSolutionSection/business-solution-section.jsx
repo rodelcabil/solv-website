@@ -4,7 +4,7 @@ import BusinessSolutionCard from '../../../../components/BusinessSolutionCard/bu
 import OtherServices from "../../../../assets/other-services.png"
 import AddOns from "../../../../assets/add-ons.png"
 import ECommerce from "../../../../assets/e-commerce.png"
-import SolvLogo from "../../../../assets/solv.jpg"
+import SolvLogo from "../../../../assets/solv.png"
 import SocialMedia from "../../../../assets/social-media.png"
 import Custom from "../../../../assets/custom.png"
 
@@ -12,7 +12,7 @@ const BusinessSolutionSection = () => {
   return (
     <MainContainer id="solution">
       <div className='flex flex-col items-center justify-center'>
-        <span className='text-4xl text-[#343434] font-normal mb-2'>DDSSI BUSINESS SOLUTIONS</span>
+        <span className='text-4xl text-[#343434] font-normal text-center mb-2'>DDSSI Business Solutions</span>
         <span className='text-1xl text-[#7A7A7A] font-normal text-center max-w-3xl'>Choose from a variety of software solutions with enterprise level features and ability to expand and scale as your business grows. It is an unbeatable offer.</span>
       </div>
       <br /><br /><br />
@@ -29,9 +29,9 @@ const BusinessSolutionSection = () => {
         <div data-aos="fade-up" data-aos-delay="300">
           <BusinessSolutionCard title="E-Commerce Platform" icon={ECommerce} description="Selling online is fast replacing brick and mortar stores. Our platform is ready for companies who want to take the leap and establish their online presence. Complete with back-end and payment facility for simple and easy operation." link="/solution/e-commerce" />
         </div>
-        <div data-aos="fade-up" data-aos-delay="400">
-          <BusinessSolutionCard title="C2C and Social Media Platform" icon={SocialMedia} description="Customer to customer (C2C) is a business model whereby customers can trade with each other. To facilitate this, we created an online trading platform with social media component." link="/solution/c-to-c-and-social-media-platform" />
-        </div>
+        {/* <div data-aos="fade-up" data-aos-delay="400">
+          <BusinessSolutionCard title="C2C/Social Media Platform" icon={SocialMedia} description="Customer to customer (C2C) is a business model whereby customers can trade with each other. To facilitate this, we created an online trading platform with social media component." link="/solution/c-to-c-and-social-media-platform" />
+        </div> */}
         <div data-aos="fade-up" data-aos-delay="500">
           <BusinessSolutionCard title="Other Services" icon={OtherServices} description="We also provide cloud hosting solutions, other network related services and hardware i.e. servers, computers, VPN, biometrics devices and other computer related products." link="/solution/other-services" />
         </div>

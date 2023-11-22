@@ -15,4 +15,8 @@ export const MainContainer = styled.div`
     img{
         height: 200px;
     }
+
+    @media screen and (max-width: 450px){
+        width: 100%;
+    }
 `;

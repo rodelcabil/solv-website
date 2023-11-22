@@ -14,6 +14,18 @@ export const MainContainer = styled.div`
     
     @media screen and (max-width: 450px){
         width: 100%;
+
+        .service-title{
+            font-size: 16px;
+        }
+        .service-description{
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        .service-button{
+            font-size: 14px;
+            padding: 6px 10px;
+        }
     }
 `;
 

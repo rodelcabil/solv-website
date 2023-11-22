@@ -29,15 +29,25 @@ const OtherNavbar = () => {
     
 
     useEffect(() => {
-      window.onscroll = function () {
-          if (window.scrollY > 50) {
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
               setScrolled(true);
-          } else {
+            } else {
               setScrolled(false);
-          }
-      };
-  }, []);
+            }
+          };
+      
+          // Attach the event listener
+          window.addEventListener('scroll', handleScroll);
+      
+          // Detach the event listener when the component is unmounted
+          return () => {
+            window.removeEventListener('scroll', handleScroll);
+          };
+     
+    }, [scrolled]);
 
+  const scrollValue = scrolled ? 1 : 0;
     return (
 
         <>
@@ -73,9 +83,9 @@ const OtherNavbar = () => {
             }
             </style>
             <IconContext.Provider value={{ color: '#555' }}>
-                <Nav>
+            <Nav scrolled={scrollValue} click={click}>
                     <NavbarContainer>
-                        <NavLogo to="/" onClick={closeMobileMenu}>
+                        <NavLogo to="/" onClick={closeMobileMenu} scrolled={scrollValue}>
                             <div className="logoContainer">
                                 <img src={Logo} className="logo" alt="Logo"/> 
                                 {/* <span>Digital Doors Software <br/>Solutions Inc.</span> */}
@@ -88,7 +98,7 @@ const OtherNavbar = () => {
                             {click ? <CgClose className="nav-icon" size="25" /> : <GiHamburgerMenu className="nav-icon" size="25" />}
                         </MobileIcon>
                         <div>
-                            <NavMenu onClick={handleClick} >
+                            <NavMenu onClick={handleClick} click={click}>
                                 <NavItem >
                                     <NavLinks exact to="/" onClick={closeMobileMenu} activeClassName="active">Home</NavLinks>
                                 </NavItem>

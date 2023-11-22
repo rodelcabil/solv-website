@@ -27,25 +27,25 @@ const Solv24 = () => {
                 </BodyContainer>
                 <br /><br />
                 <BodyContainer>
-                    <div data-aos="fade-up" data-aos-delay="100">
+                    <div data-aos="fade-up" data-aos-delay="100" className='flex items-stretch'>
                         <Solv24Card img={Uno} title="Uno" description="It includes software for 1 Headquarter with unlimited users, a software for 1 x single node/branch with unlimited users." />
                     </div>
-                    <div data-aos="fade-up" data-aos-delay="200">
+                    <div data-aos="fade-up" data-aos-delay="200" className='flex items-stretch'>
                         <Solv24Card img={Solo} title="Solo" description="It is our single log-in variant of SOLV Sales and Inventory. It includes software for combined headquarter and branch with unlimited users. It features simplified processes with auto approval." />
                     </div>
-                    <div data-aos="fade-up" data-aos-delay="300">
+                    <div data-aos="fade-up" data-aos-delay="300" className='flex items-stretch'>
                         <Solv24Card img={Duo} title="Duo" description="It is the ideal SOLV Sales and Inventory variant for businesses with 2 branches. It includes software for 1 Headquarter with unlimited users, stand alone software for 2 x single nodes/branches with unlimited users. " />
                     </div>
                 </BodyContainer>
 
-                <div className='flex flex-col py-10 mt-16'>
+                <div className='flex flex-col py-10 mt-16 max-w-[1500px] m-auto'>
                     <p className='text-2xl font-normal text-[#343434] uppercase'>Sales and Inventory System Frequently Asked Questions</p>
                     <br /><br />
                     <GridContainer>
                         {
                             sales_inventory_faqs.map((item, key) => {
                                 return (
-                                    <div data-aos="fade-up" data-aos-delay={key + "00"}>
+                                    <div data-aos="fade-up" key={key} data-aos-delay={key + "00"} className='flex'>
                                         <FaqCollapsible key={key} question={item.question} answer={item.answer} />
                                     </div>
                                 )

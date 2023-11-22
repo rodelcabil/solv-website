@@ -8,9 +8,9 @@ const Reason = ({title, description, color}) => {
                 <span className='text-2xl'>{count}</span>
             </div> */}
             <br />
-            <span className='title text-lg font-bold text-white'>{title}</span>
+            <span className='reason-title text-lg font-bold text-white'>{title}</span>
             <br />
-            <span className='text-white'>{description}</span>
+            <span className='reason-description text-white'>{description}</span>
             <br />
         </MainContainer>
     )

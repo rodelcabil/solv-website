@@ -28,10 +28,10 @@ const AddonsPage = () => {
       <Solv24Navbar/>
       <Banner>
         <div data-aos="fade-up">
-          <p className='text-5xl text-[#fff] font-normal'>SOLV24 Add-ons</p><br />
+          <p className='addon-header text-5xl text-[#fff] font-normal text-center'>SOLV24 Add-ons</p><br />
         </div>
         <div data-aos="fade-up" data-aos-delay="100" className='flex max-w-3xl'>
-          <span className='text-1xl text-[#fff]  font-light text-center'>Building blocks that add features to your SOLV system. It allows you to expand and scale
+          <span className='addon-description text-1xl text-[#fff]  font-light text-center'>Building blocks that add features to your SOLV system. It allows you to expand and scale
             at your own pace instead of being forced to get a system with features you do not need.</span>
           <br/>
         </div>
@@ -41,11 +41,13 @@ const AddonsPage = () => {
         </div>
       </Banner>
       <MainContainer id="read-more">
+        <br/><br/>
         <Swiper cssMode={true}
           navigation={true}
           pagination={true}
           mousewheel={true}
           keyboard={true}
+          loop={true}
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,

@@ -1,14 +1,16 @@
 import styled from "styled-components"
-import bg from '../../../../assets/bg.jpg';
+import bg from '../../../../assets/about-bg.jpg';
 import { NavLink } from 'react-router-dom'
+import { responsive } from "../../../../globalStyles";
 
 export const MainContainer = styled.div`
     padding: 120px 60px; 
     scroll-margin-top: 100%;
     background: var(--bg-light);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6),
-                       rgba(0, 0, 0, 0.7)), url(${bg});
-    background-size: cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.7)), url(${bg});
+    background-size: 100% 100%;
+
+    ${responsive};
 `;
 
 export const BodyContainer = styled.div`

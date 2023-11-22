@@ -30,14 +30,25 @@ const Solv24Navbar = () => {
     
 
     useEffect(() => {
-      window.onscroll = function () {
-          if (window.scrollY > 50) {
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
               setScrolled(true);
-          } else {
+            } else {
               setScrolled(false);
-          }
-      };
-  }, []);
+            }
+          };
+      
+          // Attach the event listener
+          window.addEventListener('scroll', handleScroll);
+      
+          // Detach the event listener when the component is unmounted
+          return () => {
+            window.removeEventListener('scroll', handleScroll);
+          };
+     
+    }, [scrolled]);
+
+  const scrollValue = scrolled ? 1 : 0;
 
     return (
 
@@ -74,14 +85,14 @@ const Solv24Navbar = () => {
             }
             </style>
             <IconContext.Provider value={{ color: '#555' }}>
-                <Nav>
+            <Nav scrolled={scrollValue}>
                     <NavbarContainer>
-                        <NavLogo to="/" onClick={closeMobileMenu}>
+                        <NavLogo to="/" onClick={closeMobileMenu} scrolled={scrollValue}>
                             <div className="logoContainer">
                                 <img src={Solv24Logo} className="logo" alt="Logo"/> 
-                                <div>
+                                <div className='page-name-container'>
                                     <span className="text-[#BD3200] italic text-sm">SOLV</span>
-                                    <span className="text-[#001E5A] text-lg">24</span> 
+                                    <span className="text-[#001E5A] text-lg ml-[-3px]">24</span> 
                                 </div>
                                 {/* <FaLaptopCode size="40" color="#2988B4" /> */}
                                 {/* <span>PORTFOLIO</span> */}
@@ -91,7 +102,7 @@ const Solv24Navbar = () => {
                             {click ? <CgClose className="nav-icon" size="25" /> : <GiHamburgerMenu className="nav-icon" size="25" />}
                         </MobileIcon>
                         <div>
-                            <NavMenu onClick={handleClick} >
+                            <NavMenu onClick={handleClick} click={click}>
                                 <NavItem >
                                     <NavLinks exact to="/" onClick={closeMobileMenu} activeClassName="active">Home</NavLinks>
                                 </NavItem>
