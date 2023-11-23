@@ -10,7 +10,6 @@ ${'' /* background: rgb(4, 10, 14, 0.9); */}
 ${'' /*background:  ${({ theme, scrolled }) => (scrolled ? theme.navBg : 'none' )};*/}
 background: white;
 display: flex
-transition: all 0.3s ease;
 align-items: center;
 font-size: 16px;
 top: 0;
@@ -84,7 +83,7 @@ align-items: center;
     .page-name-container{
         display: ${({ scrolled }) => (scrolled === 1 ? 'none' : 'block')};
         
-        
+
         @media screen and (max-width: 1100px){
             display: none;
         }

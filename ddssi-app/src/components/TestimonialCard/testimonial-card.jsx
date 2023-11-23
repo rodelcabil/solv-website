@@ -1,9 +1,9 @@
 import React from 'react'
 import { Divider, MainContainer } from './testimonial-card-styles'
 import qoute from '../../assets/qoute.png'
-const TestimonialCard = ({name, comment, companyImg}) => {
+const TestimonialCard = ({name, comment, companyImg, height}) => {
   return (
-    <MainContainer>
+    <MainContainer height={height}>
         <img src={qoute} alt="qoute" height="50" width="50"/>
         <br/>
         <span className="text-[#7a7a7a] text-center text-sm">{comment}</span>

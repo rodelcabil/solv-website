@@ -8,9 +8,9 @@ import 'swiper/css/pagination';
 import { Autoplay, Navigation, Pagination, Keyboard } from 'swiper/modules';
 import AccentHub from '../../../../assets/accenthub.jpg'
 import Thinkerbox from '../../../../assets/thinkerbox.jpg'
-import HopeWell from '../../../../assets/hopewell.jpg'
-import BeWell from '../../../../assets/bewell.jpg'
-import MaxVision from '../../../../assets/maxvision.jpg'
+import HopeWell from '../../../../assets/hopewell.png'
+import BeWell from '../../../../assets/bewell.png'
+import MaxVision from '../../../../assets/maxvision.png'
 import Catpc from '../../../../assets/catpc.jpg'
 
 const TestimonialSection = () => {
@@ -58,35 +58,34 @@ const TestimonialSection = () => {
            className="mySwiper flex">
           <SwiperSlide  className='flex items-stretch h-auto'>
             <div className='flex items-stretch justify-center'>
-              <TestimonialCard name="Accenthub" comment="We were able to streamline our operation with the help of Digital Doors. Using SOLV Retail, allowed us to be more agile, efficient and productive." companyImg={AccentHub} />
+              <TestimonialCard name="Accenthub" comment="We were able to streamline our operation with the help of Digital Doors. Using SOLV Retail, allowed us to be more agile, efficient and productive." companyImg={AccentHub} height="100px"/>
             </div>
           </SwiperSlide>
           <SwiperSlide className='flex items-stretch h-auto'>
             <div  className='flex justify-center'>
-              <TestimonialCard name="Bewell Nutraceuticals Corp." comment="It’s our first time to avail of a payroll software and we’re happy we have decided to work with Digital Doors Software Solution. Sir Harry and his team are very responsive when it comes to our inquiries as we learn to use the SOLV Software. The team was able to assist our requests for special functions and are easy to talk to. Hoping to further deepen our working relationship in the future." companyImg={BeWell} />
+              <TestimonialCard name="Bewell Nutraceuticals Corp." comment="It’s our first time to avail of a payroll software and we’re happy we have decided to work with Digital Doors Software Solution. Sir Harry and his team are very responsive when it comes to our inquiries as we learn to use the SOLV Software. The team was able to assist our requests for special functions and are easy to talk to. Hoping to further deepen our working relationship in the future." companyImg={BeWell} height="50px"/>
             </div>
             
           </SwiperSlide>
           <SwiperSlide className='flex items-stretch h-auto'>
             <div   className='flex justify-center'>
-              <TestimonialCard name="Thinkerbox Enterprises" comment="Digital Doors efficiently helped us in automating our inventory, payables and receivables. They provide excellent and reliable service with good customer service." companyImg={Thinkerbox}/>
+              <TestimonialCard name="Thinkerbox Enterprises" comment="Digital Doors efficiently helped us in automating our inventory, payables and receivables. They provide excellent and reliable service with good customer service." companyImg={Thinkerbox} height="100px"/>
             </div>
           </SwiperSlide>
           <SwiperSlide className='flex items-stretch h-auto'>
             <div   className='flex justify-center'>
-              <TestimonialCard name="Maxvision Technology Enterprises Inc." comment="I’m happy with the purchase of this software. It is easy to use and reduced payroll processing time by half." companyImg={MaxVision}/>
+              <TestimonialCard name="Maxvision Technology Enterprises Inc." comment="I’m happy with the purchase of this software. It is easy to use and reduced payroll processing time by half." companyImg={MaxVision} height="50px"/>
             </div>
           </SwiperSlide>
           <SwiperSlide className='flex items-stretch h-auto'>
             <div   className='flex justify-center'>
-              <TestimonialCard name="Hopewell Sales Corp." comment="I want to express my gratitude to Digital Doors for their outstanding service. From the initial consultation to the final delivery, they demonstrated a high level of competence and commitment to excellence. Digital Doors is a reliable partner for all your digital needs." companyImg={HopeWell} />
+              <TestimonialCard name="Hopewell Sales Corp." comment="I want to express my gratitude to Digital Doors for their outstanding service. From the initial consultation to the final delivery, they demonstrated a high level of competence and commitment to excellence. Digital Doors is a reliable partner for all your digital needs." companyImg={HopeWell} height="100px" />
             </div>
           </SwiperSlide>
           <SwiperSlide className='flex items-stretch h-auto'>
             <div className='flex justify-center'>
-              <TestimonialCard name="Cycle Advent Trading" comment="Digital Doors Solutions, Inc. is a team of well informed people. They are very good at what they do. Plus a very nice service done! So keep it up and more success at your business." companyImg={Catpc} />
+              <TestimonialCard name="Cycle Advent Trading" comment="Digital Doors Solutions, Inc. is a team of well informed people. They are very good at what they do. Plus a very nice service done! So keep it up and more success at your business." companyImg={Catpc} height="100px" />
             </div>
-           
           </SwiperSlide>
         </Swiper>
       </BodyContainer>

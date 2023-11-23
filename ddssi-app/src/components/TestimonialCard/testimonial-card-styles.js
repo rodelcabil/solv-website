@@ -15,7 +15,7 @@ export const MainContainer = styled.div`
     justify-content: center;
 
     .employee-img{
-        height: 100px;
+        height: ${({ height }) => height};
     }
 
     @media screen and (max-width: 450px){

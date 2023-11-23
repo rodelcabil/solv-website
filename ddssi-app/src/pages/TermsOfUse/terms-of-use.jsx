@@ -1,5 +1,6 @@
 import React from 'react'
 import { MainContainer } from './terms-of-use-styles'
+import ScrollToTopButton from '../../components/ScrollToTopButton/scroll-to-top-button'
 
 const TermsOfUse = () => {
 
@@ -9,6 +10,7 @@ const TermsOfUse = () => {
 
 
   return (
+    <>
     <MainContainer>
         <p className='text-center text-2xl text-[#343434] font-semibold'>TERMS OF USE</p><br/><br/>
         <p className='text-[#7a7a7a]'>Please read these Terms of Use carefully before using {link("www.digitaldoorssoftware.com")} and {link("https://solvdesk.digitaldoorssoftware.com")}. Using this website means you have read, understood, and accepted these Terms of Use. The following Terms of Use regulates your usage and access of the website. You are bound by these terms of use by using or accessing this website. If you do not accept these Terms of Use, do not use this website.</p><br/>
@@ -259,6 +261,8 @@ const TermsOfUse = () => {
         <p className='text-xl text-[#343434] font-semibold'>PRIVACY POLICY</p><br/>
         <p className='text-[#7a7a7a]'>You may see our <a href="/privacy-policy" target='_blank' className='underline-offset-4 hover:text-[#1595FF]'>Privacy Policy</a> here.</p>
     </MainContainer>
+    <ScrollToTopButton />
+    </>
   )
 }
 

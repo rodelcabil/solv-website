@@ -1,6 +1,6 @@
 import React from 'react'
 import { BodyContainer, MainContainer } from './hero-section-styles'
-import HeroImage from "../../../../assets/hero-image.png"
+import SolvSuite from "../../../../assets/solv-suite.png"
 
 const HeroSection = () => {
   return (
@@ -10,10 +10,10 @@ const HeroSection = () => {
           <p className='header text-6xl text-left font-normal text-white leading-[72px]'>
             We value your business and we will always provide the right solution for you!
           </p>
-          <p className='sub-header text-3xl font-normal text-[#5BE0E6]'><br/>Let’s get started with <br/>your solution.</p>
+          <p className='sub-header text-3xl font-normal text-[#5BE0E6]'><br/>Let’s SOLV it!</p>
         </div>
         <div data-aos="fade-left" className='flex flex-1 justify-center items-center'>
-          <img id="hero-img" src={HeroImage} alt='Hero Image' />
+          <img id="hero-img" src={SolvSuite} alt='Hero Image' />
         </div>
       </BodyContainer>
     </MainContainer>

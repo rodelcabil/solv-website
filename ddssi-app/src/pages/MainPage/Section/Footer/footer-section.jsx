@@ -4,7 +4,8 @@ import Logo from '/public/ddssi-logo.png'
 import Map from '../../../../assets/map.png'
 import QR from '../../../../assets/QR.jpg'
 import {MdLocationPin,MdEmail,MdLocalPhone} from "react-icons/md"
-import {FaEnvelope, FaFacebook, FaTwitter, FaInstagram, FaYoutube, FaLinkedin} from "react-icons/fa"
+import { FaFacebook, FaInstagram, FaYoutube, FaLinkedin} from "react-icons/fa"
+import { PiInstagramLogoFill } from "react-icons/pi";
 
 const FooterSection = () => {
     return (
@@ -39,7 +40,7 @@ const FooterSection = () => {
                             <br />
                             <div className='flex items-center gap-3'>
                                 <a href="https://www.facebook.com/DDSSI/" target="_blank"><FaFacebook size={25} className='cursor-pointer text-[#7a7a7a] hover:text-white'/></a>
-                                <a href="www.instagram.com/solvbiz" target="_blank"><FaInstagram size={25} className='cursor-pointer text-[#7a7a7a] hover:text-white'/></a>
+                                <a href="www.instagram.com/solvbiz" target="_blank"><PiInstagramLogoFill size={25} className='cursor-pointer text-[#7a7a7a] hover:text-white'/></a>
                                 <a href="https://www.youtube.com/channel/UCr5GylGgZ5lrJ1Ewc6JCVEw" target="_blank"><FaYoutube size={25} className='cursor-pointer text-[#7a7a7a] hover:text-white'/></a>
                                 <a href="https://www.linkedin.com/company/digital-doors-software-systems-inc" target="_blank"><FaLinkedin size={25} className='cursor-pointer text-[#7a7a7a] hover:text-white'/></a>
                             </div>
@@ -57,7 +58,7 @@ const FooterSection = () => {
                         <br/>
                         <div className='flex items-center gap-4 mb-2'>
                             <MdLocationPin size="35" className='text-[#7a7a7a]'/>
-                            <span className='text-[#7a7a7a]'>4F, 201 Del Monte Ave., Brgy. Masambong, Quezon City</span>
+                            <a href="https://www.google.com/maps/place/4f,+201+Del+Monte+Ave,+Quezon+City,+Metro+Manila/@14.6399287,121.0115315,17z/data=!4m5!3m4!1s0x3397b65d9d961197:0xb1f012a4d154dbf5!8m2!3d14.6399287!4d121.0115315" target='_blank'><span className='text-[#7a7a7a]'>4F, 201 Del Monte Ave., Brgy. Masambong, Quezon City</span></a>
                         </div>
                         <div className='flex items-center gap-4 mb-2'>
                             <MdEmail size="25" className='text-[#7a7a7a]'/>

@@ -1,5 +1,11 @@
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 import { responsive } from "../../../../globalStyles";
+
+const rotateAnimation = keyframes`
+    0% {
+        transform: rotate(100deg);
+    }
+`;
 
 export const MainContainer = styled.div`
     
@@ -17,6 +23,11 @@ export const BodyContainer = styled.div`
     align-items: center;
     justify-content: space-between;
 
+    #hero-img{
+        height: 450px;
+        animation: ${rotateAnimation} 4s infinite;
+        animation-iteration-count: 1;
+    }
     
     @media screen and (max-width: 910px){
         flex-direction: column;

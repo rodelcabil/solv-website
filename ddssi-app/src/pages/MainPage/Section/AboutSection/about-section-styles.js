@@ -7,9 +7,8 @@ export const MainContainer = styled.div`
     padding: 120px 60px; 
     scroll-margin-top: 100%;
     background: var(--bg-light);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.7)), url(${bg});
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)), url(${bg});
     background-size: 100% 100%;
-
     ${responsive};
 `;
 
@@ -18,8 +17,24 @@ export const BodyContainer = styled.div`
     margin:auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    
+    justify-content: space-around;
+    gap: 15px;
+
+    img{
+        width: 100px;
+        border-radius: 10px;
+    }
+
+    @media screen and (max-width: 910px){
+        flex-direction: column;
+
+        .row-container{
+            width: 100%;
+
+            
+        }
+
+    }
 `;
 
 export const LearnMoreButton = styled(NavLink)`

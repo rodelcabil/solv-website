@@ -14,8 +14,10 @@ export const BodyContainer = styled.div`
     align-items: center;
     justify-content: center;
     gap: 60px;
+
     img{
         height: 300px;
+        filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.25));
     }
 
     @media screen and (max-width: 910px){

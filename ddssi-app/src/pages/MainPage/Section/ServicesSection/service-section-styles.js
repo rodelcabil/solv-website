@@ -14,7 +14,7 @@ export const BodyContainer = styled.div`
     margin: auto;
     max-width: 1500px;
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
     flex-wrap: wrap;
     gap: 15px;

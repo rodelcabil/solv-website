@@ -5,11 +5,9 @@ import { Container } from '../../../globalStyles';
 
 
 export const Nav = styled.nav`
-${'' /* background: rgb(4, 10, 14, 0.9); */}
-${'' /*background:  ${({ theme, scrolled }) => (scrolled ? theme.navBg : 'none' )};*/}
-background: white;
+// background: ${({ scrolled }) => (scrolled === 1 ? 'white' : 'none' )};
+background: var(--bg-light);
 display: flex;
-transition: all 0.3s ease;
 align-items: center;
 font-size: 16px;
 top: 0;
@@ -20,9 +18,10 @@ width: 100%;
 margin: auto;
 padding: ${({ scrolled }) => (scrolled === 1 ? '0 60px' : '15px 60px')};
 justify-content: center; 
--webkit-backdrop-filter: blur(1px);
+// -webkit-backdrop-filter: blur(1px);
 box-shadow: ${({ scrolled }) => (scrolled === 1 ? '0 10px 15px -3px rgb(0 0 0 / 0.1)' : 'none')}; 
-${'' /*backdrop-filter: blur(1px);*/}
+// backdrop-filter: blur(1px);
+
 
 @media screen and (max-width: 1100px){
     width: 100%;
@@ -148,7 +147,6 @@ display: flex;
 align-items: center;
 list-style: none;
 text-align: center;
-background: var(--bg-light);
 
 @media screen and (max-width: 1100px){
     display: ${({ click }) => (click ? 'flex' : 'none')} ; 
@@ -160,7 +158,7 @@ background: var(--bg-light);
     top: 60px;
     opacity: 1;
     transition: height 0.5s ease;
-    background: ${({ theme }) => theme.backgroundColor} !important;
+    background: var(--bg-light);
     padding-left: 0px;
     // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19);
 }`;

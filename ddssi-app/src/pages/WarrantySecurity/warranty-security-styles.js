@@ -10,4 +10,13 @@ export const MainContainer = styled.div`
         margin-left: 20px;
         list-style-type: disc;
     }
+
+    p{
+        overflow-wrap: break-word;
+    }
+
+    @media screen and (max-width: 910px){
+        padding: 10px;
+    }
+
 `;

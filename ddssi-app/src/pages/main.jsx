@@ -11,6 +11,7 @@ import PageDivider from '../components/PageDivider/page-divider'
 import AboutSection from './MainPage/Section/AboutSection/about-section'
 import ContactSection from './MainPage/Section/ContactSection/contact-section'
 import ScrollToTopButton from '../components/ScrollToTopButton/scroll-to-top-button'
+import AnySection from './MainPage/Section/AnySection/any-section'
 
 const main = () => {
   return (
@@ -19,6 +20,7 @@ const main = () => {
       <Navbar />
       <HeroSection/>
       <PageDivider/>
+      <AnySection />
       <ServiceSection />
       <BusinessSolutionSection />
       <AboutSection />

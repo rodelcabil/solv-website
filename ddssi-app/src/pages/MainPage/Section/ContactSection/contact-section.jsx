@@ -1,6 +1,7 @@
 import React, { useRef } from 'react'
 import { BodyContainer, MainContainer, SubmitButton, TextAreaMessage, TextInput } from './contact-section-styles'
-import { FaEnvelope, FaFacebook, FaTwitter, FaInstagram, FaYoutube, FaLinkedin } from "react-icons/fa"
+import { FaFacebook, FaYoutube, FaLinkedin } from "react-icons/fa"
+import { PiInstagramLogoFill } from "react-icons/pi";
 import { useForm } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
 import { notification } from 'antd';
@@ -49,8 +50,7 @@ const ContactSection = () => {
                         <br />
                         <div className='left-social-media-container flex items-center gap-3'>
                             <a href="https://www.facebook.com/DDSSI/" target="_blank"><FaFacebook size={25} className='cursor-pointer text-white ' /></a>
-                            
-                            <a href="www.instagram.com/solvbiz" target="_blank"><FaInstagram size={25} className='cursor-pointer text-white' /></a>
+                            <a href="www.instagram.com/solvbiz" target="_blank"><PiInstagramLogoFill size={25} className='cursor-pointer text-white' /></a>
                             <a href="https://www.youtube.com/channel/UCr5GylGgZ5lrJ1Ewc6JCVEw" target="_blank"><FaYoutube size={25} className='cursor-pointer text-white' /></a>
                             <a href="https://www.linkedin.com/company/digital-doors-software-systems-inc" target="_blank"><FaLinkedin size={25} className='cursor-pointer text-white' /></a>
                         </div>
@@ -68,7 +68,7 @@ const ContactSection = () => {
                                     <TextInput hasError={errors.name} {...register("name", {
                                         required: "Please input your full name!",
                                     })} size="large" type="text" placeholder="Full Name" name="name" />
-                                    <p className='errorMessage text-sm text-[#990000]'>{errors.name?.message}</p>
+                                    <p className='errorMessage text-sm text-red-700'>{errors.name?.message}</p>
                                 </div>
                             </div>
                             <div className="sm:col-span-3">
@@ -83,7 +83,7 @@ const ContactSection = () => {
                                             message: "Plase input a valid email!"
                                         }
                                     })} size="large" placeholder="Email" name="email" />
-                                    <p className='errorMessage text-sm text-[#990000]'>{errors.email?.message}</p>
+                                    <p className='errorMessage text-sm text-red-700'>{errors.email?.message}</p>
                                 </div>
                             </div>
                             <div className="sm:col-span-3">
@@ -94,7 +94,7 @@ const ContactSection = () => {
                                 <TextInput hasError={errors.contact} {...register("contact", {
                                         required: "Please input your Contact Number!",
                                     })} size="large" placeholder="Contact Number" name="contact" />
-                                    <p className='errorMessage text-sm text-[#990000]'>{errors.contact?.message}</p>
+                                    <p className='errorMessage text-sm text-red-700'>{errors.contact?.message}</p>
                                 </div>
                             </div>
                             <div className="sm:col-span-3">
@@ -105,7 +105,7 @@ const ContactSection = () => {
                                 <TextInput hasError={errors.company} {...register("company", {
                                         required: "Please input your Company Name!",
                                     })} size="large" placeholder="Company Name" name="company" />
-                                    <p className='errorMessage text-sm text-[#990000]'>{errors.company?.message}</p>
+                                    <p className='errorMessage text-sm text-red-700'>{errors.company?.message}</p>
                                 </div>
                             </div>
                             <div className="col-span-full">
@@ -125,7 +125,7 @@ const ContactSection = () => {
 
 
                                     />
-                                    <p className='errorMessage text-sm text-[#990000]'>{errors.message?.message}</p>
+                                    <p className='errorMessage text-sm text-red-700'>{errors.message?.message}</p>
                                 </div>
                             </div>
                             <div className="col-span-full">

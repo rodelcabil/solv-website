@@ -91,20 +91,20 @@ export const SubmitButton = styled.button`
 
 
 export const TextInput = styled.input`
-        width: 100%;
-        padding: 6px 8px;
-        border: ${({ hasError, theme }) => (hasError === undefined ? '1px solid #2988B4' : "2px solid #990000")};
-        border-radius: 5px;
-        background: ${({ theme }) => theme.secondaryBg} !important;
-        color: ${({ theme }) => theme.color} !important;
-        transition: ${({ theme }) => theme.transition} !important;
-        font-size: 14px;
+    width: 100%;
+    padding: 6px 8px;
+    border: ${({ hasError, theme }) => (hasError === undefined ? 'none' : "2px solid red")};
+    border-radius: 5px;
+    background: var(--bg-light);
+    color: ${({ theme }) => theme.color} !important;
+    transition: ${({ theme }) => theme.transition} !important;
+    font-size: 14px;
 
-        &:focus{
-          
-            box-shadow: ${({ hasError }) => (hasError === undefined ? '0 0 0 2px rgba(24, 144, 255, .2)' : '0 0 0 2px rgba(255, 77, 79, .2)')};
-            outline: none;
-        }
+    &:focus{
+        
+        box-shadow: ${({ hasError }) => (hasError === undefined ? '0 0 0 2px rgba(24, 144, 255, .2)' : '0 0 0 2px rgba(255, 77, 79, .2)')};
+        outline: none;
+    }
 `;
 
 export const TextAreaMessage = styled.textarea`

@@ -32,6 +32,6 @@ export const MainContainer = styled.div`
     }
 
     @media screen and (max-width: 910px){
-        padding: 30px;
+        padding: 10px;
     }
 `;
