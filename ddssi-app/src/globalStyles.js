@@ -3,6 +3,7 @@ import styled, { createGlobalStyle, css } from 'styled-components';
 const GlobalStyle = createGlobalStyle`
     :root{
         --bg-primary: #1595FF;
+        --bg-light-blur: rgba(255,255,255,0.95);
         --bg-light: #fff;
         --bg-dark: #343434;
         --text-primary: #343434;

@@ -13,6 +13,9 @@ import ContactSection from '../../../MainPage/Section/ContactSection/contact-sec
 import TitleComponent from '../../../../components/Title/title'
 import DescriptionComponent from '../../../../components/Description/description'
 import ScrollToTopButton from '../../../../components/ScrollToTopButton/scroll-to-top-button'
+import UnoBgImg from '../../../../assets/uno-banner.jpg'
+import SoloBgImg from '../../../../assets/solo-banner.jpg'
+import DuoBgImg from '../../../../assets/duo-banner.jpg'
 
 const Solv24 = () => {
     return (
@@ -28,13 +31,13 @@ const Solv24 = () => {
                 <br /><br />
                 <BodyContainer>
                     <div data-aos="fade-up" data-aos-delay="100" className='flex items-stretch'>
-                        <Solv24Card img={Uno} title="Uno" description="It includes software for 1 Headquarter with unlimited users, a software for 1 x single node/branch with unlimited users." />
+                        <Solv24Card bgImg={UnoBgImg} img={Uno} title="Uno" description="It includes software for 1 Headquarter with unlimited users, a software for 1 x single node/branch with unlimited users." />
                     </div>
                     <div data-aos="fade-up" data-aos-delay="200" className='flex items-stretch'>
-                        <Solv24Card img={Solo} title="Solo" description="It is our single log-in variant of SOLV Sales and Inventory. It includes software for combined headquarter and branch with unlimited users. It features simplified processes with auto approval." />
+                        <Solv24Card bgImg={SoloBgImg} img={Solo} title="Solo" description="It is our single log-in variant of SOLV Sales and Inventory. It includes software for combined headquarter and branch with unlimited users. It features simplified processes with auto approval." />
                     </div>
                     <div data-aos="fade-up" data-aos-delay="300" className='flex items-stretch'>
-                        <Solv24Card img={Duo} title="Duo" description="It is the ideal SOLV Sales and Inventory variant for businesses with 2 branches. It includes software for 1 Headquarter with unlimited users, stand alone software for 2 x single nodes/branches with unlimited users. " />
+                        <Solv24Card bgImg={DuoBgImg} img={Duo} title="Duo" description="It is the ideal SOLV Sales and Inventory variant for businesses with 2 branches. It includes software for 1 Headquarter with unlimited users, stand alone software for 2 x single nodes/branches with unlimited users. " />
                     </div>
                 </BodyContainer>
 

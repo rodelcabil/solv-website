@@ -8,7 +8,7 @@ export const FAQCollapsibleContainer = styled.div`
     align-items: stretch;
     border-radius: 5px;
     display: flex;
-    max-width: 1500px;
+    width: 1500px;
     margin: auto;
     flex-direction: column;
     margin-bottom: 10px;

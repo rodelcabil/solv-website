@@ -5,8 +5,7 @@ import { Container } from '../../../globalStyles';
 
 
 export const Nav = styled.nav`
-// background: ${({ scrolled }) => (scrolled === 1 ? 'white' : 'none' )};
-background: var(--bg-light);
+background: ${({ scrolled }) => (scrolled === 1 ? 'var(--bg-light-blur)' : 'var(--bg-light)' )};
 display: flex;
 align-items: center;
 font-size: 16px;

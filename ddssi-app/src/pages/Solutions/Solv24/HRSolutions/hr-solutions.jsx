@@ -37,8 +37,8 @@ const HRSolutions = () => {
                             </div>
                         </div>
                     </div>
-                    <div data-aos="fade-left" data-aos-delay="200" className='flex max-w-[500px] p-2 justify-center '>
-                        <img src={HRSolution} alt="" />
+                    <div data-aos="fade-left" data-aos-delay="200" className='img-container relative flex w-[500px] p-2 justify-center '>
+                        <img src={HRSolution} className='item-img absolute' alt="" />
                     </div>
                 </BodyContainer>
                 <br/><br/>

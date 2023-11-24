@@ -6,7 +6,7 @@ const TestimonialCard = ({name, comment, companyImg, height}) => {
     <MainContainer height={height}>
         <img src={qoute} alt="qoute" height="50" width="50"/>
         <br/>
-        <span className="text-[#7a7a7a] text-center text-sm">{comment}</span>
+        <span className="text-[#7a7a7a] text-center ">{comment}</span>
         <br/>
         <Divider/>
         <br/>

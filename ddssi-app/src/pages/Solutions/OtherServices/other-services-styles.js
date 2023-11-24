@@ -3,6 +3,7 @@ import bg from '../../../assets/banner.jpg';
 
 export const MainContainer = styled.div`
     padding: 60px;
+    background: var(--bg-light);
 `;
 
 export const Banner = styled.div`

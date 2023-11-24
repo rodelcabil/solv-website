@@ -20,8 +20,8 @@ const PointOfSale = () => {
                         {/* <p className='text-5xl text-[#343434] font-bold mb-7'></p>
                         <span className='text-[#7a7a7a] text-1xl'></span> */}
                     </div>
-                    <div data-aos="fade-left" data-aos-delay="200" className='flex max-w-[500px] p-2 justify-center '>
-                        <img src={POSSolution} alt="" />
+                    <div data-aos="fade-left" data-aos-delay="200" className='img-container relative flex w-[500px] p-2 justify-center '>
+                        <img src={POSSolution} className='item-img absolute' alt="" />
                     </div>
                 </BodyContainer>
             </MainContainer>

@@ -8,7 +8,7 @@ import { Container } from '../../../globalStyles';
 export const Nav = styled.nav`
 ${'' /* background: rgb(4, 10, 14, 0.9); */}
 ${'' /*background:  ${({ theme, scrolled }) => (scrolled ? theme.navBg : 'none' )};*/}
-background: white;
+background: ${({ scrolled }) => (scrolled === 1 ? 'var(--bg-light-blur)' : 'var(--bg-light)' )};
 display: flex;
 transition: all 0.3s ease;
 align-items: center;

@@ -1,9 +1,9 @@
 import React from 'react'
 import { BodyContainer, MainContainer } from './service-section-styles'
 import ServiceCard from '../../../../components/ServiceCard/service-card'
-import SoftwareDevelopment from "../../../../assets/software-development.png"
-import WebDevelopment from "../../../../assets/web-development.png"
-import SystemSupport from "../../../../assets/system-support.png"
+import SoftwareDevelopment from "../../../../assets/about-bg.jpg"
+import WebDevelopment from "../../../../assets/custom-banner-bg.jpg"
+import SystemSupport from "../../../../assets/support-img.jpg"
 
 
 const ServiceSection = () => {

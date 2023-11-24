@@ -3,7 +3,8 @@ import bg from '../../../assets/custom-banner-bg.jpg';
 
 export const MainContainer = styled.div`
     padding: 120px 60px;
-
+    background: var(--bg-light);
+    
     @media screen and (max-width: 1200px){
         padding: 100px 30px 30px 30px;
     }
@@ -16,7 +17,7 @@ export const Banner = styled.div`
     flex-direction: column;
     padding: 120px 60px;
     background: var(--bg-light);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.7)), url(${bg});
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)), url(${bg});
     background-size: cover;
     height: calc(100vh - 90px);
 

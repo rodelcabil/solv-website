@@ -4,7 +4,9 @@ import ContactSection from '../MainPage/Section/ContactSection/contact-section'
 import OtherNavbar from '../../components/Navbar/OtherNav/other-nav'
 import { BodyContainer, MainContainer, Banner, GoalContainer } from './about-page-styles'
 import About from '../../assets/interview.svg'
-import Employee from '../../assets/employee.webp'
+import FredrickYu from '../../assets/fredrick-yu.jpg'
+import OrlyCuartero from '../../assets/orly-cuartero.jpg'
+import HarryDeLeon from '../../assets/harry-de-leon.jpg'
 import ManagementCard from '../../components/ManagementCard/management-card'
 import ScrollDownButton from '../../components/ScrolldownButton/scroll-down-button'
 
@@ -48,13 +50,13 @@ const AboutPage = () => {
             <p className='text-4xl text-[#1595FF] font-normal text-center'>Our Management</p><br />
             <div className='management-card-container flex items-center justify-center gap-5 flex-wrap'>
               <div data-aos="fade-up" data-aos-delay="100">
-                <ManagementCard img={Employee} name="Melchor Cuartero" position="President & Chief Executive Officer" />
+                <ManagementCard img={OrlyCuartero} name="Melchor Cuartero" position="President & Chief Executive Officer" />
               </div>
               <div data-aos="fade-up" data-aos-delay="200">
-                <ManagementCard img={Employee} name="Frederick Yu" position="Chairman" />
+                <ManagementCard img={FredrickYu} name="Frederick Yu" position="Chairman" />
               </div>
               <div data-aos="fade-up" data-aos-delay="300">
-                <ManagementCard img={Employee} name="Harry De Leon" position="Business Development Manager" />
+                <ManagementCard img={HarryDeLeon} name="Harry De Leon" position="Business Development Manager" />
               </div>
             </div>
           </div>

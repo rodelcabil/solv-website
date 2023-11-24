@@ -18,7 +18,7 @@ const Custom = () => {
             <Solv24Navbar />
             <Banner>
                 <div data-aos="fade-up">
-                    <p className='custom-header text-5xl text-[#fff] font-normal text-center'>SOLV24 Custom</p><br />
+                    <p className='custom-header text-5xl text-[#fff] font-normal text-center'>SOLV Custom</p><br />
                 </div>
                 <div data-aos="fade-up" data-aos-delay="100" className='flex max-w-3xl'>
                     <span className='text-1xl text-[#fff] max-w-3xl font-light text-center'>Our SOLV business solution software are already packed with features and functionality. We

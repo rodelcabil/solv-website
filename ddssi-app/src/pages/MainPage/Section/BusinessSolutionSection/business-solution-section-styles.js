@@ -10,6 +10,8 @@ export const MainContainer = styled.div`
 `;
 
 export const BodyContainer = styled.div`
+margin: auto;
+    max-width: 1500px;
     display: grid;
     grid-template-rows: repeat(auto-fit, 1fr);
     grid-template-columns: repeat(3, auto);
