@@ -60,7 +60,7 @@ margin-left: 0;
 
 export const responsive = () => css`
   @media screen and (max-width: 910px) {
-    padding: 100px 30px;
+    padding: 100px 20px;
   }
 `;
 export default GlobalStyle

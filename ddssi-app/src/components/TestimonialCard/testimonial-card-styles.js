@@ -12,7 +12,6 @@ export const MainContainer = styled.div`
     flex-direction: column;
     align-items: center;
     border: 1px solid #e2e2e2;
-    justify-content: center;
 
     .employee-img{
         height: ${({ height }) => height};

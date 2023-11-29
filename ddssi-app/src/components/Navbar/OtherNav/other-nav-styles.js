@@ -14,8 +14,8 @@ transition: all 0.3s ease;
 align-items: center;
 font-size: 16px;
 top: 0;
-position: sticky !important;
--webkit-position: -webkit-sticky !important;
+position: fixed !important;
+-webkit-position: -webkit-fixed !important;
 z-index: 999;
 width: 100%;
 margin: auto;
@@ -25,7 +25,7 @@ justify-content: center;
 box-shadow: ${({ scrolled }) => (scrolled === 1 ? '0 10px 15px -3px rgb(0 0 0 / 0.1)' : 'none')}; 
 ${'' /*backdrop-filter: blur(1px);*/}
 
-@media screen and (max-width: 910px){
+@media screen and (max-width: 1100px){
     width: 100%;
     padding: 0 20px ;
 }
@@ -64,8 +64,7 @@ align-items: center;
     gap: 10px;
 
     .logo{
-        height: 50px;
-        width: 60px;
+        width: 150px;
     }
 
     h5{
@@ -123,7 +122,7 @@ export const MobileIcon = styled.div`
     }
     
 
-    @media screen and (max-width: 910px){
+    @media screen and (max-width: 1100px){
         display: flex;
         position: absolute;
         top: 0; 
@@ -182,7 +181,7 @@ text-align: center;
     top: 60px;
     opacity: 1;
     transition: height 0.5s ease;
-    background: ${({ theme }) => theme.backgroundColor} !important;
+    background: var(--bg-light);
     padding-left: 0px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19);
 }`;
@@ -223,8 +222,7 @@ color:  var(--text-secondary);
 
 
 .solv_logo{
-    height: 30px;
-    width: 30px;
+    height: 20px;
 }
 
 &:hover{

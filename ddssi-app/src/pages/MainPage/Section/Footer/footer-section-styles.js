@@ -22,9 +22,10 @@ export const BodyContainer = styled.div`
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 15px;
-    .logo{
-        height: 50px;
-        width: 60px;
+    
+    .footer-logo{
+       
+        width: 100%;
     }
 
     @media screen and (max-width: 600px){

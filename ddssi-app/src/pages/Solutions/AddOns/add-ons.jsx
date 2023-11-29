@@ -22,6 +22,7 @@ import ABBanner from '../../../assets/accounting-books-banner.png'
 import SupportBanner from '../../../assets/support-banner.jpg'
 import ZenithBanner from '../../../assets/zenith-banner.jpg'
 import AssetBanner from '../../../assets/assets-banner.jpg'
+import { Solv24Links } from '../../MainPage/Section/Footer/footer-data-links'
 
 const AddonsPage = () => {
  
@@ -115,7 +116,7 @@ const AddonsPage = () => {
         </Swiper>
       </MainContainer>
       <ContactSection />
-      <FooterSection />
+      <FooterSection links={Solv24Links}/>
       <ScrollToTopButton/>
     </>
 

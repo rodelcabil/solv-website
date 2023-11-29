@@ -7,6 +7,7 @@ import ContactSection from '../../../MainPage/Section/ContactSection/contact-sec
 import TitleComponent from '../../../../components/Title/title'
 import DescriptionComponent from '../../../../components/Description/description'
 import ScrollToTopButton from '../../../../components/ScrollToTopButton/scroll-to-top-button'
+import { Solv24Links } from '../../../MainPage/Section/Footer/footer-data-links'
 
 const PointOfSale = () => {
     return (
@@ -26,7 +27,7 @@ const PointOfSale = () => {
                 </BodyContainer>
             </MainContainer>
             <ContactSection />
-            <FooterSection/>
+            <FooterSection links={Solv24Links}/>
             <ScrollToTopButton />
         </>
     )

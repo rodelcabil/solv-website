@@ -4,7 +4,7 @@ import { responsive } from '../../../../globalStyles';
 
 export const MainContainer = styled.div`
     
-    padding: 120px 60px 60px 60px;
+    padding: 60px;
     background: var(--bg-light);
 
     ${responsive}

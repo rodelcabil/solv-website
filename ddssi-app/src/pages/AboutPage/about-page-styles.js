@@ -46,7 +46,7 @@ export const Banner = styled.div`
     background-image: linear-gradient(rgba(0, 0, 0, 0.6),
                     rgba(0, 0, 0, 0.7)), url(${bg});
     background-size: 100% 100%;
-    height: calc(100vh - 90px);
+    height: calc(100vh + 90px);
     
     @media screen and (max-width: 910px){
         padding:  30px;

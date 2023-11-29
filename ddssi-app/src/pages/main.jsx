@@ -12,6 +12,7 @@ import AboutSection from './MainPage/Section/AboutSection/about-section'
 import ContactSection from './MainPage/Section/ContactSection/contact-section'
 import ScrollToTopButton from '../components/ScrollToTopButton/scroll-to-top-button'
 import AnySection from './MainPage/Section/AnySection/any-section'
+import { MainPageLinks } from './MainPage/Section/Footer/footer-data-links'
 
 const main = () => {
   return (
@@ -27,7 +28,7 @@ const main = () => {
       <WhyDDSSISection />
       <TestimonialSection/>
       <ContactSection />
-      <FooterSection />
+      <FooterSection links={MainPageLinks}/>
       <ScrollToTopButton />
     </>
   )

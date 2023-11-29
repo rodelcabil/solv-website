@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import bg from '../../../assets/banner.jpg';
+import bg from '../../../assets/addons-solution-img-2.jpg';
 import imgbg from '../../../assets/banner.jpg';
 
 export const MainContainer = styled.div`
@@ -61,8 +61,8 @@ export const Banner = styled.div`
     padding: 120px 60px;
     background: var(--bg-light);
     background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)), url(${bg});
-    background-size: cover;
-    height: calc(100vh - 90px);
+    background-size: 100% 100%;
+    height: 100vh;
 
     @media screen and (max-width: 910px){
         padding: 30px;

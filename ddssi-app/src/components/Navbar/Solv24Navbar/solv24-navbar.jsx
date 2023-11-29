@@ -19,7 +19,9 @@ import {
 } from './solv24-navbar-styles';
 import Logo from '/public/ddssi.png' 
 import SolvLogo from '../../../assets/solv_logo.png'
-import Solv24Logo from '../../../assets/solv.png'
+import Solv24Logo from '../../../assets/solvlogo.png'
+import SolvDeskLogo from '../../../assets/solvdesk-logo.png'
+
 const Solv24Navbar = () => {
 
     
@@ -90,10 +92,10 @@ const Solv24Navbar = () => {
                         <NavLogo to="/" onClick={closeMobileMenu} scrolled={scrollValue}>
                             <div className="logoContainer">
                                 <img src={Solv24Logo} className="logo" alt="Logo"/> 
-                                <div className='page-name-container'>
+                                {/* <div className='page-name-container'>
                                     <span className="text-[#BD3200] italic text-sm">SOLV</span>
                                     <span className="text-[#001E5A] text-lg ml-[-3px]">24</span> 
-                                </div>
+                                </div> */}
                                 {/* <FaLaptopCode size="40" color="#2988B4" /> */}
                                 {/* <span>PORTFOLIO</span> */}
                             </div>
@@ -124,8 +126,7 @@ const Solv24Navbar = () => {
                                 <NavItem>
                                     <NavLinks  exact to="/" onClick={closeMobileMenu}  activeClassName="active">
                                       <div className='flex items-center gap-1'>
-                                        <img src={SolvLogo} className="solv_logo" alt="Solv Logo"/>  
-                                        <span className='font-bold'>SOLV Desk</span>
+                                        <img src={SolvDeskLogo} className="solv_logo" alt="Solv Logo" />
                                       </div>
                                     </NavLinks>
                                 </NavItem>

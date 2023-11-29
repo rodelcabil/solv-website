@@ -1,5 +1,7 @@
 import styled from "styled-components"
 
+
+
 export const MainContainer = styled.div`
     
     padding: 120px 60px;
@@ -17,9 +19,9 @@ export const BodyContainer = styled.div`
     margin: auto;
     display: flex;
     align-items: stretch;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap; 
-    gap: 15px;
+    gap: 30px;
 
     @media screen and (max-width: 910px){
         
@@ -29,14 +31,11 @@ export const BodyContainer = styled.div`
 
 export const GridContainer = styled.div`
     
-    display: grid;
-    grid-template-rows: repeat(auto-fit, 1fr);
-    grid-template-columns: repeat(1, 1fr);
+    diplay: flex;
+    flex-direction: column;
     justify-content: center;
     align-content: center;
-    align-items: stretch;
+    align-items: start;
+    width: 100%;
 
-    @media screen and (max-width: 600px){
-        width: 100%;
-    }
 `;

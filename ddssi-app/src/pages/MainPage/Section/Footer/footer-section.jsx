@@ -1,21 +1,22 @@
 import React from 'react'
 import { BodyContainer, MainContainer, Row } from './footer-section-styles'
-import Logo from '/public/ddssi-logo.png'
+import Logo from '../../../../assets/ddssi-logo-white.png'
 import Map from '../../../../assets/map.png'
 import QR from '../../../../assets/QR.jpg'
 import {MdLocationPin,MdEmail,MdLocalPhone} from "react-icons/md"
 import { FaFacebook, FaInstagram, FaYoutube, FaLinkedin} from "react-icons/fa"
 import { PiInstagramLogoFill } from "react-icons/pi";
+import { NavLink } from 'react-router-dom'
 
-const FooterSection = () => {
+const FooterSection = ({links}) => {
     return (
         <MainContainer>
             <BodyContainer>
                 <Row>
                     <div className='flex flex-col items-start'>
                         <div className='flex items-center gap-2'>
-                            <img src={Logo} alt="Logo" className='logo' />
-                            <span className='text-white font-bold uppercase text-sm'>Digital Doors Software <br />Solutions Inc.</span>
+                            <img src={Logo} alt="Logo" className='footer-logo' />
+                            {/* <span className='text-white font-bold uppercase text-sm'>Digital Doors Software <br />Solutions Inc.</span> */}
                         </div>
                         <br />
                         <span className='text-[#7a7a7a] text-justify'>It is our goal to provide software that will address the needs of Micro, Small and Medium Enterprises (MSMEs) and help them take the leap to transform and elevate their business.</span>
@@ -25,12 +26,14 @@ const FooterSection = () => {
                     <div className='flex flex-col'>
                         <span className='text-white font-bold text-sm'>Site Links</span>
                         <br/>
-                        <a href="#home" className='no-underline mb-1 text-[#7a7a7a] cursor-pointer hover:text-white'>Home</a>
-                        <a href="#service" className='no-underline mb-1 text-[#7a7a7a] cursor-pointer hover:text-white'>Services</a>
-                        <a href="#solution" className='no-underline mb-1 text-[#7a7a7a] cursor-pointer hover:text-white'>Solutions</a>
-                        <a href="#about" className='no-underline mb-1 text-[#7a7a7a] cursor-pointer hover:text-white'>About</a>
-                        <a href="#testimonial" className='no-underline mb-1 text-[#7a7a7a] cursor-pointer hover:text-white'>Testimonials</a>
-                        <a href="#contact" className='no-underline mb-1 text-[#7a7a7a] cursor-pointer hover:text-white'>Contact Us</a>
+                        {
+                            links.map((item, key) => {
+                                return item.isNavLink ? 
+                                <NavLink key={key} to={item.link} className='no-underline mb-1 text-[#7a7a7a] cursor-pointer hover:text-white'>{item.name}</NavLink> 
+                                : 
+                                <a key={key} href={item.link} className='no-underline mb-1 text-[#7a7a7a] cursor-pointer hover:text-white'>{item.name}</a> 
+                            })
+                        }
                     </div>
                 </Row>
                 <Row>
@@ -54,7 +57,8 @@ const FooterSection = () => {
                     <div className='flex flex-col text-sm'>
                         <span className='text-white font-bold'>Company Information</span>
                         <br/>
-                        <a href="https://www.google.com/maps/place/4f,+201+Del+Monte+Ave,+Quezon+City,+Metro+Manila/@14.6399287,121.0115315,17z/data=!4m5!3m4!1s0x3397b65d9d961197:0xb1f012a4d154dbf5!8m2!3d14.6399287!4d121.0115315" target='_blank'><img src={Map} alt="DDSSI Location" className='map' /></a>
+                        {/* <a href="https://www.google.com/maps/place/4f,+201+Del+Monte+Ave,+Quezon+City,+Metro+Manila/@14.6399287,121.0115315,17z/data=!4m5!3m4!1s0x3397b65d9d961197:0xb1f012a4d154dbf5!8m2!3d14.6399287!4d121.0115315" target='_blank'><img src={Map} alt="DDSSI Location" className='map' /></a> */}
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3860.281972497848!2d121.0115315!3d14.6399287!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b65d9d961197%3A0xb1f012a4d154dbf5!2s4f%2C%20201%20Del%20Monte%20Ave%2C%20Quezon%20City%2C%20Metro%20Manila!5e0!3m2!1sen!2sph!4v1701218319213!5m2!1sen!2sph" width="300" height="200" style={{border:0}} loading="lazy" />   
                         <br/>
                         <div className='flex items-center gap-4 mb-2'>
                             <MdLocationPin size="35" className='text-[#7a7a7a]'/>

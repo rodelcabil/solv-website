@@ -114,7 +114,7 @@ export const TextAreaMessage = styled.textarea`
         border-radius: 5px;
         resize: none;
         height: 150px;
-        background: ${({ theme }) => theme.secondaryBg} !important;
+        background: var(--bg-light);
         color: ${({ theme }) => theme.color} !important;
         transition: ${({ theme }) => theme.transition} !important;
         font-size: 14px;

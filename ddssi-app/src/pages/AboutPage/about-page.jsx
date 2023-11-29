@@ -9,6 +9,14 @@ import OrlyCuartero from '../../assets/orly-cuartero.jpg'
 import HarryDeLeon from '../../assets/harry-de-leon.jpg'
 import ManagementCard from '../../components/ManagementCard/management-card'
 import ScrollDownButton from '../../components/ScrolldownButton/scroll-down-button'
+import AccenthubImg from '../../assets/accenthub.jpg'
+import BewellImg from '../../assets/bewell.png'
+import HopewellImg from '../../assets/hopewell.png'
+import MaxvisionImg from '../../assets/maxvision.png'
+import ThinkerboxImg from '../../assets/thinkerbox.jpg'
+import CatpcImg from '../../assets/catpc.jpg'
+import Marquee from "react-fast-marquee";
+import { OtherLinks } from '../MainPage/Section/Footer/footer-data-links'
 
 const AboutPage = () => {
   return (
@@ -48,7 +56,7 @@ const AboutPage = () => {
         <BodyContainer>
           <div className='flex flex-col w-full'>
             <p className='text-4xl text-[#1595FF] font-normal text-center'>Our Management</p><br />
-            <div className='management-card-container flex items-center justify-center gap-5 flex-wrap'>
+            <div className='management-card-container flex items-center justify-center flex-wrap'>
               <div data-aos="fade-up" data-aos-delay="100">
                 <ManagementCard img={OrlyCuartero} name="Melchor Cuartero" position="President & Chief Executive Officer" />
               </div>
@@ -70,9 +78,24 @@ const AboutPage = () => {
               their business operates.</span>
           </div>
         </GoalContainer>
+        {/* <BodyContainer>
+          <div className='flex flex-col w-full'>
+            <p className='text-4xl text-[#1595FF] font-normal text-center'>Trusted by</p><br /><br /><br />
+              <Marquee gradient="true">
+                <div className='flex gap-10 items-center justify-center flex-wrap'>
+                  <img src={AccenthubImg} className='h-[100px]' />
+                  <img src={BewellImg} className='h-[50px]' />
+                  <img src={HopewellImg} className='h-[100px]' />
+                  <img src={MaxvisionImg} className='h-[50px]' />
+                  <img src={ThinkerboxImg} className='h-[100px]' />
+                  <img src={CatpcImg} className='h-[100px]' />
+                </div>
+              </Marquee>
+          </div>
+        </BodyContainer> */}
       </MainContainer>
       <ContactSection />
-      <FooterSection />
+      <FooterSection links={OtherLinks}/>
     </>
   )
 }

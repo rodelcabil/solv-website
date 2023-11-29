@@ -11,6 +11,7 @@ import CustomCard from '../../../components/CustomCard/custom-card'
 import ScrollToTopButton from '../../../components/ScrollToTopButton/scroll-to-top-button'
 import ScrollDownButton from '../../../components/ScrolldownButton/scroll-down-button'
 import Solv24Navbar from '../../../components/Navbar/Solv24Navbar/solv24-navbar'
+import { Solv24Links } from '../../MainPage/Section/Footer/footer-data-links'
 
 const Custom = () => {
     return (
@@ -51,7 +52,7 @@ const Custom = () => {
                 </div>
             </MainContainer>
             <ContactSection />
-            <FooterSection />
+            <FooterSection links={Solv24Links}/>
             <ScrollToTopButton />
         </>
     )

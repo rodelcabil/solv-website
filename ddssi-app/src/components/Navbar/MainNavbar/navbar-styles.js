@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { NavLink, Link } from 'react-router-dom';
 import { FaMagento } from 'react-icons/fa';
 import { Container } from '../../../globalStyles';
-
+import { NavHashLink  } from 'react-router-hash-link';
 
 export const Nav = styled.nav`
 background: ${({ scrolled }) => (scrolled === 1 ? 'var(--bg-light-blur)' : 'var(--bg-light)' )};
@@ -58,8 +58,7 @@ align-items: center;
     gap: 15px;
 
     .logo{
-        height: 40px;
-        width: 40px;
+        width: 150px;
     }
 
     h5{
@@ -76,8 +75,8 @@ align-items: center;
     span{
         color: #343434;
         text-transform: uppercase;
-        font-weight: bold;
-        font-size: 14px;
+        font-weight: semibold;
+        font-size: 18px;
         display: ${({ scrolled }) => (scrolled === 1 ? 'none' : 'flex')};
 
         @media screen and (max-width: 1100px){
@@ -165,7 +164,7 @@ text-align: center;
 
 export const NavItem = styled.li`
 height: 60px;
-display: inline-block;
+display: flex;
 text-align: center;
 
 /* 
@@ -178,7 +177,6 @@ text-align: center;
 
 .isInActive{
     color: var(--text-secondary);
-   
 }
 
 .isActive{
@@ -187,13 +185,11 @@ text-align: center;
 
 @media screen and (max-width: 1100px){
     width: 100%;
-    /* &:hover{
-        border: none;
-    } */
+    
 }
 `;
 
-export const NavLinks = styled.a`
+export const HashLinks = styled(NavHashLink)`
 
 display: flex;
 align-items: center;
@@ -207,8 +203,7 @@ color:  var(--text-secondary);
 
 
 .solv_logo{
-    height: 30px;
-    width: 30px;
+    height: 20px;
 }
 
 &:hover{

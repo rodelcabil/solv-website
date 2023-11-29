@@ -17,8 +17,10 @@ import {
     NavItemBtn2,
 
 } from './other-nav-styles';
-import Logo from '/public/ddssi.png' 
+import Logo from '../../../assets/ddssi-logo-black.png'
 import SolvLogo from '../../../assets/solv_logo.png'
+import SolvDeskLogo from '../../../assets/solvdesk-logo.png'
+
 const OtherNavbar = () => {
 
     
@@ -105,8 +107,7 @@ const OtherNavbar = () => {
                                 <NavItem>
                                     <NavLinks  exact to="/" onClick={closeMobileMenu}  activeClassName="active">
                                       <div className='flex items-center gap-1'>
-                                        <img src={SolvLogo} className="solv_logo" alt="Solv Logo"/>  
-                                        <span className='font-bold'>SOLV Desk</span>
+                                        <img src={SolvDeskLogo} className="solv_logo" alt="Solv Logo" />
                                       </div>
                                     </NavLinks>
                                 </NavItem>

@@ -2,6 +2,7 @@ import React from 'react'
 import { BodyContainer, MainContainer } from './hero-section-styles'
 import SolvSuite from "../../../../assets/solv-suite.png"
 
+
 const HeroSection = () => {
   return (
     <MainContainer>

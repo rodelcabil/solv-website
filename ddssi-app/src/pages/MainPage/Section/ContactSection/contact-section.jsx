@@ -40,7 +40,7 @@ const ContactSection = () => {
 
     return (
         <MainContainer id="contact">
-            <p className='absolute hidden' id="contact">test</p>
+           
             <BodyContainer>
                 <div className='flex flex-col  left-container'>
                     <div data-aos="zoom-in" className='flex flex-col '>

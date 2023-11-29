@@ -8,12 +8,12 @@ import { Container } from '../../../globalStyles';
 export const Nav = styled.nav`
 ${'' /* background: rgb(4, 10, 14, 0.9); */}
 ${'' /*background:  ${({ theme, scrolled }) => (scrolled ? theme.navBg : 'none' )};*/}
-background: ${({ scrolled }) => (scrolled === 1 ? 'var(--bg-light-blur)' : 'var(--bg-light)' )};
+background: ${({ scrolled }) => (scrolled === 1 ? 'var(--bg-light-blur)' : 'transparent' )};
 display: flex
 align-items: center;
 font-size: 16px;
 top: 0;
-position: sticky !important;
+position: fixed;
 -webkit-position: -webkit-sticky !important;
 z-index: 999;
 width: 100%;
@@ -64,10 +64,7 @@ align-items: center;
     align-items: center;
     gap: 10px;
 
-    .logo{
-        height: 50px;
-        width: 60px;
-    }
+    
 
     h5{
         color: #fff;
@@ -91,13 +88,12 @@ align-items: center;
 
     @media screen and (max-width: 910px){
        
-   
     }
 }
 
 .logo{
     height: 30px;
-    width: 50px;
+    width: 110px;
 }
 
 &:hover{
@@ -226,8 +222,7 @@ color:  var(--text-secondary);
 
 
 .solv_logo{
-    height: 30px;
-    width: 30px;
+    height: 20px;
 }
 
 &:hover{

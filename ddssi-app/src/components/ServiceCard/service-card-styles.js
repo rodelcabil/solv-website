@@ -15,19 +15,27 @@ export const MainContainer = styled.div`
     padding: 30px;
 
     .img-banner{
-        position: absolute;
         border-radius: 8px;
-        top: -30%;
-        
+        position: absolute;
+        top: -25%;
         display: flex;
-        flex: 1;
-        width: 300px;
-        height: 230px;
+        height: 200px;
+        width: 340px;
+        min-height: 200px;
         // border-top-left-radius: 16px;
         // border-top-right-radius: 16px;
+
+        @media screen and (max-width: 500px){
+            position: static;
+            margin-top: -100px;
+
+            
+        }
     }
 
-    @media screen and (max-width: 450px){
+    
+
+    @media screen and (max-width: 500px){
         width: 100%;
 
         .service-title{
@@ -40,6 +48,10 @@ export const MainContainer = styled.div`
         .service-button{
             font-size: 14px;
             padding: 6px 10px;
+        }
+
+        .details-div{
+            margin-top: 30px;
         }
     }
 `;

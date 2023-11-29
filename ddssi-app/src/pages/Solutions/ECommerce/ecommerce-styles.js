@@ -4,6 +4,10 @@ import bg from '../../../assets/banner.jpg';
 export const MainContainer = styled.div`
     padding: 60px;
     background: var(--bg-light);
+
+    @media screen and (max-width: 1200px){
+        padding: 0px;
+    }
 `;
 
 
@@ -18,6 +22,12 @@ export const Banner = styled.div`
     background-image: linear-gradient(rgba(0, 0, 0, 0.6),
                     rgba(0, 0, 0, 0.7)), url(${bg});
     background-size: cover;
+    height: calc(100vh + 90px);
+
+    @media screen and (max-width: 910px){
+        padding: 30px;
+        height: calc(100vh - 60px);
+    }
 `;
 
 export const BodyContainer = styled.div`
@@ -26,4 +36,9 @@ export const BodyContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media screen and (max-width: 910px){
+        flex-direction: column-reverse;
+        padding: 0px 30px;
+    }
 `;

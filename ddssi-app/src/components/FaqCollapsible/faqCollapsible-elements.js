@@ -12,6 +12,7 @@ export const FAQCollapsibleContainer = styled.div`
     margin: auto;
     flex-direction: column;
     margin-bottom: 10px;
+   
 
     .header{
         display: flex;
@@ -21,7 +22,8 @@ export const FAQCollapsibleContainer = styled.div`
         border-bottom: ${({ click, theme }) => (click ? theme.borderBottom : 'none')};
         padding: 15px 0;
         cursor: pointer;
-
+        gap: 15px;
+        
         h5{
             margin: 0;
             color: ${({ click, theme }) => (click ? '#2988B4' : theme.color)};

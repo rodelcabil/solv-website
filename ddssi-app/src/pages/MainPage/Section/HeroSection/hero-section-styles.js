@@ -47,6 +47,7 @@ export const BodyContainer = styled.div`
         .sub-header{
             text-align: center;
             line-height: 28px;
+            font-family: cursive;
         }
     }
 `;

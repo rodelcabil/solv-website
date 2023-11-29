@@ -4,10 +4,11 @@ import { MainContainer } from './management-card-styles'
 const ManagementCard = ({img, name, position}) => {
   return (
     <MainContainer>
-        <img src={img} height="300"/>
-        <br/>
-        <p className='text-[#343434] font-bold'>{name}</p>
-        <span className='text-[#7A7A7A] text-center'>{position}</span>
+        <img src={img}/>
+        <div className='details-container absolute bottom-0 left-0 p-3'>
+          <p className='text-[#fff] font-semibold'>{name}</p>
+          <span className='text-[#e3e3e3] text-center'>{position}</span>
+        </div>
     </MainContainer>
   )
 }

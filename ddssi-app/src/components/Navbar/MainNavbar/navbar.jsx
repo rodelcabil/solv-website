@@ -13,12 +13,12 @@ import {
     MobileIcon,
     NavMenu,
     NavItem,
-    NavLinks,
+    HashLinks,
     NavItemBtn2,
 
 } from './navbar-styles';
-import Logo from '/public/ddssi-logo.png'
-import SolvLogo from '../../../assets/solv_logo.png'
+import Logo from '../../../assets/ddssi-logo-black.png'
+import SolvDeskLogo from '../../../assets/solvdesk-logo.png'
 const Navbar = () => {
 
 
@@ -38,20 +38,20 @@ const Navbar = () => {
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 50) {
-              setScrolled(true);
+                setScrolled(true);
             } else {
-              setScrolled(false);
+                setScrolled(false);
             }
-          };
-      
-          // Attach the event listener
-          window.addEventListener('scroll', handleScroll);
-      
-          // Detach the event listener when the component is unmounted
-          return () => {
+        };
+
+        // Attach the event listener
+        window.addEventListener('scroll', handleScroll);
+
+        // Detach the event listener when the component is unmounted
+        return () => {
             window.removeEventListener('scroll', handleScroll);
-          };
-     
+        };
+
     }, [scrolled]);
 
     const scrollValue = scrolled ? 1 : 0;
@@ -72,6 +72,11 @@ const Navbar = () => {
     const activeTestimonial = () => setActive(false, false, false, false, true, false);
     const activeContact = () => setActive(false, false, false, false, false, true);
 
+    const scrollWithOffset = (el) => {
+        const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+        const yOffset = -60;
+        window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' });
+    }
 
     return (
 
@@ -79,7 +84,7 @@ const Navbar = () => {
             <style type="text/css">{`
                 .active{
                     color: #1595FF;
-                    font-weight: 600;
+                    font-weight: 500;
                     border-radius: 5px;
                 }
                 
@@ -113,7 +118,8 @@ const Navbar = () => {
                         <NavLogo to="/" onClick={closeMobileMenu} scrolled={scrollValue}>
                             <div className="logoContainer">
                                 <img src={Logo} className="logo" alt="Logo" />
-                                <span>Digital Doors Software <br />Solutions Inc.</span>
+
+                                {/* <span>Digital Doors Software <br />Solutions Inc.</span> */}
 
                                 {/* <FaLaptopCode size="40" color="#2988B4" /> */}
                                 {/* <span>PORTFOLIO</span> */}
@@ -125,30 +131,30 @@ const Navbar = () => {
                         <div>
                             <NavMenu onClick={handleClick} click={click}>
                                 <NavItem >
-                                    <NavLinks href="#home" onClick={activeHome} className={homeActive ? "isActive" : "isInActive"}>Home</NavLinks>
+                                    <HashLinks to="/#home" smooth onClick={activeHome} className={homeActive ? "isActive" : "isInActive"} scroll={el => scrollWithOffset(el)}>Home</HashLinks>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLinks href="#service" onClick={activeService} className={serviceActive ? "isActive" : "isInActive"}>Services</NavLinks>
+                                    <HashLinks to="/#service" smooth onClick={activeService} className={serviceActive ? "isActive" : "isInActive"} scroll={el => scrollWithOffset(el)}>Services</HashLinks>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLinks href="#solution" onClick={activeSolution} className={solutionActive ? "isActive" : "isInActive"}>Solutions</NavLinks>
+                                    <HashLinks to="/#solution" smooth onClick={activeSolution} className={solutionActive ? "isActive" : "isInActive"} scroll={el => scrollWithOffset(el)}>Solutions</HashLinks>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLinks href="#about" onClick={activeAbout} className={aboutActive ? "isActive" : "isInActive"}>About</NavLinks>
+                                    <HashLinks to="/#about" smooth onClick={activeAbout} className={aboutActive ? "isActive" : "isInActive"} scroll={el => scrollWithOffset(el)}>About</HashLinks>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLinks href="#testimonial" onClick={activeTestimonial} className={testimonialActive ? "isActive" : "isInActive"}>Testimonials</NavLinks>
+                                    <HashLinks to="/#testimonial" smooth onClick={activeTestimonial} className={testimonialActive ? "isActive" : "isInActive"} scroll={el => scrollWithOffset(el)}>Testimonials</HashLinks>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLinks href="#contact" onClick={activeContact} className={contactActive ? "isActive" : "isInActive"}>Contact Us</NavLinks>
+                                    <HashLinks to="/#contact" smooth onClick={activeContact} className={contactActive ? "isActive" : "isInActive"} scroll={el => scrollWithOffset(el)}>Contact Us</HashLinks>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLinks href="http://solvdesk.digitaldoorssoftware.com:8023/" target="_blank" >
+                                    <HashLinks to="http://solvdesk.digitaldoorssoftware.com:8023/" target="_blank" >
                                         <div className='flex items-center gap-1'>
-                                            <img src={SolvLogo} className="solv_logo" alt="Solv Logo" />
-                                            <span className='font-bold'>SOLV Desk</span>
+                                            <img src={SolvDeskLogo} className="solv_logo" alt="Solv Logo" />
+                                            {/* <span className='font-bold'>SOLV Desk</span> */}
                                         </div>
-                                    </NavLinks>
+                                    </HashLinks>
                                 </NavItem>
                             </NavMenu>
                         </div>

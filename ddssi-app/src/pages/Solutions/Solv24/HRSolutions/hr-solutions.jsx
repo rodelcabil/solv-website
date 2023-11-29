@@ -9,6 +9,7 @@ import ContactSection from '../../../MainPage/Section/ContactSection/contact-sec
 import TitleComponent from '../../../../components/Title/title'
 import DescriptionComponent from '../../../../components/Description/description'
 import ScrollToTopButton from '../../../../components/ScrollToTopButton/scroll-to-top-button'
+import { Solv24Links } from '../../../MainPage/Section/Footer/footer-data-links'
 
 const HRSolutions = () => {
     return (
@@ -41,6 +42,8 @@ const HRSolutions = () => {
                         <img src={HRSolution} className='item-img absolute' alt="" />
                     </div>
                 </BodyContainer>
+                <br/><br/><br/><br/>
+                <iframe className='w-full rounded' width="641" height="600" src="https://www.youtube.com/embed/F-Pa-rxIstg" title="What is Hr Solution?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 <br/><br/>
                 <div className='flex flex-col py-10 max-w-[1500px] m-auto'>
                     <span className='text-2xl font-normal text-[#343434]'>HR Solution Frequently Asked Questions</span>
@@ -59,7 +62,7 @@ const HRSolutions = () => {
                 </div> 
             </MainContainer>
             <ContactSection/>
-            <FooterSection/>
+            <FooterSection links={Solv24Links}/>
             <ScrollToTopButton />
         </>
     )

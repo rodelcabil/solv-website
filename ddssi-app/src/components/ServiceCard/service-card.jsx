@@ -6,8 +6,7 @@ const ServiceCard = ({title, description, icon, color}) => {
     return (
        <MainContainer>
             <img src={icon} className='img-banner'/>
-            <br/><br/><br/><br/>
-            <div className='mt-2'>
+            <div className='details-div mt-[100px]'>
                 <Title className='service-title text-lg font-bold text-[#343434]'  color={color}>{title}</Title>
                 <br/><br/>
                 <span className='service-description text-[#7a7a7a]'>{description}</span>
