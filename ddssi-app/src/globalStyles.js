@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
         --bg-dark: #343434;
         --text-primary: #343434;
         --text-secondary: #7A7A7A;
+        --text-light: #fff;
     }
 
     *{

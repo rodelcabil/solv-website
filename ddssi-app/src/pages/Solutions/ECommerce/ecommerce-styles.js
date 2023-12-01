@@ -21,12 +21,11 @@ export const Banner = styled.div`
     background: var(--bg-light);
     background-image: linear-gradient(rgba(0, 0, 0, 0.6),
                     rgba(0, 0, 0, 0.7)), url(${bg});
-    background-size: cover;
+    background-size: 100% 100%;
     height: calc(100vh + 90px);
 
     @media screen and (max-width: 910px){
         padding: 30px;
-        height: calc(100vh - 60px);
     }
 `;
 

@@ -33,7 +33,7 @@ const Navbar = () => {
     const [solutionActive, setSolutionActive] = useState(false);
     const [testimonialActive, setTestimonialActive] = useState(false);
     const [contactActive, setContactActive] = useState(false);
-
+    const [demoActive, setDemoActive] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -55,22 +55,24 @@ const Navbar = () => {
     }, [scrolled]);
 
     const scrollValue = scrolled ? 1 : 0;
-    const setActive = (home, about, service, solution, testimonial, contact) => {
+    const setActive = (home, about, service, solution, testimonial, contact, demo) => {
         setHomeActive(home);
         setAboutActive(about);
         setServiceActive(service);
         setSolutionActive(solution);
         setTestimonialActive(testimonial);
         setContactActive(contact);
+        setDemoActive(demo);
         closeMobileMenu();
     };
 
-    const activeHome = () => setActive(true, false, false, false, false, false);
-    const activeAbout = () => setActive(false, true, false, false, false, false);
-    const activeService = () => setActive(false, false, true, false, false, false);
-    const activeSolution = () => setActive(false, false, false, true, false, false);
-    const activeTestimonial = () => setActive(false, false, false, false, true, false);
-    const activeContact = () => setActive(false, false, false, false, false, true);
+    const activeHome = () => setActive(true, false, false, false, false, false, false);
+    const activeAbout = () => setActive(false, true, false, false, false, false, false);
+    const activeService = () => setActive(false, false, true, false, false, false, false);
+    const activeSolution = () => setActive(false, false, false, true, false, false, false);
+    const activeTestimonial = () => setActive(false, false, false, false, true, false, false);
+    const activeContact = () => setActive(false, false, false, false, false, true, false);
+    const activeDemo = () => setActive(false, false, false, false, false, false,true);
 
     const scrollWithOffset = (el) => {
         const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
@@ -96,7 +98,6 @@ const Navbar = () => {
                     .active{
                         color: #fff;   
                         border-top:0;
-                        background: #2988B4;
                         padding-top: 15px;
                         border-radius: 0px;
                     }
@@ -138,6 +139,9 @@ const Navbar = () => {
                                 </NavItem>
                                 <NavItem>
                                     <HashLinks to="/#solution" smooth onClick={activeSolution} className={solutionActive ? "isActive" : "isInActive"} scroll={el => scrollWithOffset(el)}>Solutions</HashLinks>
+                                </NavItem>
+                                <NavItem>
+                                    <HashLinks to="/#product-demo" smooth onClick={activeDemo} className={demoActive ? "isActive" : "isInActive"} scroll={el => scrollWithOffset(el)}>Product Demo</HashLinks>
                                 </NavItem>
                                 <NavItem>
                                     <HashLinks to="/#about" smooth onClick={activeAbout} className={aboutActive ? "isActive" : "isInActive"} scroll={el => scrollWithOffset(el)}>About</HashLinks>

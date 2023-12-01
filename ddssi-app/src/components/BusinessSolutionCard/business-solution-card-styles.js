@@ -23,21 +23,24 @@ export const BodyContainer = styled.div`
     flex-direction: column;
     align-items: left;
     border-radius: 10px;
-    padding: 15px;
-    gap: 20px;
-
+    border: 1px solid #e3e3e3;
+    
     img{
         width: 100%;
         height: 240px;
-        border-radius: 5px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
     }
 
     .desciption{
         max-width: 400px;
     }
 
+    
     &:hover{
         background: #f2f2f2;
+        transition: all 0.5s ease;
+        transform: translateY(-5px);
     }
 
     @media screen and (max-width: 900px){

@@ -171,7 +171,7 @@ text-align: center;
     }
 }
 
-@media screen and (max-width: 1100px){
+@media screen and (max-width: 1200px){
     display: ${({ click }) => (click ? 'flex' : 'none')} ; 
     flex-direction: column;
     width: 100%;
@@ -192,19 +192,19 @@ height: 60px;
 display: inline-block;
 text-align: center;
 
-/* 
-&:hover{ 
-    background: #FEEAE8;
-    color:#fff;
-    ;
+
+// &:hover{ 
+//     background: #FEEAE8;
+//     color:#fff;
+//     ;
     
-} */
+// } 
 
 @media screen and (max-width: 1200px){
     width: 100%;
-    /* &:hover{
-        border: none;
-    } */
+    //  &:hover{
+    //     border: none;
+    // } 
 }
 `;
 
@@ -218,7 +218,8 @@ height: 100%;
 font-weight: 500;
 font-size: 14px;
 transition: ${({ theme }) => theme.transition};
-color:  var(--text-secondary);
+// color: ${({ scrolled }) => (scrolled === 1 ? 'var(--text-secondary)' : 'var(--text-light)')}; 
+color: var(--text-secondary);
 
 
 .solv_logo{
@@ -226,7 +227,8 @@ color:  var(--text-secondary);
 }
 
 &:hover{
-    color: var(--text-primary);
+   // color: ${({ scrolled }) => (scrolled === 1 ? 'var(--text-dark)' : '#cccccc')}
+   color: var(--text-dark);
 }
 
 

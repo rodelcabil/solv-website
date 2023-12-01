@@ -10,7 +10,7 @@ export const MainContainer = styled.div`
 `;
 
 export const BodyContainer = styled.div`
-margin: auto;
+    margin: auto;
     max-width: 1500px;
     display: grid;
     grid-template-rows: repeat(auto-fit, 1fr);
@@ -18,7 +18,7 @@ margin: auto;
     // justify-content: center;
     align-content: center;
     align-items: stretch;
-
+    gap: 15px;
     @media screen and (max-width: 1200px){
         grid-template-columns: repeat(2, auto);
     }

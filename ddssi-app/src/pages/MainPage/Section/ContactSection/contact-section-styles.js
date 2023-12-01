@@ -1,10 +1,11 @@
 import styled from "styled-components"
 import bg from '../../../../assets/contact.jpg';
+import { Link } from "react-router-dom";
 
 export const MainContainer = styled.div`
     
-    background: var(--bg-light);
-    position: relative;
+background: rgb(0,64,170);
+background: linear-gradient(56deg, rgba(0,64,170,1) 0%, rgba(21,149,255,1) 89%, rgba(21,149,255,1) 100%);
 `;
 
 export const BodyContainer = styled.div`
@@ -13,26 +14,21 @@ export const BodyContainer = styled.div`
     max-width: 1500px;
     margin: auto;
     align-items: stretch; 
-    justify-content: space-between;
+    justify-content: center;
     height: 100%;
+    padding: 120px 60px;
 
     .left-container{
         
         justify-content: center;
         padding: 120px 60px;
         background: var(--bg-light);
-        background-image: linear-gradient(rgba(0, 0, 0, 0.6),
-                        rgba(0, 0, 0, 0.7)), url(${bg});
-        background-size: cover;
-    }
-
-    .right-container{
-        padding: 60px;
-        min-width: 40%;
+        
     }
 
     @media screen and (max-width: 600px){
         flex-direction: column;
+        padding: 30px;
 
         .left-container{
             padding: 100px 30px 100px 30px;
@@ -73,55 +69,20 @@ export const BodyContainer = styled.div`
 `;
 
 
-export const SubmitButton = styled.button`
-    
-    background: var(--bg-dark);
+export const GetInTouchButton = styled(Link)`
+
+    background: var(--bg-primary);
     padding: 8px 20px;
-    color: white;
     display: flex;
+    align-items: center;
     justify-content: center;
-    border-radius: 4px;
+    color: var(--text-light);
+    width: fit-content;
+    margin: auto;
+    border-radius: 100px;
     cursor: pointer;
-    width: 100%;
 
     &:hover{
-        background: #404040;
+        background: #008cff;
     }
-`;
-
-
-export const TextInput = styled.input`
-    width: 100%;
-    padding: 6px 8px;
-    border: ${({ hasError, theme }) => (hasError === undefined ? 'none' : "2px solid red")};
-    border-radius: 5px;
-    background: var(--bg-light);
-    color: ${({ theme }) => theme.color} !important;
-    transition: ${({ theme }) => theme.transition} !important;
-    font-size: 14px;
-
-    &:focus{
-        
-        box-shadow: ${({ hasError }) => (hasError === undefined ? '0 0 0 2px rgba(24, 144, 255, .2)' : '0 0 0 2px rgba(255, 77, 79, .2)')};
-        outline: none;
-    }
-`;
-
-export const TextAreaMessage = styled.textarea`
-        width: 100%;
-        padding: 12px 8px;
-        border: ${({ messageHasError, theme }) => (messageHasError === undefined ? 'none' : "2px solid #990000")};
-        border-radius: 5px;
-        resize: none;
-        height: 150px;
-        background: var(--bg-light);
-        color: ${({ theme }) => theme.color} !important;
-        transition: ${({ theme }) => theme.transition} !important;
-        font-size: 14px;
-        
-        &:focus{
-            box-shadow: ${({ messageHasError }) => (messageHasError === undefined ? '0 0 0 2px rgba(24, 144, 255, .2)' : '0 0 0 2px rgba(255, 77, 79, .2)')} ;
-            outline: none;
-        }
-
-`;
+`

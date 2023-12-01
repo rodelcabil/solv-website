@@ -18,14 +18,54 @@ const AnySection = () => {
             </div>
             <br /><br /><br />
             <GridContainer>
-                <img src={macbook} />
-                <img src={beach} />
-                <img src={ipadv3} />
-                <img src={pcsolv} />
-                <img src={party} />
-                <img src={ipadv4} />
-                <img src={conference} />
-                <img src={imacsolv} />
+                <div className="container">
+                    <img src={macbook} />
+                    <div className="overlay">
+                        <div className="text-white">Using a laptop</div>
+                    </div>
+                </div>
+                <div className="container">
+                    <img src={beach} />
+                    <div className="overlay">
+                        <div className="text-white">While having a vacation</div>
+                    </div>
+                </div>
+                <div className="container">
+                    <img src={ipadv3} />
+                    <div className="overlay">
+                        <div className="text-white">Using a tablet</div>
+                    </div>
+                </div>
+                <div className="container">
+                    <img src={pcsolv} />
+                    <div className="overlay">
+                        <div className="text-white">Using a computer</div>
+                    </div>
+                </div>
+                <div className="container">
+                    <img src={party} />
+                    <div className="overlay">
+                        <div className="text-white">At the party</div>
+                    </div>
+                </div>
+                <div className="container">
+                    <img src={ipadv4} />
+                    <div className="overlay">
+                        <div className="text-white">Using an Ipad</div>
+                    </div>
+                </div>
+                <div className="container">
+                    <img src={conference} />
+                    <div className="overlay">
+                        <div className="text-white">At the conference</div>
+                    </div>
+                </div>
+                <div className="container">
+                    <img src={imacsolv} />
+                    <div className="overlay">
+                        <div className="text-white">Using a mac computer</div>
+                    </div>
+                </div>
             </GridContainer>
         </MainContainer>
 

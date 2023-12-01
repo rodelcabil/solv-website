@@ -8,7 +8,7 @@ const WhyDDSSISection = () => {
       <BodyContainer>
         <div className='flex flex-col'>
           <span className='text-4xl text-[#343434] font-normal text-center'>Why DDSSI?</span>
-          <span className='text-1xl text-[#7A7A7A] font-normal text-center'>Reasons why our company chose us.</span>
+          <span className='text-1xl text-[#7A7A7A] font-normal text-center'>Reasons why our clients chose us.</span>
         </div>
       </BodyContainer>
       <br /><br />

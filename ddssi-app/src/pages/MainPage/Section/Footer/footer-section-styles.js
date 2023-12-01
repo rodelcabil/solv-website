@@ -2,16 +2,22 @@ import styled from 'styled-components';
 import { responsive } from '../../../../globalStyles';
 
 export const MainContainer = styled.div`  
-    padding: 60px;
+    
     background: var(--bg-dark);
     
     .footer-text{
         width: max-content;
     }
 
-    @media screen and (max-width: 910px){
-        padding: 30px;
+
+    .copyright-container{
+        @media screen and (max-width: 600px){
+            flex-direction: column;
+            padding: 20px;
+        }
     }
+
+    
 `;
 
 export const BodyContainer = styled.div`
@@ -22,6 +28,7 @@ export const BodyContainer = styled.div`
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 15px;
+    padding: 60px;
     
     .footer-logo{
        
@@ -30,7 +37,9 @@ export const BodyContainer = styled.div`
 
     @media screen and (max-width: 600px){
      
-        flex-direction: column-reverse;
+        flex-direction: column;
+        padding: 10px;
+        flex-wrap: nowrap;
      }
     
 `;
@@ -46,15 +55,23 @@ export const Row = styled.div`
         width: 40px;
     }
 
-    .map{
+    .google-map{
         height: 200px;
         width: 300px;
+
+        @media screen and (max-width: 600px){
+     
+            width: 100%;
+            
+         }
     }
     
     @media screen and (max-width: 600px){
      
-       width: 100%;
+        max-width: 100%;
        justify-content: center;
        align-items: center;
     }
+
+   
 `;

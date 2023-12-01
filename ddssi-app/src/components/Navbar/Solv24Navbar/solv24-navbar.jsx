@@ -70,7 +70,6 @@ const Solv24Navbar = () => {
                     .active{
                         color: #fff;   
                         border-top:0;
-                        background: #2988B4;
                         padding-top: 15px;
                         border-radius: 0px;
                     }
@@ -106,13 +105,13 @@ const Solv24Navbar = () => {
                         <div>
                             <NavMenu onClick={handleClick} click={click}>
                                 <NavItem >
-                                    <NavLinks exact to="/" onClick={closeMobileMenu} activeClassName="active">Home</NavLinks>
+                                    <NavLinks exact to="/"  onClick={closeMobileMenu} activeClassName="active">Home</NavLinks>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLinks exact to="/solution/solv-24/sales-and-inventory" onClick={closeMobileMenu} activeClassName="active">Sales and Inventory System</NavLinks>
+                                    <NavLinks exact to="/solution/solv-24/sales-and-inventory"  onClick={closeMobileMenu} activeClassName="active">Sales and Inventory System</NavLinks>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLinks  exact to="/solution/solv-24/hr-solutions" onClick={closeMobileMenu} activeClassName="active">HR Solutions</NavLinks>
+                                    <NavLinks  exact to="/solution/solv-24/hr-solutions"  onClick={closeMobileMenu} activeClassName="active">HR Solutions</NavLinks>
                                 </NavItem>
                                 <NavItem>
                                     <NavLinks  exact to="/solution/solv-24/point-of-sale" onClick={closeMobileMenu} activeClassName="active">Point Of Sales</NavLinks>
@@ -121,7 +120,7 @@ const Solv24Navbar = () => {
                                     <NavLinks  exact to="/solution/add-ons" onClick={closeMobileMenu} activeClassName="active">Add-ons</NavLinks>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLinks  exact to="/solution/custom" onClick={closeMobileMenu} activeClassName="active">Custom</NavLinks>
+                                    <NavLinks  exact to="/solution/custom"  onClick={closeMobileMenu} activeClassName="active">Custom</NavLinks>
                                 </NavItem>
                                 <NavItem>
                                     <NavLinks  exact to="/" onClick={closeMobileMenu}  activeClassName="active">

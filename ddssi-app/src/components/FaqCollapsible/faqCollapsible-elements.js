@@ -4,7 +4,6 @@ export const FAQCollapsibleContainer = styled.div`
     background: #F2F2F2;
     transition: all 0.5s ease !important;
     padding: 0 20px;
-    border: ${({ theme }) => theme.border};
     align-items: stretch;
     border-radius: 5px;
     display: flex;
@@ -23,7 +22,7 @@ export const FAQCollapsibleContainer = styled.div`
         padding: 15px 0;
         cursor: pointer;
         gap: 15px;
-        
+
         h5{
             margin: 0;
             color: ${({ click, theme }) => (click ? '#2988B4' : theme.color)};
@@ -63,6 +62,9 @@ export const FAQCollapsibleContainer = styled.div`
         
     }
 
+    &:hover{
+        background: #e2e2e2;
+    }
 
 
     @media screen and (max-width: 1400px){

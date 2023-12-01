@@ -43,7 +43,7 @@ export const LearnMoreButton = styled(NavLink)`
     align-items: center;
     background: var(--bg-primary);
     width: fit-content;
-    padding: 6px 40px;
+    padding: 10px 40px;
     color: white;
     border-radius: 50px;
     font-size: 14px;

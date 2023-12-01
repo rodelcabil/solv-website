@@ -18,6 +18,9 @@ import 'aos/dist/aos.css';
 import Custom from './pages/Solutions/Custom/custom';
 import WarrantySecurity from './pages/WarrantySecurity/warranty-security';
 import TermsOfUse from './pages/TermsOfUse/terms-of-use';
+import SolvMeet from './pages/SolvMeet/solv-meet';
+import MeetingPage from './pages/MeetingPage/meeting';
+import ContactPage from './pages/ContactPage/contact-page';
 AOS.init();
 
 function App() {
@@ -28,18 +31,21 @@ function App() {
         <ScrollToTop/>
         <Switch>
           <Route path="/" exact component={Main} />
-          <Route path="/about" component={AboutPage} />
-          <Route path="/solution/solv-24/sales-and-inventory" component={Solv24} />
-          <Route path="/solution/solv-24/hr-solutions" component={HRSolutions} />
-          <Route path="/solution/solv-24/point-of-sale" component={PointOfSale} />
-          <Route path="/solution/add-ons" component={AddonsPage} />
-          <Route path="/solution/custom" component={Custom} />
-          <Route path="/solution/e-commerce" component={ECommerce} />
+          <Route path="/about" exact component={AboutPage} />
+          <Route path="/solution/solv-24/sales-and-inventory" exact component={Solv24} />
+          <Route path="/solution/solv-24/hr-solutions" exact component={HRSolutions} />
+          <Route path="/solution/solv-24/point-of-sale" exact component={PointOfSale} />
+          <Route path="/solution/add-ons" exact component={AddonsPage} />
+          <Route path="/solution/custom" exact component={Custom} />
+          <Route path="/solution/e-commerce" exact component={ECommerce} />
           <Route path="/solution/c-to-c-and-social-media-platform" component={C2CSocialMedia} />
           <Route path="/solution/other-services" component={OtherServices} />
-          <Route path="/privacy-policy" component={PrivacyPolicy} />
-          <Route path="/warranty-and-security" component={WarrantySecurity} />
-          <Route path="/terms-of-use" component={TermsOfUse} />
+          <Route path="/privacy-policy" exact component={PrivacyPolicy} />
+          <Route path="/warranty-and-security" exact component={WarrantySecurity} />
+          <Route path="/terms-of-use" exact component={TermsOfUse} />
+          <Route path="/solv-meet" exact component={SolvMeet} />
+          <Route path="/solv-meet/meeting/:roomName" exact component={MeetingPage} />
+          <Route path="/contact-page" exact component={ContactPage} />
         </Switch>
         
       </Router>

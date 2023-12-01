@@ -17,6 +17,34 @@ export const GridContainer = styled.div`
     align-content: center;
     align-items: stretch;
     
+    .container{
+        display: flex;
+        position: relative;
+        cursor: pointer;
+        
+        .overlay{
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            height: 100%;
+            width: 100%;
+
+            &:hover{
+                background: rgba(0,0,0,0.7);
+                transition: all 0.5s ease;
+            }
+        }
+
+        &:hover .overlay{
+            opacity: 1;
+        }
+    }
 
     @media screen and (max-width: 1200px){
         grid-template-columns: repeat(3, auto);

@@ -14,6 +14,7 @@ export const MainContainer = styled.div`
     margin-top: 130px;
     padding: 30px;
 
+    
     .img-banner{
         border-radius: 8px;
         position: absolute;
@@ -33,6 +34,10 @@ export const MainContainer = styled.div`
         }
     }
 
+    &:hover{
+        transition: all 0.5s ease;
+        transform: translateY(-5px);
+    }
     
 
     @media screen and (max-width: 500px){

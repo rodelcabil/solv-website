@@ -10,6 +10,11 @@ export const MainContainer = styled.div`
     display: flex;
     flex-direction: column;
     
+    &:hover{
+        transition: all 0.5s ease;
+        transform: translateY(-5px);
+    }
+
     @media screen and (max-width: 600px){
         .reason-title{
             font-size: 16px;

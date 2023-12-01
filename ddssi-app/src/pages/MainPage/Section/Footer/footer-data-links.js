@@ -70,8 +70,8 @@ export const Solv24Links = [
     {
         "name": "About",
         "link": "/about",
-        "isNavLink": false
-    }
+        "isNavLink": true
+    },
 
 ]
 
@@ -79,6 +79,25 @@ export const OtherLinks = [
     {
         "name": "Home",
         "link": "/",
+        "isNavLink": true
+    }
+]
+
+
+export const SiteInformationLinks = [
+    {
+        "name": "Privacy Policy",
+        "link": "/privacy-policy",
+        "isNavLink": true
+    },
+    {
+        "name": "Terms of Use",
+        "link": "/terms-of-use",
+        "isNavLink": true
+    },
+    {
+        "name": "Warranty, Security and Service",
+        "link": "/warranty-and-security",
         "isNavLink": true
     }
 ]
