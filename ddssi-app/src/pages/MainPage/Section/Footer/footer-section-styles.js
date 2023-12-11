@@ -4,6 +4,8 @@ import { responsive } from '../../../../globalStyles';
 export const MainContainer = styled.div`  
     
     background: var(--bg-dark);
+    position: relative;
+    z-index: 100000;
     
     .footer-text{
         width: max-content;
@@ -11,7 +13,7 @@ export const MainContainer = styled.div`
 
 
     .copyright-container{
-        @media screen and (max-width: 600px){
+        @media screen and (max-width: 800px){
             flex-direction: column;
             padding: 20px;
         }

@@ -12,7 +12,7 @@ font-size: 16px;
 top: 0;
 position: sticky !important;
 -webkit-position: -webkit-sticky !important;
-z-index: 999;
+z-index: 1000000;
 width: 100%;
 margin: auto;
 padding: ${({ scrolled }) => (scrolled === 1 ? '0 60px' : '15px 60px')};
@@ -177,9 +177,13 @@ text-align: center;
 
 .isInActive{
     color: var(--text-secondary);
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid transparent;
 }
 
 .isActive{
+    border-bottom: 3px solid #1595FF;
+    border-top: 3px solid transparent;
     color: var(--bg-primary);
 }
 

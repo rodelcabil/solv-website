@@ -6,10 +6,10 @@ import { PiInstagramLogoFill } from "react-icons/pi";
 const MiniInfoSection = () => {
 
   return (
-    <MainContainer id="home">
+    <MainContainer>
         <BodyContainer>
         <div className='flex items-center gap-3'>
-            <FaEnvelope size={20}/> <span>info@digitaldoorssoftware.com</span>
+            <FaEnvelope size={20}/> <span className='text-white'>info@digitaldoorssoftware.com</span>
         </div>
         <div className='flex items-center gap-10'>
           {/* <div className='flex items-center gap-3'>
@@ -19,8 +19,8 @@ const MiniInfoSection = () => {
               <a href="https://www.linkedin.com/company/digital-doors-software-systems-inc" target="_blank"><FaLinkedin size={25} className='cursor-pointer'/></a>
           </div> */}
           <div className='flex items-center gap-3'>
-            <span >Try our new feature, SOLV Meet</span>
-            <TryButton className='whitespace-nowrap' to="/solv-meet" exact>Try it!</TryButton>
+            <span className='text-white'>Try our new feature, SOLV Meet</span>
+            <TryButton className='whitespace-nowrap' to="/solv-meet" exact>Try for free</TryButton>
           </div>
         </div>
         </BodyContainer>

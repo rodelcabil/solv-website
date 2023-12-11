@@ -17,6 +17,7 @@ import ThinkerboxImg from '../../assets/thinkerbox.jpg'
 import CatpcImg from '../../assets/catpc.jpg'
 import Marquee from "react-fast-marquee";
 import { OtherLinks } from '../MainPage/Section/Footer/footer-data-links'
+import ScrollToTopButton from '../../components/ScrollToTopButton/scroll-to-top-button'
 
 const AboutPage = () => {
   return (
@@ -96,6 +97,7 @@ const AboutPage = () => {
       </MainContainer>
       <ContactSection />
       <FooterSection links={OtherLinks}/>
+      <ScrollToTopButton/>
     </>
   )
 }

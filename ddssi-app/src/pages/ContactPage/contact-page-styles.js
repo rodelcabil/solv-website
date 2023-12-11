@@ -5,6 +5,7 @@ export const MainContainer = styled.div`
     
     background: var(--bg-light);
     position: relative;
+    height: 100vh;
 `;
 
 export const BodyContainer = styled.div`
@@ -17,16 +18,15 @@ export const BodyContainer = styled.div`
     height: 100%;
 
     .left-container{
-        
         justify-content: center;
         padding: 120px 60px;
         background: var(--bg-light);
-        background-image: linear-gradient(rgba(0, 0, 0, 0.6),
-                        rgba(0, 0, 0, 0.7)), url(${bg});
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url(${bg});
         background-size: cover;
     }
 
     .right-container{
+        justify-content: center;
         padding: 60px;
         min-width: 40%;
     }

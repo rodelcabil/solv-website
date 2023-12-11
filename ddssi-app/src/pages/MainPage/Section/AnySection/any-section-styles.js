@@ -21,7 +21,7 @@ export const GridContainer = styled.div`
         display: flex;
         position: relative;
         cursor: pointer;
-        
+
         .overlay{
             position: absolute;
             display: flex;
@@ -43,6 +43,11 @@ export const GridContainer = styled.div`
 
         &:hover .overlay{
             opacity: 1;
+        }
+        
+        &:hover{
+            transition: all 0.5s ease;
+            transform: translateY(-5px);
         }
     }
 

@@ -25,7 +25,7 @@ export const MainPageLinks = [
         "isNavLink": false
     },
     {
-        "name": "Contact",
+        "name": "Contact Us",
         "link": "#contact",
         "isNavLink": false
     }
@@ -63,7 +63,7 @@ export const Solv24Links = [
         "isNavLink": true
     },
     {
-        "name": "Contact",
+        "name": "Contact Us",
         "link": "#contact",
         "isNavLink": false
     },

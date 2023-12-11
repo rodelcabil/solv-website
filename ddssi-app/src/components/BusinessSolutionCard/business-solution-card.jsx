@@ -5,7 +5,7 @@ import { IoIosArrowForward } from "react-icons/io";
 
 const BusinessSolutionCard = ({ title, icon, description, link, hasReadMore }) => {
   return (
-    <NavLink exact to={link} className="flex">
+    <NavLink exact to={link} className="flex w-full">
       <MainContainer>
         <BodyContainer>
           <div className='flex h-fit justify-center'>

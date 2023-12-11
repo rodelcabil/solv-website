@@ -1,53 +1,69 @@
 import React, { useState, useEffect } from 'react';
 import { MainContainer, BodyContainer } from './product-demo-section-styles'
 
+import VideoComponent from '../../../../components/VideoComponent/video-component';
+import SolvCommsVideo from '../../../../assets/videos/solv-comms.mp4'
+import SolvAccountingVideo from '../../../../assets/videos/solv-accounting.mp4'
+import HRSolutionVideo from '../../../../assets/videos/hr-solutions.mp4'
+import SalesAndInventoryVideo from '../../../../assets/videos/sales-and-inventory.mp4'
+import { useRef } from 'react';
+import { Waypoint } from 'react-waypoint';
+import { useDispatch } from 'react-redux';
+import { setActiveNav } from '../../../../redux/activeNavSlice';
+import { useInView } from 'react-intersection-observer';
+import SectionObserver from '../../../../functions/section-obeserver';
+
 const ProductDemoDection = () => {
 
+    const { ref } = SectionObserver("product-demo");
     const [name, setName] = useState("Sales and Inventory");
-    const [videos, setVideos] = useState([]);
-    const [loading, setLoading] = useState(false);
+    const [product, setProduct] = useState([]);
 
     const productList = [
         {
             "name": "Sales and Inventory",
-            "videoLink": [
-                "https://www.youtube.com/embed/fBGbzeAMqvg",
-            ]
+            "videoLink": SalesAndInventoryVideo,
+            "description": "Sales and inventory system perfect for businesses with one or two stores with option to expand and scale in the future."
         },
         {
             "name": "HR Solutions",
-            "videoLink": [
-                "https://www.youtube.com/embed/fBGbzeAMqvg",
-                "https://www.youtube.com/embed/fBGbzeAMqvg",
-            ]
+            "videoLink": HRSolutionVideo,
+            "description": "End to end software solution for the Human Resources Department designed to improve delivery of service, efficiency and productivity."
         },
         {
-            "name": "Accounting",
-            "videoLink": [
-                "https://www.youtube.com/embed/8JW6qzPCkE8?list=RDEQxz6zL9RFI",
-                "https://www.youtube.com/embed/fBGbzeAMqvg",
-                "https://www.youtube.com/embed/fBGbzeAMqvg"
-            ]
+            "name": "SOLV Accounting",
+            "videoLink": SolvAccountingVideo,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "name": "SOLV Comms",
+            "videoLink": SolvCommsVideo,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         },
     ]
 
     useEffect(() => {
-        let productVideos = productList.filter(product => product.name === name);
-        setVideos(productVideos[0]?.videoLink);
 
-    }, [name, loading])
+        let filteredProduct = productList.filter(product => product.name === name);
+        setProduct(filteredProduct);
+
+      
+
+    }, [name])
+
 
 
     const onFilter = (key) => {
         setName(key);
-        let productVideos = productList.filter(product => product.name === name);
-        setVideos(productVideos[0]?.videoLink);
+        let filteredProduct = productList.filter(product => product.name === key);
+        setProduct(filteredProduct);
     };
 
 
 
+
     return (
-        <MainContainer id="product-demo">
+        <MainContainer ref={ref} id="product-demo">
             <div className='flex flex-col items-center justify-center'>
                 <span className='text-4xl text-[#343434] font-normal text-center mb-2'>Our Product Demo</span>
                 <span className='text-1xl text-[#7A7A7A] font-normal text-center max-w-3xl'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
@@ -57,15 +73,23 @@ const ProductDemoDection = () => {
                 <div className='tab-container'>
                     {
                         productList.map((item, key) => {
-                            return <button key={key} className={item.name === name ? 'tab-button selected' : 'tab-button'} onClick={() => onFilter(item.name)}>{item.name}</button>
+                            return <button key={key} className={item.name === name ? 'tab-button selected' : 'tab-button'} onClick={() => item.name === name ? "" : onFilter(item.name)}>{item.name}</button>
                         })
                     }
                 </div>
-                <br /><br /><br />
+                <br /><br />
+                {/*<div className="tab-body flex flex-col max-w-[500px] text-center items-center justify-center gap-4">
+                    {
+                        product.map((item, key)     => {
+                            return <span key={key} className='text-[#7a7a7a]'>{item.description}</span>
+                        })
+                    }
+                </div> */}
+                <br />
                 <div className="tab-body flex flex-col w-full items-center justify-center gap-4">
                     {
-                        videos.map((item, key) => {
-                            return <iframe key={key} className='video flex w-[800px] rounded' height="600" src={item} title="Test" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen={true}></iframe>
+                        product.map((item, key) => {
+                            return <VideoComponent key={key} videoSrc={item.videoLink} videoKey={key} />
                         })
                     }
                 </div>

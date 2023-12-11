@@ -1,15 +1,26 @@
-import React from 'react'
-import { useLocation } from 'react-router-dom';
+import React, {useRef} from 'react'
+import { useLocation, useHistory  } from 'react-router-dom';
 import { JitsiMeeting } from '@jitsi/react-sdk';
 
 const MeetingPage = () => {
     const { roomName, displayName } = useLocation().state;
-    console.log("roomName",roomName, "displayName",displayName);
+    console.log(roomName, displayName)
+    const history = useHistory();
+    const apiRef = useRef();
+
+    const handleClose =()=>{
+        window.location.href = 'http://localhost:5173/solv-meet';
+    }
+
+    const handleApiReady = apiObj => {
+        apiRef.current = apiObj;
+        apiRef.current.on('videoConferenceLeft', handleClose);
+    };
 
     return (
         <JitsiMeeting
             //domain="meet.jit.si"
-            //domain="comms.pesoapp.ph"
+            domain="comms.pesoapp.ph"
             roomName={roomName}
             configOverwrite={{
                 startWithAudioMuted: true,
@@ -21,12 +32,10 @@ const MeetingPage = () => {
                 DISABLE_JOIN_LEAVE_NOTIFICATIONS: true
             }}
             userInfo={{
-                displayName: { displayName }
+                displayName: displayName 
             }}
-            onApiReady={(externalApi) => {
-                // here you can attach custom event listeners to the Jitsi Meet External API
-                // you can also store it locally to execute commands
-            }}
+            onApiReady = { externalApi => handleApiReady(externalApi) }
+            onReadyToClose={handleClose}
             getIFrameRef={(iframeRef) => { iframeRef.style.height = '100vh'; }}
         />
     )

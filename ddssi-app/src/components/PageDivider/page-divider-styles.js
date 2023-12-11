@@ -15,7 +15,7 @@ export const Divider = styled.div`
     }
 
     .shape-fill {
-        fill: var(--bg-primary);
+        fill: linear-gradient(56deg, rgba(255,255,255,0.006039915966386533) 0%, rgba(153,209,255,1) 57%, rgba(21,149,255,1) 100%);
     }
 
 `;

@@ -3,9 +3,50 @@ import bg from '../../../../assets/contact.jpg';
 import { Link } from "react-router-dom";
 
 export const MainContainer = styled.div`
-    
-background: rgb(0,64,170);
-background: linear-gradient(56deg, rgba(0,64,170,1) 0%, rgba(21,149,255,1) 89%, rgba(21,149,255,1) 100%);
+    position: relative;    
+    background: rgb(0,64,170);
+    background: linear-gradient(56deg, rgba(0,64,170,1) 0%, rgba(21,149,255,1) 89%, rgba(21,149,255,1) 100%);
+
+    .circle{
+        position: absolute;
+        top: -200px;
+        left: -100px;
+        height: 500px;
+        width: 500px;
+        background: #fff;
+        opacity: 0.1;
+        border-radius: 100%;
+
+        @media screen and (max-width: 600px){
+            width: 100%;
+        }
+    }
+    .circle-2{
+        position: absolute;
+        bottom: -200px;
+        right: 0;
+        height: 500px;
+        width: 500px;
+        background: #fff;
+        opacity: 0.1;
+        border-radius: 100%;
+    }
+
+    .boxes{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 400px;
+        width: 350px;
+        background: #fff;
+        opacity: 0.1;
+        border-top-left-radius: 50px;
+        bottom: -60px;
+
+        @media screen and (max-width: 600px){
+            width: 100%;
+        }
+    }
 `;
 
 export const BodyContainer = styled.div`
@@ -81,6 +122,8 @@ export const GetInTouchButton = styled(Link)`
     margin: auto;
     border-radius: 100px;
     cursor: pointer;
+    position: relative;
+    z-index: 10000;
 
     &:hover{
         background: #008cff;

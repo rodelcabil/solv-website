@@ -15,7 +15,7 @@ font-size: 16px;
 top: 0;
 position: fixed;
 -webkit-position: -webkit-sticky !important;
-z-index: 999;
+z-index: 1000000;
 width: 100%;
 margin: auto;
 padding: ${({ scrolled }) => (scrolled === 1 ? '0 60px' : '15px 60px')};

@@ -21,6 +21,10 @@ const FooterSection = ({links}) => {
                         </div>
                         <br />
                         <span className='text-[#7a7a7a] text-justify'>It is our goal to provide software that will address the needs of Micro, Small and Medium Enterprises (MSMEs) and help them take the leap to transform and elevate their business.</span>
+                        <br/>
+                        <div className='flex'>
+                            <img src={QR} />
+                        </div>
                     </div>
                 </Row>
                 <Row>
@@ -46,14 +50,12 @@ const FooterSection = ({links}) => {
                                 return <NavLink key={key} to={item.link} className='mb-[15px] no-underline text-[#7a7a7a] cursor-pointer hover:text-white'>{item.name}</NavLink> 
                             })
                         }
-                        <div className='flex'>
-                            <img src={QR} />
-                        </div>
+                        
                     </div>
                 </Row>
                 <Row>
-                    <div className='flex flex-col text-sm'>
-                        <span className='text-white font-bold'>Company Information</span>
+                    <div className='flex flex-col '>
+                        <span className='text-white font-bold text-sm'>Company Information</span>
                         <br/>
                         {/* <a href="https://www.google.com/maps/place/4f,+201+Del+Monte+Ave,+Quezon+City,+Metro+Manila/@14.6399287,121.0115315,17z/data=!4m5!3m4!1s0x3397b65d9d961197:0xb1f012a4d154dbf5!8m2!3d14.6399287!4d121.0115315" target='_blank'><img src={Map} alt="DDSSI Location" className='map' /></a> */}
                         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3860.281972497848!2d121.0115315!3d14.6399287!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b65d9d961197%3A0xb1f012a4d154dbf5!2s4f%2C%20201%20Del%20Monte%20Ave%2C%20Quezon%20City%2C%20Metro%20Manila!5e0!3m2!1sen!2sph!4v1701218319213!5m2!1sen!2sph" width="300" height="200" style={{border:0}} loading="lazy" className='google-map' />   
@@ -68,7 +70,7 @@ const FooterSection = ({links}) => {
                         </div>
                         <div className='flex items-center gap-4'>
                             <MdLocalPhone size="25" className='text-[#7a7a7a]'/>
-                            <span className='text-[#7a7a7a]'>+63 2 7358 9421</span>
+                            <span className='text-[#7a7a7a]'>+63 2070060207</span>
                         </div>
                     </div>
                 </Row>
@@ -79,7 +81,7 @@ const FooterSection = ({links}) => {
                 <div className='flex flex-col gap-5'>
                     <div className='flex items-center gap-3'>
                         <a href="https://www.facebook.com/DDSSI/" target="_blank"><FaFacebook size={25} className='cursor-pointer text-[#fff] hover:text-white'/></a>
-                        <a href="www.instagram.com/solvbiz" target="_blank"><PiInstagramLogoFill size={25} className='cursor-pointer text-[#fff] hover:text-white'/></a>
+                        <a href="https://www.instagram.com/solvbiz" target="_blank"><PiInstagramLogoFill size={25} className='cursor-pointer text-[#fff] hover:text-white'/></a>
                         <a href="https://www.youtube.com/channel/UCr5GylGgZ5lrJ1Ewc6JCVEw" target="_blank"><FaYoutube size={25} className='cursor-pointer text-[#fff] hover:text-white'/></a>
                         <a href="https://www.linkedin.com/company/digital-doors-software-systems-inc" target="_blank"><FaLinkedin size={25} className='cursor-pointer text-[#fff] hover:text-white'/></a>
                     </div>

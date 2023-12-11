@@ -3,11 +3,19 @@ import { BodyContainer, MainContainer, LearnMoreButton } from './about-section-s
 import AboutImg1 from '../../../../assets/about-img-1.jpg'
 import AboutImg2 from '../../../../assets/about-img-2.jpg'
 import AboutImg3 from '../../../../assets/about-img-3.jpg'
+import { useRef } from 'react'
+import WhyDDSSISection from '../WhyDDSSISection/why-ddssi-section'
+import { Waypoint } from 'react-waypoint'
+import { useDispatch } from 'react-redux'
+import { setActiveNav } from '../../../../redux/activeNavSlice'
+import SectionObserver from '../../../../functions/section-obeserver'
 
 const AboutSection = () => {
+
+    const { ref } = SectionObserver("about");
+
     return (
-        <>
-            <p id="about"></p>
+        <div ref={ref} id="about">
             <MainContainer >
                 <BodyContainer>
                     <div className='flex flex-col max-w-2xl' data-aos="zoom-in">
@@ -27,23 +35,22 @@ const AboutSection = () => {
                     <div className='flex flex-col gap-3 w-[400px] row-container'>
                         <div className='flex flex-1 gap-3'>
                             <div className='flex flex-1 gap-3 items-stretch' data-aos="zoom-in" data-aos-delay="100">
-                                <img src={AboutImg1} height="200" className='flex-1'/>
+                                <img src={AboutImg1} height="200" className='flex-1' />
                             </div>
                         </div>
                         <div className='flex flex-1 gap-3'>
                             <div className='flex flex-1' data-aos="zoom-in" data-aos-delay="200">
-                                <img src={AboutImg2} height="200" className='flex-1'/>
+                                <img src={AboutImg2} height="200" className='flex-1' />
                             </div>
                             <div className='flex flex-1' data-aos="zoom-in" data-aos-delay="300">
-                                <img src={AboutImg3} height="200" className='flex-1'/>
+                                <img src={AboutImg3} height="200" className='flex-1' />
                             </div>
                         </div>
                     </div>
                 </BodyContainer>
-
             </MainContainer>
-        </>
-
+            <WhyDDSSISection />
+        </div>
     )
 }
 

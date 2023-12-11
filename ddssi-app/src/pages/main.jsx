@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import Navbar from '../components/Navbar/MainNavbar/navbar'
 import MiniInfoSection from './MainPage/Section/MiniInfoSection/mini-info-section'
 import ServiceSection from './MainPage/Section/ServicesSection/service-section'
@@ -14,23 +14,30 @@ import ScrollToTopButton from '../components/ScrollToTopButton/scroll-to-top-but
 import AnySection from './MainPage/Section/AnySection/any-section'
 import { MainPageLinks } from './MainPage/Section/Footer/footer-data-links'
 import ProductDemoDection from './MainPage/Section/ProductDemoSection/product-demo-section'
+import { useSelector } from 'react-redux'
+
+
 
 const main = () => {
+
+  const activeTab = useSelector((state) => state.activeNav.active);
+
+  useEffect(() => {
+    console.log("activeTab", activeTab);
+  }, [activeTab])
+
   return (
     <>
-      <MiniInfoSection/>
+      <MiniInfoSection />
       <Navbar />
-      <HeroSection/>
-      <PageDivider/>
-      <AnySection />
+      <HeroSection />
       <ServiceSection />
       <BusinessSolutionSection />
-      <ProductDemoDection/>
+      <ProductDemoDection />
       <AboutSection />
-      <WhyDDSSISection />
-      <TestimonialSection/>
+      <TestimonialSection />
       <ContactSection />
-      <FooterSection links={MainPageLinks}/>
+      <FooterSection links={MainPageLinks} />
       <ScrollToTopButton />
     </>
   )

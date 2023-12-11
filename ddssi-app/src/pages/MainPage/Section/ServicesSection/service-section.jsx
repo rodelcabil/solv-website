@@ -4,11 +4,35 @@ import ServiceCard from '../../../../components/ServiceCard/service-card'
 import SoftwareDevelopment from "../../../../assets/about-bg.jpg"
 import WebDevelopment from "../../../../assets/custom-banner-bg.jpg"
 import SystemSupport from "../../../../assets/support-img.jpg"
+import { useDispatch } from 'react-redux'
+import { setActiveNav } from '../../../../redux/activeNavSlice'
+import { useInView } from 'react-intersection-observer'
+import { useEffect } from 'react'
+import SectionObserver from '../../../../functions/section-obeserver'
 
 
 const ServiceSection = () => {
+
+    const { ref } = SectionObserver("service");
+
+    // const dispatch = useDispatch();
+
+    // const changeTab = (tab) => {
+    //     dispatch(setActiveNav(tab));
+    // };
+
+    // const { ref, inView } = useInView({ triggerOnce: false });
+
+    // useEffect(() => {
+    //     if (inView) {
+    //         changeTab("service");
+    //     }
+        
+    // }, [inView])
+
     return (
-        <MainContainer id="service">
+
+        <MainContainer ref={ref} id="service">
             <div className='flex flex-col max-w-[1500px] m-auto'>
                 <span className='text-4xl text-[#343434] font-normal'>DDSSI Services</span>
                 <span className='text-1xl text-[#7A7A7A] font-normal'>These are the things we can offer our clients.</span>
@@ -22,7 +46,7 @@ const ServiceSection = () => {
                             <span>
                                 We develop business solution software with enterprise level features using the work processes perfected in actual business environment. <br /><br />Our software is designed to improve efficiency and productivity of any type of business.
                             </span>
-                        } 
+                        }
                         icon={SoftwareDevelopment} color="#DEAE1E" />
                 </div>
                 <div data-aos="zoom-in-up" data-aos-delay="100" className='flex'>

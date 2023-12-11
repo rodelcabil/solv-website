@@ -19,9 +19,12 @@ import {
 } from './navbar-styles';
 import Logo from '../../../assets/ddssi-logo-black.png'
 import SolvDeskLogo from '../../../assets/solvdesk-logo.png'
+import { useDispatch, useSelector } from 'react-redux'
+import { setActiveNav } from '../../../redux/activeNavSlice'
+
 const Navbar = () => {
 
-
+    const dispatch = useDispatch();
     const [click, setClick] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const handleClick = () => setClick(!click);
@@ -34,6 +37,8 @@ const Navbar = () => {
     const [testimonialActive, setTestimonialActive] = useState(false);
     const [contactActive, setContactActive] = useState(false);
     const [demoActive, setDemoActive] = useState(false);
+
+    const activeTab = useSelector((state) => state.activeNav.active);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -52,7 +57,7 @@ const Navbar = () => {
             window.removeEventListener('scroll', handleScroll);
         };
 
-    }, [scrolled]);
+    }, [scrolled, activeTab]);
 
     const scrollValue = scrolled ? 1 : 0;
     const setActive = (home, about, service, solution, testimonial, contact, demo) => {
@@ -80,6 +85,10 @@ const Navbar = () => {
         window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' });
     }
 
+    const changeTab = (tab) =>{
+        dispatch(setActiveNav(tab));
+    }
+
     return (
 
         <>
@@ -87,11 +96,12 @@ const Navbar = () => {
                 .active{
                     color: #1595FF;
                     font-weight: 500;
-                    border-radius: 5px;
+                    
                 }
                 
                 .active:hover{
-                  color: #1595FF;
+                  color: #102E74;
+                  border-bottom: 3px solid #102E74;
                 }
 
                 @media screen and (max-width: 910px){
@@ -132,25 +142,25 @@ const Navbar = () => {
                         <div>
                             <NavMenu onClick={handleClick} click={click}>
                                 <NavItem >
-                                    <HashLinks to="/#home" smooth onClick={activeHome} className={homeActive ? "isActive" : "isInActive"} scroll={el => scrollWithOffset(el)}>Home</HashLinks>
+                                    <HashLinks to="/#home" smooth onClick={()=>{changeTab("home")}} className={activeTab == "home" ? "isActive" : "isInActive"} scroll={el => scrollWithOffset(el)}>Home</HashLinks>
                                 </NavItem>
                                 <NavItem>
-                                    <HashLinks to="/#service" smooth onClick={activeService} className={serviceActive ? "isActive" : "isInActive"} scroll={el => scrollWithOffset(el)}>Services</HashLinks>
+                                    <HashLinks to="/#service" smooth onClick={()=>{changeTab("service")}} className={activeTab == "service" ? "isActive" : "isInActive"} scroll={el => scrollWithOffset(el)}>Services</HashLinks>
                                 </NavItem>
                                 <NavItem>
-                                    <HashLinks to="/#solution" smooth onClick={activeSolution} className={solutionActive ? "isActive" : "isInActive"} scroll={el => scrollWithOffset(el)}>Solutions</HashLinks>
+                                    <HashLinks to="/#solution" smooth onClick={()=>{changeTab("solution")}} className={activeTab == "solution" ? "isActive" : "isInActive"} scroll={el => scrollWithOffset(el)}>Solutions</HashLinks>
                                 </NavItem>
                                 <NavItem>
-                                    <HashLinks to="/#product-demo" smooth onClick={activeDemo} className={demoActive ? "isActive" : "isInActive"} scroll={el => scrollWithOffset(el)}>Product Demo</HashLinks>
+                                    <HashLinks to="/#product-demo" smooth onClick={()=>{changeTab("product-demo")}} className={activeTab == "product-demo" ? "isActive" : "isInActive"} scroll={el => scrollWithOffset(el)}>Product Demo</HashLinks>
                                 </NavItem>
                                 <NavItem>
-                                    <HashLinks to="/#about" smooth onClick={activeAbout} className={aboutActive ? "isActive" : "isInActive"} scroll={el => scrollWithOffset(el)}>About</HashLinks>
+                                    <HashLinks to="/#about" smooth onClick={()=>{changeTab("about")}} className={activeTab == "about" ? "isActive" : "isInActive"} scroll={el => scrollWithOffset(el)}>About</HashLinks>
                                 </NavItem>
                                 <NavItem>
-                                    <HashLinks to="/#testimonial" smooth onClick={activeTestimonial} className={testimonialActive ? "isActive" : "isInActive"} scroll={el => scrollWithOffset(el)}>Testimonials</HashLinks>
+                                    <HashLinks to="/#testimonial" smooth onClick={()=>{changeTab("testimonial")}} className={activeTab == "testimonial" ? "isActive" : "isInActive"} scroll={el => scrollWithOffset(el)}>Testimonials</HashLinks>
                                 </NavItem>
                                 <NavItem>
-                                    <HashLinks to="/#contact" smooth onClick={activeContact} className={contactActive ? "isActive" : "isInActive"} scroll={el => scrollWithOffset(el)}>Contact Us</HashLinks>
+                                    <HashLinks to="/#contact" smooth onClick={()=>{changeTab("contact")}} className={activeTab == "contact" ? "isActive" : "isInActive"} scroll={el => scrollWithOffset(el)}>Contact Us</HashLinks>
                                 </NavItem>
                                 <NavItem>
                                     <HashLinks to="http://solvdesk.digitaldoorssoftware.com:8023/" target="_blank" >

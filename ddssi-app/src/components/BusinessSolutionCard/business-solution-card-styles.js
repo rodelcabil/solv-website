@@ -7,17 +7,18 @@ export const MainContainer = styled.div`
     gap: 15px;
     justify-content: center;
     cursor: pointer;
-
+    width: 100%;
+    align-items: stretch;
     .desciption{
         max-width: 400px;
     }
 
-    
-    
 `;
 
 export const BodyContainer = styled.div`
-    width: 400px;
+    // max-width: 500px;
+    // min-width: 200px;
+    width: 100%;
     background: var(--bg-light);
     display: flex;
     flex-direction: column;
