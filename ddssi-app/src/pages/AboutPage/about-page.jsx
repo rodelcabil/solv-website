@@ -4,9 +4,9 @@ import ContactSection from '../MainPage/Section/ContactSection/contact-section'
 import OtherNavbar from '../../components/Navbar/OtherNav/other-nav'
 import { BodyContainer, MainContainer, Banner, GoalContainer } from './about-page-styles'
 import About from '../../assets/interview.svg'
-import FredrickYu from '../../assets/fredrick-yu.jpg'
-import OrlyCuartero from '../../assets/orly-cuartero.jpg'
-import HarryDeLeon from '../../assets/harry-de-leon.jpg'
+import FredrickYu from '../../assets/fredrick-yu.png'
+import OrlyCuartero from '../../assets/orly-cuartero.png'
+import HarryDeLeon from '../../assets/harry-de-leon.png'
 import ManagementCard from '../../components/ManagementCard/management-card'
 import ScrollDownButton from '../../components/ScrolldownButton/scroll-down-button'
 import AccenthubImg from '../../assets/accenthub.jpg'
@@ -56,8 +56,8 @@ const AboutPage = () => {
         </BodyContainer>
         <BodyContainer>
           <div className='flex flex-col w-full'>
-            <p className='text-4xl text-[#1595FF] font-normal text-center'>Our Management</p><br />
-            <div className='management-card-container flex items-center justify-center flex-wrap'>
+            <p className='text-4xl text-[#1595FF] font-normal text-center'>Our Management</p><br /><br /><br />
+            <div className='management-card-container flex items-center justify-around flex-wrap gap-[90px]'>
               <div data-aos="fade-up" data-aos-delay="100">
                 <ManagementCard img={OrlyCuartero} name="Melchor Cuartero" position="President & Chief Executive Officer" />
               </div>

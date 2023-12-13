@@ -89,7 +89,7 @@ const ProductDemoDection = () => {
                 <div className="tab-body flex flex-col w-full items-center justify-center gap-4">
                     {
                         product.map((item, key) => {
-                            return <VideoComponent key={key} videoSrc={item.videoLink} videoKey={key} />
+                            return <VideoComponent key={key} width="900" videoSrc={item.videoLink} videoKey={key} />
                         })
                     }
                 </div>

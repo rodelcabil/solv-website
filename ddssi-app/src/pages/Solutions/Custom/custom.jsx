@@ -10,8 +10,9 @@ import Custom4 from '../../../assets/custom-4.png'
 import CustomCard from '../../../components/CustomCard/custom-card'
 import ScrollToTopButton from '../../../components/ScrollToTopButton/scroll-to-top-button'
 import ScrollDownButton from '../../../components/ScrolldownButton/scroll-down-button'
-import Solv24Navbar from '../../../components/Navbar/Solv24Navbar/solv24-navbar'
+import Solv24Navbar from '../../../components/Navbar/ReusableNavbar/reusable-navbar'
 import { Solv24Links } from '../../MainPage/Section/Footer/footer-data-links'
+import SubscriptionCard from '../../../components/SubscriptionCard/subscription-card'
 
 const Custom = () => {
     return (
@@ -33,23 +34,40 @@ const Custom = () => {
             </Banner>
             <MainContainer id="read-more">
                 <BodyContainer>
-                    <div data-aos="fade-up" data-aos-delay="100">
-                        <CustomCard description="15 man-days" img={Custom1} />
+                    <span className='text-2xl text-[#343434]'>SOLV Custom Plan</span>
+                </BodyContainer>
+                <br/><br/>
+                <BodyContainer>
+                    {/* <div data-aos="fade-up" data-aos-delay="100">
+                        <CustomCard description="Customization package up to maximum 15 man-days with 1 year validity" img={Custom1} price="₱49,990.00"/>
                     </div>
                     <div data-aos="fade-up" data-aos-delay="200">
-                        <CustomCard description="30 man-days" img={Custom2} />
+                        <CustomCard description="Customization package up to maximum 30 man-days with 1 year validity." img={Custom2} price="₱99,990.00"/>
                     </div>
                     <div data-aos="fade-up" data-aos-delay="300">
-                        <CustomCard description="60 man-days" img={Custom3} />
+                        <CustomCard description="Customization package up to maximum 60 man-days with 1 year validity" img={Custom3} price="₱199,990.00"/>
                     </div>
                     <div data-aos="fade-up" data-aos-delay="400">
-                        <CustomCard description="90 man-days" img={Custom4} />
+                        <CustomCard description="Customization package up to maximum 90 man-days with 1 year validity." img={Custom4} price="₱299,990.00" />
+                    </div> */}
+                    <div data-aos="fade-up" data-aos-delay="100">
+                        <SubscriptionCard header="SOLV Custom" title="Custom 1" price="₱49,990.00" inclusion="Test" color="#1595FF" description="Customization package up to maximum 15 man-days with 1 year validity." />
                     </div>
+                    <div data-aos="fade-up" data-aos-delay="200">
+                        <SubscriptionCard header="SOLV Custom" title="Custom 2" price="₱99,990.00" inclusion="Test" color="#D7B146" description="Customization package up to maximum 30 man-days with 1 year validity."/>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="300">
+                        <SubscriptionCard header="SOLV Custom" title="Custom 3" price="₱199,990.00" inclusion="Test" color="#5469AC" description="Customization package up to maximum 60 man-days with 1 year validity."/>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="300">
+                        <SubscriptionCard header="SOLV Custom" title="Custom 4" price="₱299,990.00" inclusion="Test" color="#AD4742" description="Customization package up to maximum 90 man-days with 1 year validity."/>
+                    </div>
+                    
                 </BodyContainer>
                 <br />
-                <div className='flex justify-center flex-1 max-w-[1500px] m-auto'>
+                {/* <div className='flex justify-center flex-1 max-w-[1500px] m-auto'>
                     <span className='w-full text-2xl text-[#343434] max-w-2xl font-light text-center'>We have four discounted packages that have varying number of man-days for software customization.</span>
-                </div>
+                </div> */}
             </MainContainer>
             <ContactSection />
             <FooterSection links={Solv24Links}/>

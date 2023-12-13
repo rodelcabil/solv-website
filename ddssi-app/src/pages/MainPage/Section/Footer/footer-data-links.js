@@ -34,17 +34,17 @@ export const MainPageLinks = [
 export const Solv24Links = [
     {
         "name": "Sales and Inventory",
-        "link": "/solution/solv-24/sales-and-inventory",
+        "link": "/solution/sales-and-inventory",
         "isNavLink": true
     },
     {
         "name": "HR Solutions",
-        "link": "/solution/solv-24/hr-solutions",
+        "link": "/solution/hr-solutions",
         "isNavLink": true
     },
     {
         "name": "Point of Sales",
-        "link": "/solution/solv-24/point-of-sale",
+        "link": "/solution/accounting",
         "isNavLink": true
     },
     {

@@ -6,6 +6,10 @@ const GlobalStyle = createGlobalStyle`
         --bg-light-blur: rgba(255,255,255,0.95);
         --bg-light: #fff;
         --bg-dark: #343434;
+        --bg-yellow: #D7B146;
+        --bg-violet: #5469AC;
+        --bg-red: #AD4742;
+        --bg-green: #738A46;
         --text-primary: #343434;
         --text-secondary: #7A7A7A;
         --text-light: #fff;

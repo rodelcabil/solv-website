@@ -1,13 +1,13 @@
 import React from 'react'
-import Solv24Navbar from '../../../../components/Navbar/Solv24Navbar/solv24-navbar'
+import Solv24Navbar from '../../../components/Navbar/ReusableNavbar/reusable-navbar'
 import { BodyContainer, MainContainer } from './point-of-sale-styles'
 import POSSolution from '../../../../assets/pos-solv-24.png'
-import FooterSection from '../../../MainPage/Section/Footer/footer-section'
-import ContactSection from '../../../MainPage/Section/ContactSection/contact-section'
-import TitleComponent from '../../../../components/Title/title'
-import DescriptionComponent from '../../../../components/Description/description'
-import ScrollToTopButton from '../../../../components/ScrollToTopButton/scroll-to-top-button'
-import { Solv24Links } from '../../../MainPage/Section/Footer/footer-data-links'
+import FooterSection from '../../MainPage/Section/Footer/footer-section'
+import ContactSection from '../../MainPage/Section/ContactSection/contact-section'
+import TitleComponent from '../../../components/Title/title'
+import DescriptionComponent from '../../../components/Description/description'
+import ScrollToTopButton from '../../../components/ScrollToTopButton/scroll-to-top-button'
+import { Solv24Links } from '../../MainPage/Section/Footer/footer-data-links'
 
 const PointOfSale = () => {
     return (

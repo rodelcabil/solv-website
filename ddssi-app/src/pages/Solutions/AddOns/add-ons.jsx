@@ -17,7 +17,7 @@ import 'swiper/css/pagination';
 import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
 import ScrollToTopButton from '../../../components/ScrollToTopButton/scroll-to-top-button'
 import ScrollDownButton from '../../../components/ScrolldownButton/scroll-down-button'
-import Solv24Navbar from '../../../components/Navbar/Solv24Navbar/solv24-navbar'
+import Solv24Navbar from '../../../components/Navbar/ReusableNavbar/reusable-navbar'
 import ABBanner from '../../../assets/accounting-books-banner.png'
 import SupportBanner from '../../../assets/support-banner.jpg'
 import ZenithBanner from '../../../assets/zenith-banner.jpg'
@@ -57,7 +57,7 @@ const AddonsPage = () => {
           }}
           modules={[Navigation, Pagination, Mousewheel, Keyboard]} 
           className="mySwiper">
-          <SwiperSlide>
+          {/* <SwiperSlide>
             <BodyContainer imgbg={ABBanner}>
               <div className='flex justify-center'>
                 <div className='flex flex-col max-w-[500px]'>
@@ -70,7 +70,7 @@ const AddonsPage = () => {
               </div>
             </BodyContainer>
             <br/><br/><br/><br/>
-          </SwiperSlide>
+          </SwiperSlide> */}
           <SwiperSlide>
             <BodyContainer imgbg={SupportBanner}>
               <div className='flex justify-center'>

@@ -16,13 +16,13 @@ import {
     NavLinks,
     NavItemBtn2,
 
-} from './solv24-navbar-styles';
+} from './reusable-navbar-styles';
 import Logo from '/public/ddssi.png' 
 import SolvLogo from '../../../assets/solv_logo.png'
 import Solv24Logo from '../../../assets/solvlogo.png'
 import SolvDeskLogo from '../../../assets/solvdesk-logo.png'
 
-const Solv24Navbar = () => {
+const ReusableNavbar = () => {
 
     
     const [click, setClick] = useState(false);
@@ -108,13 +108,16 @@ const Solv24Navbar = () => {
                                     <NavLinks exact to="/"  onClick={closeMobileMenu} activeClassName="active">Home</NavLinks>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLinks exact to="/solution/solv-24/sales-and-inventory"  onClick={closeMobileMenu} activeClassName="active">Sales and Inventory System</NavLinks>
+                                    <NavLinks exact to="/solution/solv-24"  onClick={closeMobileMenu} activeClassName="active">Solv 24</NavLinks>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLinks  exact to="/solution/solv-24/hr-solutions"  onClick={closeMobileMenu} activeClassName="active">HR Solutions</NavLinks>
+                                    <NavLinks exact to="/solution/sales-and-inventory"  onClick={closeMobileMenu} activeClassName="active">Sales and Inventory System</NavLinks>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLinks  exact to="/solution/solv-24/point-of-sale" onClick={closeMobileMenu} activeClassName="active">Point Of Sales</NavLinks>
+                                    <NavLinks  exact to="/solution/hr-solutions"  onClick={closeMobileMenu} activeClassName="active">HR Solutions</NavLinks>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLinks  exact to="/solution/accounting" onClick={closeMobileMenu} activeClassName="active">Accounting</NavLinks>
                                 </NavItem>
                                 <NavItem>
                                     <NavLinks  exact to="/solution/add-ons" onClick={closeMobileMenu} activeClassName="active">Add-ons</NavLinks>
@@ -139,4 +142,4 @@ const Solv24Navbar = () => {
     )
 }
 
-export default Solv24Navbar
+export default ReusableNavbar

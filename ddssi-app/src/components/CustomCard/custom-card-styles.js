@@ -8,9 +8,10 @@ export const MainContainer = styled.div`
     background: var(--bg-light);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
 
     img{
         height: 300px;
+        border: 5px solid white;
     }
 `;

@@ -103,12 +103,12 @@ align-items: center;
 `;
 
 export const NavIcon = styled(FaMagento)`
-margin: 0.5rem;
-color: #fff;
+    margin: 0.5rem;
+    color: #fff;
 
-@media screen and (max-width: 910px){
-    margin-left: 3rem;
-}
+    @media screen and (max-width: 910px){
+        margin-left: 3rem;
+    }
 `;
 
 

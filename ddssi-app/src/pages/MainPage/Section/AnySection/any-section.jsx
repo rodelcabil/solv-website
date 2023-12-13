@@ -13,8 +13,8 @@ const AnySection = () => {
     return (
         <MainContainer>
             <div className='flex flex-col items-center justify-center'>
-                <span className='text-4xl text-[#343434] font-normal text-center mb-2'>Anytime, Anywhere, Any device</span>
-                <span className='text-1xl text-[#7A7A7A] font-normal text-center max-w-3xl'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+                <span className='text-4xl text-[#343434] font-normal text-center mb-2'>Anytime, Anywhere, On any device</span>
+                <span className='text-1xl text-[#7A7A7A] font-normal text-center max-w-3xl'>Our platform ensures a consistent and effortless user experience, providing you the flexibility to stay connected and productive no matter where life takes you.</span>
             </div>
             <br /><br /><br />
             <GridContainer>

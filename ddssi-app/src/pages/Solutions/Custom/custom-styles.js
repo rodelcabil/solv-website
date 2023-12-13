@@ -40,9 +40,13 @@ export const BodyContainer = styled.div`
     max-width: 1500px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: space-between;
     gap: 15px;
 
    
+    @media screen and (max-width: 900px){
+        justify-content: center;
+        flex-wrap: wrap;
+       
+    }
 `;

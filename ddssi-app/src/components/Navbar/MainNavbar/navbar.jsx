@@ -29,15 +29,7 @@ const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
     const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);
-
-    const [homeActive, setHomeActive] = useState(true);
-    const [aboutActive, setAboutActive] = useState(false);
-    const [serviceActive, setServiceActive] = useState(false);
-    const [solutionActive, setSolutionActive] = useState(false);
-    const [testimonialActive, setTestimonialActive] = useState(false);
-    const [contactActive, setContactActive] = useState(false);
-    const [demoActive, setDemoActive] = useState(false);
-
+ 
     const activeTab = useSelector((state) => state.activeNav.active);
 
     useEffect(() => {
@@ -60,24 +52,7 @@ const Navbar = () => {
     }, [scrolled, activeTab]);
 
     const scrollValue = scrolled ? 1 : 0;
-    const setActive = (home, about, service, solution, testimonial, contact, demo) => {
-        setHomeActive(home);
-        setAboutActive(about);
-        setServiceActive(service);
-        setSolutionActive(solution);
-        setTestimonialActive(testimonial);
-        setContactActive(contact);
-        setDemoActive(demo);
-        closeMobileMenu();
-    };
-
-    const activeHome = () => setActive(true, false, false, false, false, false, false);
-    const activeAbout = () => setActive(false, true, false, false, false, false, false);
-    const activeService = () => setActive(false, false, true, false, false, false, false);
-    const activeSolution = () => setActive(false, false, false, true, false, false, false);
-    const activeTestimonial = () => setActive(false, false, false, false, true, false, false);
-    const activeContact = () => setActive(false, false, false, false, false, true, false);
-    const activeDemo = () => setActive(false, false, false, false, false, false,true);
+    
 
     const scrollWithOffset = (el) => {
         const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
@@ -100,8 +75,8 @@ const Navbar = () => {
                 }
                 
                 .active:hover{
-                  color: #102E74;
-                  border-bottom: 3px solid #102E74;
+                  color: #1595FF;
+                  border-bottom: 3px solid #1595FF;
                 }
 
                 @media screen and (max-width: 910px){

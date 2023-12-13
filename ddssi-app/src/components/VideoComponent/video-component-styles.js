@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const MainContainer = styled.div`
 
     position: relative;
-    max-width: 900px;
+    max-width: ${({ width }) => width};
 
     #video1{
         position: relative;
