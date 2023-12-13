@@ -1,7 +1,7 @@
 import React from 'react'
 import Solv24Navbar from '../../../components/Navbar/ReusableNavbar/reusable-navbar'
 import { BodyContainer, MainContainer } from './point-of-sale-styles'
-import POSSolution from '../../../../assets/pos-solv-24.png'
+import POSSolution from '../../../assets/pos-solv-24.png'
 import FooterSection from '../../MainPage/Section/Footer/footer-section'
 import ContactSection from '../../MainPage/Section/ContactSection/contact-section'
 import TitleComponent from '../../../components/Title/title'
