@@ -92,7 +92,7 @@ const SalesAndInventory = () => {
                     <ScrollDownButton href="#read-more" />
                 </div>
             </Banner>
-            <MainContainer>
+            <MainContainer id="read-more">
                 <br /><br /><br />
                 <BodyContainer>
                     <div className='max-w-[500px]'>

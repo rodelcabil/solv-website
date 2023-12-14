@@ -22,7 +22,7 @@ export const BodyContainer = styled.div`
     justify-content: space-around;
     flex-wrap: wrap; 
     gap: 30px;
-
+    padding: 30px 0 ;
     @media screen and (max-width: 910px){
         
     }

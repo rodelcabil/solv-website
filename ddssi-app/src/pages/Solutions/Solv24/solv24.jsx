@@ -1,5 +1,5 @@
 import React from 'react'
-import { MainContainer, BodyContainer, Banner, DynamicContainer, PlanContainer, Divider } from './solv24-styles'
+import { MainContainer, BodyContainer, Banner, DynamicContainer, PlanContainer } from './solv24-styles'
 import Solv24Navbar from '../../../components/Navbar/ReusableNavbar/reusable-navbar'
 import TitleComponent from '../../../components/Title/title'
 import DescriptionComponent from '../../../components/Description/description'
@@ -126,11 +126,11 @@ const Solv24 = () => {
                 <div className="flex w-full m-auto max-w-[1500px] py-[30px]">
                     <span className='text-2xl text-[#343434]'>Sales and Inventory Plans</span>
                 </div>
-                <PlanContainer col={4} >
-                    <SubscriptionCard key={1} header="SOLV 24" title="Uno 24" price="₱4,125.00 monthly" color="#1595FF" description="Uno is our entry level variant of SOLV Business Solution. This is available on a 24-month installment." />,
-                    <SubscriptionCard key={2} header="SOLV 24" title="Solo 24" price="₱4,125.00 monthly" color="#D7B146" description="Solo 24 is our single log-in variant of SOLV Business Solution. This is available on a 24-month installment."/>,
-                    <SubscriptionCard key={3} header="SOLV 24" title="Duo 24" price="₱6,625.00 monthly" color="#5469AC" description="Duo is the ideal SOLV Business Solution variant for businesses with 2 branches. This is available on a 24-month installment."/>,
-                    <SubscriptionCard key={4} header="SOLV 24" title="POS 24" price="₱750.00 monthly" color="#AD4742" description="POS 24 is an add-on or stand alone Point of Sale software (1 x Single Node, Unlimited users). This is available on a 24-month installment."/>
+                <PlanContainer col={4}>
+                    <SubscriptionCard header="SOLV 24" title="Uno 24" price="₱4,125.00 monthly" color="#1595FF" description="Uno is our entry level variant of SOLV Business Solution. This is available on a 24-month installment." />
+                    <SubscriptionCard header="SOLV 24" title="Solo 24" price="₱4,125.00 monthly" color="#D7B146" description="Solo 24 is our single log-in variant of SOLV Business Solution. This is available on a 24-month installment."/>
+                    <SubscriptionCard header="SOLV 24" title="Duo 24" price="₱6,625.00 monthly" color="#5469AC" description="Duo is the ideal SOLV Business Solution variant for businesses with 2 branches. This is available on a 24-month installment."/>
+                    <SubscriptionCard header="SOLV 24" title="POS 24" price="₱750.00 monthly" color="#AD4742" description="POS 24 is an add-on or stand alone Point of Sale software (1 x Single Node, Unlimited users). This is available on a 24-month installment."/>
                 </PlanContainer>
                 <br/><br/>
                 <div className="flex w-full m-auto max-w-[1500px] py-[30px]">
