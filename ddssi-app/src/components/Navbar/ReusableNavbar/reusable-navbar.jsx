@@ -68,7 +68,7 @@ const ReusableNavbar = () => {
 
                 @media screen and (max-width: 910px){
                     .active{
-                        color: #fff;   
+                       
                         border-top:0;
                         padding-top: 15px;
                         border-radius: 0px;
@@ -105,25 +105,25 @@ const ReusableNavbar = () => {
                         <div>
                             <NavMenu onClick={handleClick} click={click}>
                                 <NavItem >
-                                    <NavLinks exact to="/"  onClick={closeMobileMenu} activeClassName="active">Home</NavLinks>
+                                    <NavLinks exact to="/" scrolled={scrollValue}  onClick={closeMobileMenu} activeClassName="active">Home</NavLinks>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLinks exact to="/solution/solv-24"  onClick={closeMobileMenu} activeClassName="active">Solv 24</NavLinks>
+                                    <NavLinks exact to="/solution/solv-24" scrolled={scrollValue}  onClick={closeMobileMenu} activeClassName="active">Solv 24</NavLinks>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLinks exact to="/solution/sales-and-inventory"  onClick={closeMobileMenu} activeClassName="active">Sales and Inventory System</NavLinks>
+                                    <NavLinks exact to="/solution/sales-and-inventory" scrolled={scrollValue}  onClick={closeMobileMenu} activeClassName="active">Sales and Inventory System</NavLinks>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLinks  exact to="/solution/hr-solutions"  onClick={closeMobileMenu} activeClassName="active">HR Solutions</NavLinks>
+                                    <NavLinks  exact to="/solution/hr-solutions" scrolled={scrollValue}  onClick={closeMobileMenu} activeClassName="active">HR Solutions</NavLinks>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLinks  exact to="/solution/accounting" onClick={closeMobileMenu} activeClassName="active">Accounting</NavLinks>
+                                    <NavLinks  exact to="/solution/accounting" scrolled={scrollValue} onClick={closeMobileMenu} activeClassName="active">Accounting</NavLinks>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLinks  exact to="/solution/add-ons" onClick={closeMobileMenu} activeClassName="active">Add-ons</NavLinks>
+                                    <NavLinks  exact to="/solution/add-ons" scrolled={scrollValue} onClick={closeMobileMenu} activeClassName="active">Add-ons</NavLinks>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLinks  exact to="/solution/custom"  onClick={closeMobileMenu} activeClassName="active">Custom</NavLinks>
+                                    <NavLinks  exact to="/solution/custom" scrolled={scrollValue}  onClick={closeMobileMenu} activeClassName="active">Custom</NavLinks>
                                 </NavItem>
                                 <NavItem>
                                     <NavLinks  exact to="/" onClick={closeMobileMenu}  activeClassName="active">

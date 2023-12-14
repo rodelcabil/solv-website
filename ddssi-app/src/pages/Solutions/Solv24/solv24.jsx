@@ -6,11 +6,16 @@ import DescriptionComponent from '../../../components/Description/description'
 import UnoImg from '../../../assets/uno.png'
 import SoloImg from '../../../assets/solo.png'
 import DuoImg from '../../../assets/duo.png'
+import POSImg from '../../../assets/pos-solv-24.png'
+import AccountingImg from '../../../assets/accounting.png'
+import HRImg from '../../../assets/hr-solv-24.png'
 import ScrollDownButton from '../../../components/ScrolldownButton/scroll-down-button'
 import SubscriptionCard from '../../../components/SubscriptionCard/subscription-card'
 import ContactSection from '../../MainPage/Section/ContactSection/contact-section'
 import FooterSection from '../../MainPage/Section/Footer/footer-section'
 import { Solv24Links } from '../../MainPage/Section/Footer/footer-data-links'
+import SolutionDiscountContainer from '../../../components/SolutionDiscountContainer/solution-discount-container'
+import FloatingComponent from '../../../components/FloatingComponent/floating-component'
 
 const Solv24 = () => {
 
@@ -35,38 +40,38 @@ const Solv24 = () => {
         },
         {
             "title":"POS 24",
-            "description":"POS 24 is an add-on or stand alone Point of Sale software (1 x Single Node, Unlimited users).",
-            "img": UnoImg,
+            "description":"A convenient way to accurately record sales and keep track of how your business is doing. It also integrates with POS devices. POS is an add-on or stand alone point of sale software for a Single Node with unlimited users.",
+            "img": POSImg,
             "reverse": true,
         },
         {
             "title": "Accounting One 24",
             "description": "Accounting One is a stand-alone advance accounting system. It will simplify, digitize and automate your accounting processes and ensure accurate recording of your company's financial transactions into organized accounts.",
-            "img": UnoImg,
+            "img": AccountingImg,
             "reverse": false,
         },
         {
             "title": "Accounting Connect 24",
             "description": "Accounting Connect is an add-on software that will add an integrated advance accounting module to your SOLV system. It will simplify, digitize and automate your accounting processes and ensure accurate recording of your company's financial transactions into organized accounts.",
-            "img": UnoImg,
+            "img": AccountingImg,
             "reverse": true,
         },
         {
             "title": "Hr Solution Starter 24",
             "description":"Accounting One is a stand-alone advance accounting system. It will simplify, digitize and automate your accounting processes and ensure accurate recording of your company's financial transactions into organized accounts.",
-            "img": UnoImg,
+            "img": HRImg,
             "reverse": false,
         },
         {
             "title":"Hr Solution Basic 24",
             "description":"Hr Solution Basic 24 is an add-on or stand alone software that will provide a complete solution for the Human Resources Department and expand the capabilities of your SOLV system. Hr Solution includes payroll, Human Resources Information System (HRIS) and timekeeping with geo tagging.",
-            "img": UnoImg,
+            "img": HRImg,
             "reverse": true,
         },
         {
             "title":"Hr Solution Intermediate 24",
             "description":"Hr Solution Intermediate 24 is an add-on or stand alone software that will provide a complete solution for the Human Resources Department and expand the capabilities of your SOLV system. Hr Solution includes payroll, Human Resources Information System (HRIS) and timekeeping with geo tagging.",
-            "img": UnoImg,
+            "img": HRImg,
             "reverse": false,
         },
 
@@ -104,25 +109,25 @@ const Solv24 = () => {
                  {
                     data.map((item, key)=>{
                         return  <DynamicContainer key={key} reverse={item.reverse}>
-                                    <div data-aos={item.reverse ? "fade-left" : "fade-right"} className='flex justify-center flex-col max-w-[500px]'>
-                                        <TitleComponent title={item.title} /><br />
-                                        <DescriptionComponent description={item.description} />
-                                    </div>
-                                    <div data-aos={item.reverse ? "fade-right" : "fade-left"}>
-                                        <img src={item.img} className='item-img' alt="" />
-                                    </div>
-                                </DynamicContainer>
+                            <div  className='flex justify-center flex-col max-w-[500px]'>
+                                <TitleComponent title={item.title} /><br />
+                                <DescriptionComponent description={item.description} />
+                            </div>
+                            <div >
+                                <img src={item.img} className='item-img' alt="" width="300" />
+                            </div>
+                        </DynamicContainer>
                     })
                  }
                 <br/><br/><br/>
                 <div className="flex w-full m-auto max-w-[1500px] py-[30px]">
                     <span className='text-2xl text-[#343434]'>Sales and Inventory Plans</span>
                 </div>
-                <PlanContainer col={4}>
-                    <SubscriptionCard header="SOLV 24" title="Uno 24" price="₱4,125.00 monthly" color="#1595FF" description="Uno is our entry level variant of SOLV Business Solution. This is available on a 24-month installment." />
-                    <SubscriptionCard header="SOLV 24" title="Solo 24" price="₱4,125.00 monthly" color="#D7B146" description="Solo 24 is our single log-in variant of SOLV Business Solution. This is available on a 24-month installment."/>
-                    <SubscriptionCard header="SOLV 24" title="Duo 24" price="₱6,625.00 monthly" color="#5469AC" description="Duo is the ideal SOLV Business Solution variant for businesses with 2 branches. This is available on a 24-month installment."/>
-                    <SubscriptionCard header="SOLV 24" title="POS 24" price="₱750.00 monthly" color="#AD4742" description="POS 24 is an add-on or stand alone Point of Sale software (1 x Single Node, Unlimited users). This is available on a 24-month installment."/>
+                <PlanContainer col={4} >
+                    <SubscriptionCard key={1} header="SOLV 24" title="Uno 24" price="₱4,125.00 monthly" color="#1595FF" description="Uno is our entry level variant of SOLV Business Solution. This is available on a 24-month installment." />,
+                    <SubscriptionCard key={2} header="SOLV 24" title="Solo 24" price="₱4,125.00 monthly" color="#D7B146" description="Solo 24 is our single log-in variant of SOLV Business Solution. This is available on a 24-month installment."/>,
+                    <SubscriptionCard key={3} header="SOLV 24" title="Duo 24" price="₱6,625.00 monthly" color="#5469AC" description="Duo is the ideal SOLV Business Solution variant for businesses with 2 branches. This is available on a 24-month installment."/>,
+                    <SubscriptionCard key={4} header="SOLV 24" title="POS 24" price="₱750.00 monthly" color="#AD4742" description="POS 24 is an add-on or stand alone Point of Sale software (1 x Single Node, Unlimited users). This is available on a 24-month installment."/>
                 </PlanContainer>
                 <br/><br/>
                 <div className="flex w-full m-auto max-w-[1500px] py-[30px]">
@@ -143,8 +148,10 @@ const Solv24 = () => {
                     <SubscriptionCard header="SOLV 24" title="Hr Solution Intermediate 24" price="₱7,041.67 monthly" color="#738A46" description="Hr Solution - Intermediate 24 can accommodate 151 to 300 employees. 24 months installment."/>
                 </PlanContainer>
             </MainContainer>
+            <SolutionDiscountContainer />
             <ContactSection />
             <FooterSection links={Solv24Links} />
+            <FloatingComponent />
         </>
 
     )

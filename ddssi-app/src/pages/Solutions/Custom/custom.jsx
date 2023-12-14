@@ -13,6 +13,8 @@ import ScrollDownButton from '../../../components/ScrolldownButton/scroll-down-b
 import Solv24Navbar from '../../../components/Navbar/ReusableNavbar/reusable-navbar'
 import { Solv24Links } from '../../MainPage/Section/Footer/footer-data-links'
 import SubscriptionCard from '../../../components/SubscriptionCard/subscription-card'
+import FloatingComponent from '../../../components/FloatingComponent/floating-component'
+import SolutionDiscountContainer from '../../../components/SolutionDiscountContainer/solution-discount-container'
 
 const Custom = () => {
     return (
@@ -69,9 +71,11 @@ const Custom = () => {
                     <span className='w-full text-2xl text-[#343434] max-w-2xl font-light text-center'>We have four discounted packages that have varying number of man-days for software customization.</span>
                 </div> */}
             </MainContainer>
+            <SolutionDiscountContainer />
             <ContactSection />
             <FooterSection links={Solv24Links}/>
             <ScrollToTopButton />
+            <FloatingComponent />
         </>
     )
 }

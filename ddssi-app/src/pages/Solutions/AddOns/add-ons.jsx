@@ -22,6 +22,8 @@ import SupportBanner from '../../../assets/support-banner.jpg'
 import ZenithBanner from '../../../assets/zenith-banner.jpg'
 import AssetBanner from '../../../assets/assets-banner.jpg'
 import { Solv24Links } from '../../MainPage/Section/Footer/footer-data-links'
+import FloatingComponent from '../../../components/FloatingComponent/floating-component'
+import SolutionDiscountContainer from '../../../components/SolutionDiscountContainer/solution-discount-container'
 
 const AddonsPage = () => {
  
@@ -114,9 +116,11 @@ const AddonsPage = () => {
           </SwiperSlide>
         </Swiper>
       </MainContainer>
+      <SolutionDiscountContainer />
       <ContactSection />
       <FooterSection links={Solv24Links}/>
       <ScrollToTopButton/>
+      <FloatingComponent />
     </>
 
   )

@@ -21,6 +21,8 @@ import SalesInventoryVideo from '../../../assets/videos/sales-and-inventory.mp4'
 import ScrollDownButton from '../../../components/ScrolldownButton/scroll-down-button'
 import SubscriptionCard from '../../../components/SubscriptionCard/subscription-card'
 import UnoImg from '../../../assets/uno.png'
+import FloatingComponent from '../../../components/FloatingComponent/floating-component'
+import SolutionDiscountContainer from '../../../components/SolutionDiscountContainer/solution-discount-container'
 
 const SalesAndInventory = () => {
 
@@ -153,9 +155,11 @@ const SalesAndInventory = () => {
                 </div>
 
             </MainContainer>
+            <SolutionDiscountContainer />
             <ContactSection />
             <FooterSection links={Solv24Links} />
             <ScrollToTopButton />
+            <FloatingComponent />
         </>
     )
 }

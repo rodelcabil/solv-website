@@ -88,7 +88,7 @@ export const MainContainer = styled.div`
     &:hover .card-header .price-container{
         background:  ${({ color }) => color};
         color: white;
-        border: 1px solid white;
+        border: 3px solid white;
     }
 
 

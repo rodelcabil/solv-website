@@ -15,6 +15,8 @@ import HRSolutionsVideo from '../../../assets/videos/hr-solutions.mp4'
 import SubscriptionCard from '../../../components/SubscriptionCard/subscription-card'
 import ScrollDownButton from '../../../components/ScrolldownButton/scroll-down-button'
 import UnoImg from '../../../assets/uno.png'
+import FloatingComponent from '../../../components/FloatingComponent/floating-component'
+import SolutionDiscountContainer from '../../../components/SolutionDiscountContainer/solution-discount-container'
 
 const HRSolutions = () => {
 
@@ -165,9 +167,11 @@ const HRSolutions = () => {
                     </GridContainer>
                 </div> 
             </MainContainer>
+            <SolutionDiscountContainer />
             <ContactSection/>
             <FooterSection links={Solv24Links}/>
             <ScrollToTopButton />
+            <FloatingComponent />
         </>
     )
 }

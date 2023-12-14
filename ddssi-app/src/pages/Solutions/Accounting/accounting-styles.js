@@ -56,7 +56,7 @@ export const BodyContainer = styled.div`
 export const DynamicContainer = styled.div`
 
     max-width: 1500px;
-    padding: 60px 0;
+    padding: 120px 0;
     margin: auto;
     display: flex;
     align-items: center;

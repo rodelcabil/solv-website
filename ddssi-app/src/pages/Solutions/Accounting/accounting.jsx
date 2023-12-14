@@ -11,6 +11,8 @@ import FooterSection from '../../MainPage/Section/Footer/footer-section'
 import { Solv24Links } from '../../MainPage/Section/Footer/footer-data-links'
 import VideoComponent from '../../../components/VideoComponent/video-component'
 import AccountingVideo from '../../../assets/videos/solv-accounting.mp4'
+import FloatingComponent from '../../../components/FloatingComponent/floating-component'
+import SolutionDiscountContainer from '../../../components/SolutionDiscountContainer/solution-discount-container'
 
 const Accounting = () => {
 
@@ -60,7 +62,7 @@ const Accounting = () => {
                                         <DescriptionComponent description={item.description} />
                                     </div>
                                     <div data-aos={item.reverse ? "fade-right" : "fade-left"}>
-                                        <img src={item.img} className='item-img' alt="" />
+                                        <img src={item.img} className='item-img' alt="" width="300"/>
                                     </div>
                                 </DynamicContainer>
                     })
@@ -74,8 +76,10 @@ const Accounting = () => {
                     <SubscriptionCard header="Accounting" title="Accounting Connect" price="₱149,000.00 monthly" color="#5469AC" description="Accounting Connect is an add-on software that will add an integrated advance accounting module to your SOLV system. This is available on a 24-month installment."/>
                 </PlanContainer>
             </MainContainer>
+            <SolutionDiscountContainer />
             <ContactSection/>
             <FooterSection links={Solv24Links}/>
+            <FloatingComponent/>
         </>
     )
 }

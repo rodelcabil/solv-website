@@ -218,8 +218,8 @@ height: 100%;
 font-weight: 500;
 font-size: 14px;
 transition: ${({ theme }) => theme.transition};
-// color: ${({ scrolled }) => (scrolled === 1 ? 'var(--text-secondary)' : 'var(--text-light)')}; 
-color: var(--text-secondary);
+color: ${({ scrolled }) => (scrolled === 1 ? 'var(--text-secondary)' : 'var(--text-light)')}; 
+// color: var(--text-secondary);
 
 
 .solv_logo{
@@ -227,8 +227,8 @@ color: var(--text-secondary);
 }
 
 &:hover{
-   // color: ${({ scrolled }) => (scrolled === 1 ? 'var(--text-dark)' : '#cccccc')}
-   color: var(--text-dark);
+   color: ${({ scrolled }) => (scrolled === 1 ? 'var(--text-dark)' : '#cccccc')}
+  // color: var(--text-dark);
 }
 
 
@@ -239,13 +239,13 @@ color: var(--text-secondary);
     display: flex;
     justify-content: center;
   
-    &:hover{
-        color: #2988B4;
-        transition: all 0.3s ease;
+    // &:hover{
+    //     color: #2988B4;
+    //     transition: all 0.3s ease;
        
-        text-decoration: none;
+    //     text-decoration: none;
         
-    }
+    // }
 }
 `;
 
