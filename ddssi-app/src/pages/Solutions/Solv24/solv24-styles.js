@@ -117,4 +117,16 @@ export const DynamicContainer = styled.div`
     flex-wrap: wrap; 
     gap: 30px;
 
+    .details-container {
+        &::after{
+            content: "",
+            width: 200px;
+            height: 10px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: var(--bg-primary);
+        }
+    }
+
 `

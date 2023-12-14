@@ -1,5 +1,5 @@
 import React from 'react'
-import { MainContainer, BodyContainer, Banner, DynamicContainer, PlanContainer } from './solv24-styles'
+import { MainContainer, BodyContainer, Banner, DynamicContainer, PlanContainer, Divider } from './solv24-styles'
 import Solv24Navbar from '../../../components/Navbar/ReusableNavbar/reusable-navbar'
 import TitleComponent from '../../../components/Title/title'
 import DescriptionComponent from '../../../components/Description/description'
@@ -109,8 +109,11 @@ const Solv24 = () => {
                  {
                     data.map((item, key)=>{
                         return  <DynamicContainer key={key} reverse={item.reverse}>
-                            <div  className='flex justify-center flex-col max-w-[500px]'>
-                                <TitleComponent title={item.title} /><br />
+                            <div  className=' flex justify-center flex-col max-w-[500px]'>
+                                <TitleComponent title={item.title} isGradient={true} />
+                                <br/>
+                                <div className='h-[5px] w-[100px] bg-[#1595FF] rounded-xl' />
+                                <br/>
                                 <DescriptionComponent description={item.description} />
                             </div>
                             <div >

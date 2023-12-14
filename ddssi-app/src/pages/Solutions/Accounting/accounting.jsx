@@ -55,16 +55,19 @@ const Accounting = () => {
                     <VideoComponent videoSrc={AccountingVideo} width="1000" />
                 </BodyContainer>
                 {
-                    data.map((item, key) => {
-                        return <DynamicContainer key={key} reverse={item.reverse}>
-                                    <div data-aos={item.reverse ? "fade-left" : "fade-right"} className='flex justify-center flex-col max-w-[500px]'>
-                                        <TitleComponent title={item.title} /><br />
-                                        <DescriptionComponent description={item.description} />
-                                    </div>
-                                    <div data-aos={item.reverse ? "fade-right" : "fade-left"}>
-                                        <img src={item.img} className='item-img' alt="" width="300"/>
-                                    </div>
-                                </DynamicContainer>
+                    data.map((item, key)=>{
+                        return  <DynamicContainer key={key} reverse={item.reverse}>
+                            <div  className=' flex justify-center flex-col max-w-[500px]'>
+                                <TitleComponent title={item.title} isGradient={true} />
+                                <br/>
+                                <div className='h-[5px] w-[100px] bg-[#1595FF] rounded-xl' />
+                                <br/>
+                                <DescriptionComponent description={item.description} />
+                            </div>
+                            <div >
+                                <img src={item.img} className='item-img' alt="" width="300" />
+                            </div>
+                        </DynamicContainer>
                     })
                 }
                 <br/><br/><br/>

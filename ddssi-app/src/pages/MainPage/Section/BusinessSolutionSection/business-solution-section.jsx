@@ -31,10 +31,10 @@ const BusinessSolutionSection = () => {
           <BusinessSolutionCard title="SOLV Sales and Inventory" icon={SoloBgImg} description="It is a web-based point-of-sales, inventory, customer management and reporting tool designed for small and medium Business (SMBs) who needs a direct and practical approach in recording and maintaining their business transactions." link="/solution/sales-and-inventory" hasReadMore={true} />
         </div>
         <div data-aos="fade-up" data-aos-delay="100" className='flex w-[100%] items-stretch justify-center'>
-          <BusinessSolutionCard title="SOLV Hr Solution" icon={HRSolution} description="Building blocks that add features to your SOLV system. It allows you to expand and scale at your own pace instead of being forced to get a system with features you do not need." link="/solution/add-ons" hasReadMore={true} />
+          <BusinessSolutionCard title="SOLV Hr Solution" icon={HRSolution} description="End to end software solution for the Human Resources Department designed to improve delivery of service, efficiency and productivity. Hr Solution includes payroll, Human Resources Information System (HRIS) and system timekeeping with geo tagging." link="/solution/hr-solutions" hasReadMore={true} />
         </div>
         <div data-aos="fade-up" data-aos-delay="100" className='flex w-[100%] items-stretch justify-center'>
-          <BusinessSolutionCard title="SOLV Accounting" icon={Accounting} description="Building blocks that add features to your SOLV system. It allows you to expand and scale at your own pace instead of being forced to get a system with features you do not need." link="/solution/add-ons" hasReadMore={true} />
+          <BusinessSolutionCard title="SOLV Accounting" icon={Accounting} description="Simplified accounting system perfect for small and medium businesses. Manage your finances easily and have accurate reports at a press of a button." link="/solution/accounting" hasReadMore={true} />
         </div>
         <div data-aos="fade-up" data-aos-delay="100" className='flex w-[100%] items-stretch justify-center'>
           <BusinessSolutionCard title="SOLV Add-ons" icon={AddOns} description="Building blocks that add features to your SOLV system. It allows you to expand and scale at your own pace instead of being forced to get a system with features you do not need." link="/solution/add-ons" hasReadMore={true} />
