@@ -20,6 +20,10 @@ export const BodyContainer = styled.div`
     align-items: center;
     justify-content: center; 
     gap: 15px;
+    background: rgba(25, 65, 163, 0.1);
+    padding: 60px;
+    border-radius: 20px;
+    margin-bottom: 20px;
 
     .img-container{
         background-image: url(${bg});
@@ -109,16 +113,3 @@ export const GridContainer = styled.div`
     
 `;
 
-export const DynamicContainer = styled.div`
-
-    max-width: 1500px;
-    padding: 60px 0;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: ${({ reverse }) => (reverse === true ? 'row-reverse' : 'row')};
-    flex-wrap: wrap; 
-    gap: 30px;
-
-`

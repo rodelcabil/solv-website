@@ -15,8 +15,75 @@ import { Solv24Links } from '../../MainPage/Section/Footer/footer-data-links'
 import SubscriptionCard from '../../../components/SubscriptionCard/subscription-card'
 import FloatingComponent from '../../../components/FloatingComponent/floating-component'
 import SolutionDiscountContainer from '../../../components/SolutionDiscountContainer/solution-discount-container'
+import DynamicContainer from '../../../components/DyanamicContainer/dynamic-container'
+import RequirementAnalysis from '../../../assets/new-images/requirement-analysis.jpg'
+import RapidPrototyping from '../../../assets/new-images/rapid-prototyping.jpg'
+import AgileDevelopmentMethodologies from '../../../assets/new-images/agile.jpg'
+import CostEffectiveSolutions from '../../../assets/new-images/cost-effective.jpg'
+import CollaborativeApproach from '../../../assets/new-images/collaborative-approach.jpg'
+import FeatureEnhancement from '../../../assets/new-images/feature-enhancement.jpg'
+
 
 const Custom = () => {
+
+    const data = [
+        {
+            "title": "Requirements Analysis",
+            "description": " Conduct indepth analysis of client requirements. Identify specific features, workflows, and functionalities needed.",
+            "img": RequirementAnalysis,
+            "reverse": false,
+            "background": "rgba(21, 149, 255, 0.1)",
+            "color": "#1D8DF9",
+            "animation": "zoom-in-up"
+        },
+        {
+            "title": "Rapid Prototyping",
+            "description": "Develop prototypes to visualize customization early in the process. Ensure alignment with client expectations before full implementation.",
+            "img": RapidPrototyping,
+            "reverse": true,
+            "background": "rgba(215, 177, 70, 0.1)",
+            "color": "#D7B146",
+            "animation": "zoom-in-up"
+        },
+        {
+            "title": "Feature Enhancement",
+            "description": "Add, modify, or remove features based on client needs. Align software capabilities with specific business goals.",
+            "img": FeatureEnhancement,
+            "reverse": false,
+            "background": "rgba(84, 105, 172, 0.1)",
+            "color": "#5469AC",
+            "animation": "zoom-in-up"
+        },
+        {
+            "title": "Agile Development Methodologies",
+            "description": "Adopt agile methodologies for flexible and iterative development. Accommodate changes and updates throughout the customization process.",
+            "img": AgileDevelopmentMethodologies,
+            "reverse": true,
+            "background": "rgba(21, 149, 255, 0.1)",
+            "color": "#1D8DF9",
+            "animation": "zoom-in-up"
+        },
+        {
+            "title": "Cost-Effective Solutions",
+            "description": "Offer tiered pricing models based on customization needs. Provide transparent cost structures for tailored",
+            "img": CostEffectiveSolutions,
+            "reverse": false,
+            "background": "rgba(173, 71, 66, 0.1)",
+            "color": "#AD4742",
+            "animation": "zoom-in-up"
+        },
+        {
+            "title": "Collaborative Approach",
+            "description": "Work closely with clients in a collaborative development model. Ensure client involvement in decision-making hroughout the customization process.",
+            "img": CollaborativeApproach,
+            "reverse": true,
+            "background": "rgba(115, 138, 70, 0.1)",
+            "color": "#738A46",
+            "animation": "zoom-in-up"
+        }
+
+    ];
+
     return (
         <>
             <Solv24Navbar />
@@ -35,23 +102,13 @@ const Custom = () => {
                 </div>
             </Banner>
             <MainContainer id="read-more">
+                <DynamicContainer data={data} />
+                <br/><br/>
                 <BodyContainer>
                     <span className='text-2xl text-[#343434]'>SOLV Custom Plan</span>
                 </BodyContainer>
                 <br/><br/>
                 <BodyContainer>
-                    {/* <div data-aos="fade-up" data-aos-delay="100">
-                        <CustomCard description="Customization package up to maximum 15 man-days with 1 year validity" img={Custom1} price="₱49,990.00"/>
-                    </div>
-                    <div data-aos="fade-up" data-aos-delay="200">
-                        <CustomCard description="Customization package up to maximum 30 man-days with 1 year validity." img={Custom2} price="₱99,990.00"/>
-                    </div>
-                    <div data-aos="fade-up" data-aos-delay="300">
-                        <CustomCard description="Customization package up to maximum 60 man-days with 1 year validity" img={Custom3} price="₱199,990.00"/>
-                    </div>
-                    <div data-aos="fade-up" data-aos-delay="400">
-                        <CustomCard description="Customization package up to maximum 90 man-days with 1 year validity." img={Custom4} price="₱299,990.00" />
-                    </div> */}
                     <div data-aos="fade-up" data-aos-delay="100">
                         <SubscriptionCard header="SOLV Custom" title="Custom 1" price="₱49,990.00" inclusion="Test" color="#1595FF" description="Customization package up to maximum 15 man-days with 1 year validity." />
                     </div>
@@ -64,14 +121,13 @@ const Custom = () => {
                     <div data-aos="fade-up" data-aos-delay="300">
                         <SubscriptionCard header="SOLV Custom" title="Custom 4" price="₱299,990.00" inclusion="Test" color="#AD4742" description="Customization package up to maximum 90 man-days with 1 year validity."/>
                     </div>
-                    
                 </BodyContainer>
                 <br />
                 {/* <div className='flex justify-center flex-1 max-w-[1500px] m-auto'>
                     <span className='w-full text-2xl text-[#343434] max-w-2xl font-light text-center'>We have four discounted packages that have varying number of man-days for software customization.</span>
                 </div> */}
             </MainContainer>
-            <SolutionDiscountContainer />
+            {/* <SolutionDiscountContainer /> */}
             <ContactSection />
             <FooterSection links={Solv24Links}/>
             <ScrollToTopButton />

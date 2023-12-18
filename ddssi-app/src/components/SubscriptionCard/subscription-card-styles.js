@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const MainContainer = styled.div`
@@ -8,6 +9,16 @@ export const MainContainer = styled.div`
     border: ${({ color }) => '1px solid' + color};
     border-radius: 16px;
     cursor: pointer;
+    position: relative;
+
+
+    #discount{
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1000;
+        width: 60px;
+    }
 
     .card-header{
         background:  ${({ color }) => color};
@@ -16,8 +27,9 @@ export const MainContainer = styled.div`
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         color: var(--text-light);
-        height: 100px;
+        height: 120px;
         position: relative;
 
 
@@ -69,6 +81,17 @@ export const MainContainer = styled.div`
         }
     }
     
+
+    .discount-container{
+        margin-top: auto;
+        border-radius: 8px;
+        padding: 8px;
+        color: var(--text-primary);
+        text-align: center;
+        font-size: 14px;
+        width: 100%;
+    }
+
     &:hover {
         background:  ${({ color }) => color};
     }
@@ -91,7 +114,28 @@ export const MainContainer = styled.div`
         border: 3px solid white;
     }
 
+    &:hover .discount-container{
+        color: var(--text-light);
+    }
+
+    &:hover .avail-button{
+        background:  white;
+        color: ${({ color }) => color};
+    }
 
     
     
 `;
+
+export const AvailButton = styled(Link)`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background: ${({color}) => color};
+    width: 100%;
+    margin: auto;
+    padding: 8px 16px;
+    color: var(--text-light);
+    
+`

@@ -12,10 +12,12 @@ export const MainContainer = styled.div`
 `;
 
 export const BodyContainer = styled.div`
+    
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     gap: 60px;
+    flex-direction: ${({ reverse }) => (reverse === true ? 'row-reverse' : 'row')};
 
     img{
         height: 300px;
@@ -26,7 +28,7 @@ export const BodyContainer = styled.div`
         
         background-image: ${({ imgbg }) => `url(${imgbg})`};
         background-size: cover;
-        height: 350px;
+        height: 300px;
         margin-bottom: 50px;
         border-radius: 8px;
 
@@ -75,5 +77,40 @@ export const Banner = styled.div`
         }
 
        
+    }
+`;
+
+export const DynamicContainer = styled.div`
+
+    max-width: 1500px;
+    padding: 60px 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: ${({ reverse }) => (reverse === true ? 'row-reverse' : 'row')};
+    flex-wrap: wrap; 
+    gap: 30px;
+
+`
+
+export const PlanContainer = styled.div`
+    max-width: 1500px;
+    display: grid;
+    grid-template-columns: ${({ col }) => `repeat(${col}, 1fr)`};
+    grid-template-rows: 1fr;
+    align-content: center;
+    align-items: stretch;
+    gap: 20px;
+    margin: auto;
+
+    @media screen and (max-width: 1200px){
+        grid-template-columns: repeat(3, auto);
+    }
+    @media screen and (max-width: 800px){
+        grid-template-columns: repeat(2, auto);
+    }
+    @media screen and (max-width: 650px){
+        grid-template-columns: repeat(1, auto);
     }
 `;

@@ -3,7 +3,7 @@ import bg from '../../../assets/solv-solution-img-2.png';
 
 export const MainContainer = styled.div`
     
-    padding: 60px;
+    padding: 120px 60px;
     background: var(--bg-light);
 
     @media screen and (max-width: 910px){
@@ -103,30 +103,3 @@ export const PlanContainer = styled.div`
         grid-template-columns: repeat(1, auto);
     }
 `;
-
-
-export const DynamicContainer = styled.div`
-
-    max-width: 1500px;
-    padding: 120px 0;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: ${({ reverse }) => (reverse === true ? 'row-reverse' : 'row')};
-    flex-wrap: wrap; 
-    gap: 30px;
-
-    .details-container {
-        &::after{
-            content: "",
-            width: 200px;
-            height: 10px;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            background: var(--bg-primary);
-        }
-    }
-
-`

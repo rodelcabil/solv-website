@@ -27,8 +27,6 @@ ${'' /*backdrop-filter: blur(1px);*/}
 @media screen and (max-width: 1200px){
     width: 100%;
     padding: 0 20px ;
-    position: sticky !important;
-    -webkit-position: -webkit-sticky !important;
 }
 
 `;
@@ -238,14 +236,11 @@ color: ${({ scrolled }) => (scrolled === 1 ? 'var(--text-secondary)' : 'var(--te
     width: 100%;
     display: flex;
     justify-content: center;
-  
-    // &:hover{
-    //     color: #2988B4;
-    //     transition: all 0.3s ease;
-       
-    //     text-decoration: none;
-        
-    // }
+    color: var(--text-secondary); 
+    
+    &:hover{
+        color: var(--text-dark);
+    }
 }
 `;
 

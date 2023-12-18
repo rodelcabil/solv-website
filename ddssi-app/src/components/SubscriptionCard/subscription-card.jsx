@@ -1,7 +1,8 @@
 import React from 'react'
-import { MainContainer } from './subscription-card-styles'
+import { AvailButton, MainContainer } from './subscription-card-styles'
 import { useState } from 'react'
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import Discount from '../../assets/new-images/discount.png'
 
 const SubscriptionCard = ({ header, title, price, description, color }) => {
 
@@ -13,9 +14,10 @@ const SubscriptionCard = ({ header, title, price, description, color }) => {
 
     return (
         <MainContainer color={color} click={click}> 
+            <img src={Discount} id="discount"/>
             <div className='card-header'>
                 <p className='uppercase font-semibold'>{header}</p>
-                <span className='uppercase font-semibold title'>{title}</span>
+                <span className='uppercase font-semibold title text-center'>{title}</span>
                 <div className='price-container'>
                     <span className='price'>{price}</span>
                 </div>
@@ -24,6 +26,13 @@ const SubscriptionCard = ({ header, title, price, description, color }) => {
             <br /><br />
             <span className='descritpion text-[#7a7a7a] text-sm'>{description}</span>
             <br />
+            <div className='discount-container'>
+                <span>
+                    Avail within 48 hours and get a 20% discount!
+                </span>
+                <br/><br/>
+                <AvailButton to="/" color={color} className='avail-button'>Avail now</AvailButton>
+            </div>
             
             {/* <div className="accordion">
                 <div className='accordion-body flex items-center text-[#7a7a7a] cursor-pointer'>

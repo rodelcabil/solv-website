@@ -1,12 +1,12 @@
 import styled from "styled-components"
-import bg from '../../../assets/accounting-banner.webp';
+import bg from '../../../assets/solo-banner.jpg'
 
 
 export const MainContainer = styled.div`
     
     padding: 120px  60px;
     background: var(--bg-light);
-
+    scroll-behavior: smooth;
     @media screen and (max-width: 910px){
         padding: 30px;
     }
@@ -22,7 +22,10 @@ export const BodyContainer = styled.div`
     justify-content: space-around;
     flex-wrap: wrap; 
     gap: 30px;
-    padding: 30px 0 ;
+    padding: 120px 30px;
+    background: rgba(16, 46, 118, 0.2);
+    border-radius: 20px;
+
     @media screen and (max-width: 910px){
         
     }
@@ -86,17 +89,3 @@ export const PlanContainer = styled.div`
         grid-template-columns: repeat(1, auto);
     }
 `;
-
-export const DynamicContainer = styled.div`
-
-    max-width: 1500px;
-    padding: 60px 0;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: ${({ reverse }) => (reverse === true ? 'row-reverse' : 'row')};
-    flex-wrap: wrap; 
-    gap: 30px;
-
-`

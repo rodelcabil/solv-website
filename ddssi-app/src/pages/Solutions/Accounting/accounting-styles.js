@@ -46,6 +46,10 @@ export const BodyContainer = styled.div`
     justify-content: center;
     flex-wrap: wrap; 
     gap: 30px;
+    background: rgba(255, 165, 0, 0.2);
+    padding: 60px;
+    border-radius: 20px;
+    margin-bottom: 20px;
 
     @media screen and (max-width: 910px){
         
@@ -53,19 +57,6 @@ export const BodyContainer = styled.div`
 
 `;
 
-export const DynamicContainer = styled.div`
-
-    max-width: 1500px;
-    padding: 120px 0;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: ${({ reverse }) => (reverse === true ? 'row-reverse' : 'row')};
-    flex-wrap: wrap; 
-    gap: 30px;
-
-`
 export const PlanContainer = styled.div`
     position: relative;
     z-index: 10000;

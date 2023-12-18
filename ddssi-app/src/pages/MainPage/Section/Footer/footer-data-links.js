@@ -33,6 +33,11 @@ export const MainPageLinks = [
 
 export const Solv24Links = [
     {
+        "name": "SOLV 24",
+        "link": "/solution/solv-24",
+        "isNavLink": true
+    },
+    {
         "name": "Sales and Inventory",
         "link": "/solution/sales-and-inventory",
         "isNavLink": true
@@ -43,7 +48,7 @@ export const Solv24Links = [
         "isNavLink": true
     },
     {
-        "name": "Point of Sales",
+        "name": "SOLV Accounting",
         "link": "/solution/accounting",
         "isNavLink": true
     },
@@ -57,11 +62,11 @@ export const Solv24Links = [
         "link": "/solution/custom",
         "isNavLink": true
     },
-    {
-        "name": "E-Commerce",
-        "link": "/solution/e-commerce",
-        "isNavLink": true
-    },
+    // {
+    //     "name": "E-Commerce",
+    //     "link": "/solution/e-commerce",
+    //     "isNavLink": true
+    // },
     {
         "name": "Contact Us",
         "link": "#contact",

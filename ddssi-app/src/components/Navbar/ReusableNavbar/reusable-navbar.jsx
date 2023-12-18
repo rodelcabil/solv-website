@@ -20,7 +20,9 @@ import {
 import Logo from '/public/ddssi.png' 
 import SolvLogo from '../../../assets/solv_logo.png'
 import Solv24Logo from '../../../assets/solvlogo.png'
+import Solv24LogoWhite from '../../../assets/solvlogo-white.png'
 import SolvDeskLogo from '../../../assets/solvdesk-logo.png'
+import SolvDeskLogoWhite from '../../../assets/solvdesk-logo-white.png'
 
 const ReusableNavbar = () => {
 
@@ -90,7 +92,7 @@ const ReusableNavbar = () => {
                     <NavbarContainer>
                         <NavLogo to="/" onClick={closeMobileMenu} scrolled={scrollValue}>
                             <div className="logoContainer">
-                                <img src={Solv24Logo} className="logo" alt="Logo"/> 
+                                <img src={scrollValue == 0 ? Solv24LogoWhite : Solv24Logo} className="logo" alt="Logo"/> 
                                 {/* <div className='page-name-container'>
                                     <span className="text-[#BD3200] italic text-sm">SOLV</span>
                                     <span className="text-[#001E5A] text-lg ml-[-3px]">24</span> 
@@ -128,12 +130,11 @@ const ReusableNavbar = () => {
                                 <NavItem>
                                     <NavLinks  exact to="/" onClick={closeMobileMenu}  activeClassName="active">
                                       <div className='flex items-center gap-1'>
-                                        <img src={SolvDeskLogo} className="solv_logo" alt="Solv Logo" />
+                                        <img src={scrollValue === 0 ? SolvDeskLogoWhite : SolvDeskLogo} className="solv_logo" alt="Solv Logo" />
                                       </div>
                                     </NavLinks>
                                 </NavItem>
                             </NavMenu>
-                            
                         </div>
                     </NavbarContainer>
                 </Nav>

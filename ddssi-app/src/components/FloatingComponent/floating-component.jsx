@@ -1,6 +1,6 @@
 import React from 'react'
 import { MainContainer } from './flaoting-component-styles'
-import FloatingImg from '../../assets/solv-comms-float.png'
+import FloatingImg from '../../assets/new-images/floating-img.png'
 import { IoClose } from "react-icons/io5";
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
@@ -22,8 +22,8 @@ const FloatingComponent = () => {
     
 
     return (
-        <MainContainer visible={visible} className='shadow-lg'>
-            <div className='flex justify-end'>
+        <MainContainer visible={visible}>
+            <div className='flex justify-center absolute top-0 right-0'>
                 <IoClose className=' cursor-pointer absolute' size="25" onClick={handleVisibility} />
             </div>
             <NavLink exact to="/solv-meet">
