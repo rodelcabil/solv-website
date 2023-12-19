@@ -23,7 +23,7 @@ const main = () => {
   const activeTab = useSelector((state) => state.activeNav.active);
 
   useEffect(() => {
-    console.log("activeTab", activeTab);
+    //console.log("activeTab", activeTab);
   }, [activeTab])
 
   return (

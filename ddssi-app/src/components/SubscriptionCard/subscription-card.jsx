@@ -1,20 +1,31 @@
 import React from 'react'
 import { AvailButton, MainContainer } from './subscription-card-styles'
 import { useState } from 'react'
-import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+
 import Discount from '../../assets/new-images/discount.png'
+import FreeDownload from '../../assets/new-images/free-download.png'
+import FreeDownloadWhite from '../../assets/new-images/free-download-white.png'
 
 const SubscriptionCard = ({ header, title, price, description, color, hasDiscount }) => {
 
     const [click, setClicked] = useState(false);
+    const [hover, serHover] = useState(false);
+
+
+    useState(()=>{
+
+    },[hover])
 
     const handleClick = () =>{
         setClicked(!click);
     }
-    console.log("hasDiscount", hasDiscount)
+
+    const handleMouseOver = () =>{
+        serHover(!hover);
+    }
 
     return (
-        <MainContainer color={color} click={click}> 
+        <MainContainer color={color} click={click} onMouseEnter={handleMouseOver} onMouseLeave={handleMouseOver}> 
             {hasDiscount === true ? <img src={Discount} id="discount" /> : <></>}
             <div className='card-header'>
                 <p className='uppercase font-semibold'>{header}</p>
@@ -28,10 +39,8 @@ const SubscriptionCard = ({ header, title, price, description, color, hasDiscoun
             <span className='descritpion text-[#7a7a7a] text-sm'>{description}</span>
             <br />
             <div className='discount-container'>
-                <span>
-                    Avail within 48 hours and get a 20% discount!
-                </span>
-                <br/><br/>
+                {hasDiscount === true ? <span>Avail within <span className='font-semibold'>48 hours</span> and get a <span className='font-semibold'>20% discount!</span></span>: <img src={hover ? FreeDownloadWhite : FreeDownload} height="100" />}
+                <br/>
                 <AvailButton href="http://192.168.230.35:8023/Registration" target="_blank" color={color} className='avail-button'>Avail now</AvailButton>
             </div>
             

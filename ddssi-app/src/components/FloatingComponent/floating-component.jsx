@@ -12,7 +12,6 @@ const FloatingComponent = () => {
     const [visible, setVisible] = useState(true);
 
     useEffect(()=>{
-        console.log("visible", visible)
     },[visible]);
 
     const handleVisibility = () => {

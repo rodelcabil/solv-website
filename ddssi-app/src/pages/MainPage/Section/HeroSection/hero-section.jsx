@@ -20,7 +20,7 @@ const HeroSection = () => {
             <p className='header text-6xl text-left font-normal text-[#343434] leading-[72px]'>
               We <span className='gradient-text'>value</span> your business and we will always provide the <span className='gradient-text'>right solution</span> for you!
             </p>
-            <p className='sub-header text-3xl font-normal text-[#1595FF]'><br />Let’s SOLV it!</p>
+            {/* <p className='sub-header text-3xl font-normal text-[#1595FF]'><br />Let’s SOLV it!</p> */}
 
           </div>
           <div data-aos="fade-left" className='flex flex-1 justify-center items-center hero-right-container'>

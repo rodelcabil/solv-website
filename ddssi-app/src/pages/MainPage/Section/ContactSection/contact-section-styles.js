@@ -16,6 +16,7 @@ export const MainContainer = styled.div`
         background: #fff;
         opacity: 0.1;
         border-radius: 100%;
+        z-index:2;
 
         @media screen and (max-width: 600px){
             width: 100%;

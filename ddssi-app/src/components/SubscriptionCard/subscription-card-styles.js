@@ -10,7 +10,7 @@ export const MainContainer = styled.div`
     border-radius: 16px;
     cursor: pointer;
     position: relative;
-
+    z-index: 3;
 
     #discount{
         position: absolute;
@@ -83,6 +83,8 @@ export const MainContainer = styled.div`
     
 
     .discount-container{
+        display: flex;
+        flex-direction: column;
         margin-top: auto;
         border-radius: 8px;
         padding: 8px;
@@ -90,6 +92,13 @@ export const MainContainer = styled.div`
         text-align: center;
         font-size: 14px;
         width: 100%;
+        justify-content: center;
+        align-items: center;
+        
+        img{
+            height: 100px;
+            width: 200px;
+        }
     }
 
     &:hover {
