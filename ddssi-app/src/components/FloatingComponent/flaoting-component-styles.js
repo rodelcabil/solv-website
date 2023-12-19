@@ -28,4 +28,12 @@ export const MainContainer = styled.div`
     flex-direction: column;
     animation: ${FloatingAnimation} 6s ease-in-out infinite;
 
+    img{
+        width: 200px;
+
+        @media screen and (max-width: 600px){
+            width: 150px;
+        }
+    }
+
 `

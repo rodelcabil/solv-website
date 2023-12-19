@@ -1,11 +1,12 @@
 import React, {Suspense, lazy} from 'react';
 import './App.css';
+import './index.css'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import GlobalStyle from './globalStyles';
 import ScrollToTop from './scrollToTop';
+import Loader from './components/Loader/loader';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
-import Loader from './components/Loader/loader';
 AOS.init();
 
 const LazyHomePage = lazy(() => import('./pages/main'));
@@ -32,7 +33,7 @@ const LazyPageNotFoundPage = lazy(() => import('./pages/404/page-not-found'));
 function App() {
   return (
     <>
-      <Router>
+      <Router basename='/'>
       <Suspense fallback={<Loader />}>
         <GlobalStyle/>
         <ScrollToTop/>

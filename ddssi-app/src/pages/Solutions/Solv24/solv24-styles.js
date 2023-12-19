@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import bg from '../../../assets/solv-solution-img-2.png';
 
-export const MainContainer = styled.div`
+export const SMainContainer = styled.div`
     
     padding: 120px 60px;
     background: var(--bg-light);
@@ -25,7 +25,7 @@ export const Banner = styled.div`
 
     @media screen and (max-width: 910px){
         padding: 30px;
-        height: calc(100vh - 60px);
+        height: 100vh;
     }
 
     @media screen and (max-width: 600px){

@@ -1,16 +1,17 @@
 import styled from 'styled-components';
 
 export const FAQCollapsibleContainer = styled.div`
-    background: #F2F2F2;
+    //background: #F2F2F2;
     transition: all 0.5s ease !important;
-    padding: 0 20px;
+    padding: 0;
     align-items: stretch;
-    border-radius: 5px;
+    //border-radius: 5px;
     display: flex;
     width: 1500px;
     margin: auto;
     flex-direction: column;
-    margin-bottom: 10px;
+  //  margin-bottom: 10px;
+    border-top: 1px solid #dadce0;
    
 
     .header{
@@ -62,9 +63,9 @@ export const FAQCollapsibleContainer = styled.div`
         
     }
 
-    &:hover{
-        background: #e2e2e2;
-    }
+    // &:hover{
+    //     background: #e2e2e2;
+    // }
 
 
     @media screen and (max-width: 1400px){

@@ -54,6 +54,7 @@ const ReusableNavbar = () => {
 
   const scrollValue = scrolled ? 1 : 0;
 
+
     return (
 
         <>

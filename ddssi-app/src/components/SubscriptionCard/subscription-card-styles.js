@@ -127,7 +127,7 @@ export const MainContainer = styled.div`
     
 `;
 
-export const AvailButton = styled(Link)`
+export const AvailButton = styled.a`
     display: flex;
     justify-content: center;
     align-items: center;

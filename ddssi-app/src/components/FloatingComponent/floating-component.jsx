@@ -27,7 +27,7 @@ const FloatingComponent = () => {
                 <IoClose className=' cursor-pointer absolute' size="25" onClick={handleVisibility} />
             </div>
             <NavLink exact to="/solv-meet">
-                <img src={FloatingImg} width="200" />
+                <img src={FloatingImg}/>
             </NavLink>
         </MainContainer>
     )

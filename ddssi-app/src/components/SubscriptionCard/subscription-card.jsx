@@ -4,17 +4,18 @@ import { useState } from 'react'
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import Discount from '../../assets/new-images/discount.png'
 
-const SubscriptionCard = ({ header, title, price, description, color }) => {
+const SubscriptionCard = ({ header, title, price, description, color, hasDiscount }) => {
 
     const [click, setClicked] = useState(false);
 
     const handleClick = () =>{
         setClicked(!click);
     }
+    console.log("hasDiscount", hasDiscount)
 
     return (
         <MainContainer color={color} click={click}> 
-            <img src={Discount} id="discount"/>
+            {hasDiscount === true ? <img src={Discount} id="discount" /> : <></>}
             <div className='card-header'>
                 <p className='uppercase font-semibold'>{header}</p>
                 <span className='uppercase font-semibold title text-center'>{title}</span>
@@ -31,7 +32,7 @@ const SubscriptionCard = ({ header, title, price, description, color }) => {
                     Avail within 48 hours and get a 20% discount!
                 </span>
                 <br/><br/>
-                <AvailButton to="/" color={color} className='avail-button'>Avail now</AvailButton>
+                <AvailButton href="http://192.168.230.35:8023/Registration" target="_blank" color={color} className='avail-button'>Avail now</AvailButton>
             </div>
             
             {/* <div className="accordion">

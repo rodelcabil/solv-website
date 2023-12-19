@@ -1,6 +1,6 @@
 {
   "name": "ddssi-app",
-  "homepage": "https://digitaldoorssoftware.com/beta-test",
+  "homepage": "/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -16,7 +16,7 @@
     "@reduxjs/toolkit": "^2.0.1",
     "antd": "^5.11.2",
     "aos": "^2.3.4",
-    "firebase": "^10.6.0",
+    "firebase": "^10.7.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-draggable": "^4.4.6",
