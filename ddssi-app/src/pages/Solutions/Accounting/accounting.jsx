@@ -43,7 +43,7 @@ const Accounting = () => {
                 <DynamicContainer data={data} />
                 <br/><br/><br/>
                 <div className="flex w-full m-auto max-w-[1500px] py-[30px]">
-                    <span className='text-2xl text-[#343434]'>Sales and Inventory Plans</span>
+                    <span className='text-2xl text-[#343434]'>SOLV Accounting Plans</span>
                 </div>
                 <PlanContainer data={accounting_plan_data[0].accounting} />
             </MainContainer>

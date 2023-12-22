@@ -1,13 +1,9 @@
 import React from 'react'
 import { BodyContainer, MainContainer } from './service-section-styles'
 import ServiceCard from '../../../../components/ServiceCard/service-card'
-import SoftwareDevelopment from "../../../../assets/about-bg.jpg"
-import WebDevelopment from "../../../../assets/custom-banner-bg.jpg"
-import SystemSupport from "../../../../assets/support-img.jpg"
-import { useDispatch } from 'react-redux'
-import { setActiveNav } from '../../../../redux/activeNavSlice'
-import { useInView } from 'react-intersection-observer'
-import { useEffect } from 'react'
+import SoftwareDevelopment from "../../../../assets/compressed/about-bg.jpg"
+import WebDevelopment from "../../../../assets/compressed/custom-banner-bg.jpg"
+import SystemSupport from "../../../../assets/compressed/support-img.jpg"
 import SectionObserver from '../../../../functions/section-obeserver'
 
 

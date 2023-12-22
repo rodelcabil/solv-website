@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import bg from '../../../assets/custom-solution-img.jpg';
+import bg from '../../../assets/compressed/custom-solution-img.jpg';
 
 export const MainContainer = styled.div`
     padding: 120px 60px;

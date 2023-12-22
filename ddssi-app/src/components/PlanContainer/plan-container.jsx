@@ -15,6 +15,8 @@ const PlanContainer = ({ data }) => {
                         price={item.price}
                         color={item.color}
                         description={item.description}
+                        isAvailable={item.isAvailable}
+                        isSolv24={item.isSolv24}
                     />
                 })
             }

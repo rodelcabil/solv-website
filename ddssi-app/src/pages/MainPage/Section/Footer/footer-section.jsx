@@ -1,8 +1,6 @@
 import React from 'react'
 import { BodyContainer, MainContainer, Row } from './footer-section-styles'
-import Logo from '../../../../assets/ddssi-logo-white.png'
-import Map from '../../../../assets/map.png'
-import QR from '../../../../assets/QR.jpg'
+import Logo from '../../../../assets/compressed/ddssi-logo-white.png'
 import {MdLocationPin,MdEmail,MdLocalPhone} from "react-icons/md"
 import { FaFacebook, FaInstagram, FaYoutube, FaLinkedin} from "react-icons/fa"
 import { PiInstagramLogoFill } from "react-icons/pi";
@@ -22,9 +20,9 @@ const FooterSection = ({links}) => {
                         <br />
                         <span className='text-[#7a7a7a] text-justify'>It is our goal to provide software that will address the needs of Micro, Small and Medium Enterprises (MSMEs) and help them take the leap to transform and elevate their business.</span>
                         <br/>
-                        <div className='flex'>
+                        {/* <div className='flex'>
                             <img src={QR} />
-                        </div>
+                        </div> */}
                     </div>
                 </Row>
                 <Row>

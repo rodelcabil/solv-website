@@ -1,14 +1,14 @@
 import React from 'react'
 import { BodyContainer, MainContainer } from './business-solution-section-styles'
 import BusinessSolutionCard from '../../../../components/BusinessSolutionCard/business-solution-card'
-import OtherServices from "../../../../assets/other-services-img.jpg"
-import AddOns from "../../../../assets/addons-solution-img-2.jpg"
-import ECommerce from "../../../../assets/e-commerce-img.png"
-import SolvLogo from "../../../../assets/solv-solution-img-2.png"
-import Custom from "../../../../assets/custom-solution-img.jpg"
-import SoloBgImg from '../../../../assets/solo-banner.jpg'
-import HRSolution from '../../../../assets/hris-banner.jpg';
-import Accounting from '../../../../assets/accounting-banner.webp';
+import OtherServices from "../../../../assets/compressed/other-services-img.jpg"
+import AddOns from "../../../../assets/compressed/addons-solution-img-2.jpg"
+import ECommerce from "../../../../assets/compressed/e-commerce-img.png"
+import SolvLogo from "../../../../assets/compressed/solv-solution-img-2.png"
+import Custom from "../../../../assets/compressed/custom-solution-img.jpg"
+import SoloBgImg from '../../../../assets/compressed/solo-banner.jpg'
+import HRSolution from '../../../../assets/compressed/hris-banner.jpg';
+import Accounting from '../../../../assets/compressed/accounting-banner.png';
 import SectionObserver from '../../../../functions/section-obeserver'
 
 

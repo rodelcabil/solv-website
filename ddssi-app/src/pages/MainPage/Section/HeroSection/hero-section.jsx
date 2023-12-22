@@ -1,10 +1,6 @@
 import React from 'react'
 import { BodyContainer, MainContainer } from './hero-section-styles'
-import SolvSuite from "../../../../assets/solv-suite.png"
-import { setActiveNav } from '../../../../redux/activeNavSlice'
-import { useDispatch } from 'react-redux'
-import { useInView } from 'react-intersection-observer';
-import { useEffect } from 'react'
+import SolvSuite from "../../../../assets/compressed/solv-suite.png"
 import SectionObserver from '../../../../functions/section-obeserver'
 import AnySection from '../AnySection/any-section'
 

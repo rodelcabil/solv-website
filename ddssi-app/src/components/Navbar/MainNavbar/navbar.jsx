@@ -17,8 +17,8 @@ import {
     NavItemBtn2,
 
 } from './navbar-styles';
-import Logo from '../../../assets/ddssi-logo-black.png'
-import SolvDeskLogo from '../../../assets/solvdesk-logo.png'
+import Logo from '../../../assets/compressed/ddssi-logo-black.png'
+import SolvDeskLogo from '../../../assets/compressed/solvdesk-logo.png'
 import { useDispatch, useSelector } from 'react-redux'
 import { setActiveNav } from '../../../redux/activeNavSlice'
 

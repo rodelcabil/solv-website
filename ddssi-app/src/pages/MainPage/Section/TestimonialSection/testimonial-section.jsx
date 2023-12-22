@@ -6,16 +6,12 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Autoplay, Navigation, Pagination, Keyboard } from 'swiper/modules';
-import AccentHub from '../../../../assets/accenthub.jpg'
-import Thinkerbox from '../../../../assets/thinkerbox.jpg'
-import HopeWell from '../../../../assets/hopewell.png'
-import BeWell from '../../../../assets/bewell.png'
-import MaxVision from '../../../../assets/maxvision.png'
-import Catpc from '../../../../assets/catpc.jpg'
-import { useRef } from 'react';
-import { Waypoint } from 'react-waypoint';
-import { useDispatch } from 'react-redux';
-import { setActiveNav } from '../../../../redux/activeNavSlice';
+import AccentHub from '../../../../assets/compressed/accenthub.jpg'
+import Thinkerbox from '../../../../assets/compressed/thinkerbox.jpg'
+import HopeWell from '../../../../assets/compressed/hopewell.png'
+import BeWell from '../../../../assets/compressed/bewell.png'
+import MaxVision from '../../../../assets/compressed/maxvision.png'
+import Catpc from '../../../../assets/compressed/catpc.jpg'
 import SectionObserver from '../../../../functions/section-obeserver';
 
 const TestimonialSection = () => {

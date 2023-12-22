@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import bg from '../../../assets/solv-solution-img-2.png';
+import bg from '../../../assets/compressed/solv-solution-img-2.png';
 
 export const SMainContainer = styled.div`
     

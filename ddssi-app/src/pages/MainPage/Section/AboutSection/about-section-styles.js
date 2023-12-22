@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import bg from '../../../../assets/about-bg.jpg';
+import bg from '../../../../assets/compressed/about-bg.jpg';
 import { NavLink } from 'react-router-dom'
 import { responsive } from "../../../../globalStyles";
 

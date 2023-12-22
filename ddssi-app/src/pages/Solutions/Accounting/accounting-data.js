@@ -1,10 +1,11 @@
-import AccountingImg from '../../../assets/accounting.png'
+import AccountingImg from '../../../assets/compressed/accounting.png'
 import Staging from '../../../assets/new-images/stagin.jpg'
 import FinancialStatement from '../../../assets/new-images/financial-statement.jpg'
 import UserPermission from '../../../assets/new-images/user-permission-security.jpg'
 import SimplifiedDataEntry from '../../../assets/new-images/simplified-data-entry.jpg'
 import Chart from '../../../assets/new-images/chart.jpg'
 import Posting from '../../../assets/new-images/posting.jpg'
+
 
 export const _data = [
     {
@@ -86,21 +87,25 @@ export const accounting_plan_data = [{
             
             {
                 "hasDiscount": true,
-                "header": "Sales and Inventory",
-                "title":"Uno",
-                "price":"₱99,000.00",
+                "header": "Accounting",
+                "title":"One",
+                "price":"₱149,000.00",
                 "color": "#1595FF", 
-                "description": "Uno is our entry level variant of SOLV Business Solution. It includes software for 1 Headquarters with unlimited users, a stand alone software for 1 x single node/branch with unlimited users."
+                "description": "Accounting One is a stand-alone advance accounting system. It will simplify, digitize and automate your accounting processes and ensure accurate recording of your company's financial transactions into organized accounts.",
+                "isAvailable": true,
+                "isSolv24": false,
+                
                 
             },
             {
                 "hasDiscount":true,
-                "header":"Sales and Inventory",
-                "title":"Solo",
-                "price":"₱99,000.00", 
+                "header":"Accounting",
+                "title":"Unified Pro",
+                "price":"₱149,000.00", 
                 "color": "#738A46",
-                "description": "Solo is our single log-in variant of SOLV Business Solution. It includes software for combined headquarters and branch with unlimited users, auto approval."
-                
+                "description": "Accounting Unified Pro is an add-on software that will add an integrated advance accounting module to your SOLV system. It will simplify, digitize and automate your accounting processes and ensure accurate recording of your company's financial transactions into organized accounts.",
+                "isAvailable": false,
+                "isSolv24": false,
             },
         ]
     }

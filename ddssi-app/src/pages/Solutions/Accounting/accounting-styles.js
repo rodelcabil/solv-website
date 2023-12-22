@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import bg from '../../../assets/accounting-banner.webp';
+import bg from '../../../assets/compressed/accounting-banner.png';
 
 export const MainContainer = styled.div`
     

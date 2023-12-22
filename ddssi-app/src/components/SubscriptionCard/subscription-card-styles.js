@@ -74,10 +74,12 @@ export const MainContainer = styled.div`
 
         .accordion-body{
             position: relative;
-            height: ${({ click }) => (click ? '100%' : '0')};
-            padding: ${({ click }) => (click ? '15px 0' : '0')};
+            height: ${({ click }) => (click ? 'auto' : '0')};
+            padding: ${({ click }) => (click ? '10px' : '0')};
             overflow: hidden;
-            
+            background: ${({ color }) => color};
+            color: white;
+            border-radius: 10px;
         }
     }
     
@@ -86,7 +88,6 @@ export const MainContainer = styled.div`
         display: flex;
         flex-direction: column;
         margin-top: auto;
-        border-radius: 8px;
         padding: 8px;
         color: var(--text-primary);
         text-align: center;
@@ -94,43 +95,43 @@ export const MainContainer = styled.div`
         width: 100%;
         justify-content: center;
         align-items: center;
-        
-        img{
-            height: 100px;
-            width: 200px;
-        }
+
+        // img{
+        //     height: 100px;
+        //     width: 200px;
+        // }
     }
 
-    &:hover {
-        background:  ${({ color }) => color};
-    }
+    // &:hover {
+    //     background:  ${({ color }) => color};
+    // }
 
-    &:hover .descritpion{
-        color:  white;
-    }
+    // &:hover .descritpion{
+    //     color:  white;
+    // }
 
-    &:hover .card-header{
-        background:  white;
+    // &:hover .card-header{
+    //     background:  white;
 
-        p, .title{
-            color: var(--text-primary);
-        }
-    }
+    //     p, .title{
+    //         color: var(--text-primary);
+    //     }
+    // }
 
-    &:hover .card-header .price-container{
-        background:  ${({ color }) => color};
-        color: white;
-        border: 3px solid white;
-    }
+    // &:hover .card-header .price-container{
+    //     background:  ${({ color }) => color};
+    //     color: white;
+    //     border: 3px solid white;
+    // }
 
-    &:hover .discount-container{
-        color: var(--text-light);
-    }
+    // &:hover .discount-container{
+    //     color: var(--text-light);
+    // }
 
-    &:hover .avail-button{
-        background:  white;
-        color: ${({ color }) => color};
-    }
+    // &:hover .avail-button{
+    //     background:  white;
+    //     color: ${({ color }) => color};
+    // }
 
     
     
@@ -148,3 +149,35 @@ export const AvailButton = styled.a`
     color: var(--text-light);
     
 `
+
+export const ComingSoonButton = styled.a`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background: var(--bg-light);
+    width: 100%;
+    margin: auto;
+    padding: 8px 16px;
+    color: var(--text-secondary);
+    border: 1px solid #e3e3e3;
+    
+    &:hover{
+        background: #e3e3e3;
+        color: var(--text-primary);
+    }
+`
+
+export const CloseButton = styled.a`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background: var(--bg-primary);
+    width: 100%;
+    margin: auto;
+    padding: 8px 16px;
+    color: var(--text-light);
+    
+`
+

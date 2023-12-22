@@ -9,12 +9,17 @@ const MeetingPage = () => {
     const apiRef = useRef();
 
     const handleClose =()=>{
-        window.location.href = 'http://localhost:5173/solv-meet';
+        history.goBack();
+    }
+
+    const handleConferenceLeft = () =>{
+        window.location.href = 'https://www.digitaldoorssoftware.com/solv-meet';
+        //window.location.href = 'http://localhost:5173/solv-meet';
     }
 
     const handleApiReady = apiObj => {
         apiRef.current = apiObj;
-        apiRef.current.on('videoConferenceLeft', handleClose);
+        apiRef.current.on('videoConferenceLeft', handleConferenceLeft);
     };
 
     return (

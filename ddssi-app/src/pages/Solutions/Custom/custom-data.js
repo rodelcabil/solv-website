@@ -69,37 +69,45 @@ export const custom_plan_data = [{
         "col": 4,
         "list": [
             {
-                "hasDiscount": true,
+                "hasDiscount": false,
                 "header": "SOLV Custom",
-                "title":"Custom 1",
+                "title":"Level 1",
                 "price":"₱49,990.00",
                 "color": "#1595FF", 
-                "description": "Customization package up to maximum 15 man-days with 1 year validity."
+                "description": "Customization package up to maximum 15 man-days with 1 year validity.",
+                "isAvailable": true,
+                "isSolv24" : false
             },
             {
-                "hasDiscount":true,
+                "hasDiscount": false,
                 "header":"SOLV Custom",
-                "title":"Custom 2",
+                "title":"Level 2",
                 "price":"₱99,990.00", 
                 "color": "#D7B146",
-                "description": "Customization package up to maximum 30 man-days with 1 year validity."
+                "description": "Customization package up to maximum 30 man-days with 1 year validity.",
+                "isAvailable": true,
+                "isSolv24" : false
             },
             {
-                "hasDiscount": true,
+                "hasDiscount": false,
                 "header": "SOLV Custom",
-                "title":"Custom 3",
+                "title":"Level 3",
                 "price":"₱199,990.00",
                 "color": "#5469AC", 
-                "description": "Customization package up to maximum 60 man-days with 1 year validity."
+                "description": "Customization package up to maximum 60 man-days with 1 year validity.",
+                "isAvailable": true,
+                "isSolv24" : false
                 
             },
             {
-                "hasDiscount":true,
+                "hasDiscount": false,
                 "header":"SOLV Custom",
-                "title":"Custom 4",
+                "title":"Level 4",
                 "price":"₱299,000.00", 
                 "color": "#AD4742",
-                "description": "Customization package up to maximum 90 man-days with 1 year validity."
+                "description": "Customization package up to maximum 90 man-days with 1 year validity.",
+                "isAvailable": true,
+                "isSolv24" : false
                 
             },
         ]

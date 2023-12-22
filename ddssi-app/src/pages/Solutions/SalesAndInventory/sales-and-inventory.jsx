@@ -39,13 +39,13 @@ const SalesAndInventory = () => {
             </Banner>
             <MainContainer id="read-more">
                 <BodyContainer>
-                    <div className='max-w-[500px]'>
+                    {/* <div className='max-w-[500px]'>
                         <TitleComponent title="Sales and Inventory System" isGradient={true} /><br />
                         <div className='h-[5px] w-[100px] bg-[#1595FF] rounded-xl' /><br />
                         <DescriptionComponent description="It is a web-based point-of-sales, inventory, customer management and reporting tool designed for small and medium Business (SMBs) who needs a direct and practical approach in recording and maintaining their business transactions. Developed using the work process perfected in actual business environment, it can be applied to any business handling inventory and sales functions." />
-                    </div>
+                    </div> */}
 
-                    <VideoComponent videoSrc={SalesInventoryVideo} width="550" />
+                    <VideoComponent videoSrc={SalesInventoryVideo} width="1000" />
                 </BodyContainer>
                 <br />
                 <DynamicContainer data={data} />

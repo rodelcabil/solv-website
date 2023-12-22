@@ -1,13 +1,11 @@
 import styled from "styled-components"
-import bg from '../../assets/about-banner-bg.jpg';
-import pattern from '../../assets/pattern.webp';
+import bg from '../../assets/compressed/about-banner-bg.jpg';
+import pattern from '../../assets/compressed/pattern.png';
 import { responsive } from "../../globalStyles";
 
 
 export const MainContainer = styled.div`
     background: var(--bg-light)
-
-
 `;
 
 export const BodyContainer = styled.div`

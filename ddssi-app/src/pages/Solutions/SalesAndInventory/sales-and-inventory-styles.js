@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import bg from '../../../assets/solo-banner.jpg'
+import bg from '../../../assets/compressed/solo-banner.jpg'
 
 
 export const MainContainer = styled.div`
@@ -22,7 +22,7 @@ export const BodyContainer = styled.div`
     justify-content: space-around;
     flex-wrap: wrap; 
     gap: 30px;
-    padding: 120px 30px;
+    padding: 60px;
     background: rgba(16, 46, 118, 0.2);
     border-radius: 20px;
 

@@ -1,4 +1,4 @@
-import UnoImg from '../../../assets/uno.png'
+import UnoImg from '../../../assets/compressed/uno.png'
 import Unlimited from '../../../assets/new-images/unlimited.jpg'
 import RealtimeDashboard from '../../../assets/new-images/realtime-dashboard.jpg'
 import Mobile from '../../../assets/new/beach.png'
@@ -218,7 +218,9 @@ export const sales_plan_data = [{
                 "title":"Uno",
                 "price":"₱99,000.00",
                 "color": "#1595FF", 
-                "description": "Uno is our entry level variant of SOLV Business Solution. It includes software for 1 Headquarters with unlimited users, a stand alone software for 1 x single node/branch with unlimited users."
+                "description": "Uno is our entry level variant of SOLV Business Solution. It includes software for 1 Headquarters with unlimited users, a stand alone software for 1 x single node/branch with unlimited users.",
+                "isAvailable": true,
+                "isSolv24": false
                 
             },
             {
@@ -227,7 +229,9 @@ export const sales_plan_data = [{
                 "title":"Solo",
                 "price":"₱99,000.00", 
                 "color": "#738A46",
-                "description": "Solo is our single log-in variant of SOLV Business Solution. It includes software for combined headquarters and branch with unlimited users, auto approval."
+                "description": "Solo is our single log-in variant of SOLV Business Solution. It includes software for combined headquarters and branch with unlimited users, auto approval.",
+                "isAvailable": true,
+                "isSolv24": false
                 
             },
             {
@@ -236,7 +240,9 @@ export const sales_plan_data = [{
                 "title":"Duo", 
                 "price": "₱159,000.00", 
                 "color":"#D7B146",
-                "description":"Duo is the ideal SOLV Business Solution variant for businesses with 2 branches. It includes software for 1 Headquarters with unlimited users, stand alone software for 2 x single nodes/branches with unlimited users."
+                "description":"Duo is the ideal SOLV Business Solution variant for businesses with 2 branches. It includes software for 1 Headquarters with unlimited users, stand alone software for 2 x single nodes/branches with unlimited users.",
+                "isAvailable": true,
+                "isSolv24": false
                 
             },
             {
@@ -245,7 +251,9 @@ export const sales_plan_data = [{
                 "title":"Duo+" ,
                 "price":"₱225,000.00" ,
                 "color":"#D7B146" ,
-                "description":"Duo+ is the ideal SOLV Business Solution variant for businesses with 2 branches. It includes software for 1 Headquarters with unlimited users, stand alone software for 2 x single nodes/branches with unlimited users and add-on 1st year maintenance agreement on package included nodes."
+                "description":"Duo+ is the ideal SOLV Business Solution variant for businesses with 2 branches. It includes software for 1 Headquarters with unlimited users, stand alone software for 2 x single nodes/branches with unlimited users and add-on 1st year maintenance agreement on package included nodes.",
+                "isAvailable": true,
+                "isSolv24": false
                 
             },
             {
@@ -254,7 +262,9 @@ export const sales_plan_data = [{
                 "title":"Multi" ,
                 "price":"₱319,000.00" ,
                 "color":"#AD4742" ,
-                "description":"Multi is the ideal SOLV Business Solution variant for businesses with 3 branches. It includes software for 1 Headquarters with unlimited users, stand alone software for 3 x single nodes/branches with unlimited users"
+                "description":"Multi is the ideal SOLV Business Solution variant for businesses with 3 branches. It includes software for 1 Headquarters with unlimited users, stand alone software for 3 x single nodes/branches with unlimited users",
+                "isAvailable": true,
+                "isSolv24": false
                 
             },
             {
@@ -263,7 +273,9 @@ export const sales_plan_data = [{
                 "title":"Multi+" ,
                 "price":"₱219,000.00" ,
                 "color":"#AD4742" ,
-                "description":"Multi+ is the ideal SOLV Business Solution variant for businesses with 3 branches. It includes software for 1 Headquarters with unlimited users, stand alone software for 3 x single nodes/branches with unlimited users and add-on 1st year maintenance agreement on package included nodes."
+                "description":"Multi+ is the ideal SOLV Business Solution variant for businesses with 3 branches. It includes software for 1 Headquarters with unlimited users, stand alone software for 3 x single nodes/branches with unlimited users and add-on 1st year maintenance agreement on package included nodes.",
+                "isAvailable": true,
+                "isSolv24": false
 
             },
             {
@@ -272,7 +284,9 @@ export const sales_plan_data = [{
                 "title":"POS" ,
                 "price":"₱18,000.00" ,
                 "color":"#5469AC" ,
-                "description":"Solo is our single log-in variant of SOLV Business Solution. It includes software for combined headquarters and branch with unlimited users, auto approval."
+                "description":"Solo is our single log-in variant of SOLV Business Solution. It includes software for combined headquarters and branch with unlimited users, auto approval.",
+                "isAvailable": true,
+                "isSolv24": false
                 
             }
         ]

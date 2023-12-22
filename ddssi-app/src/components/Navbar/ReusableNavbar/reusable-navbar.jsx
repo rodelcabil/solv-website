@@ -18,11 +18,11 @@ import {
 
 } from './reusable-navbar-styles';
 import Logo from '/public/ddssi.png' 
-import SolvLogo from '../../../assets/solv_logo.png'
-import Solv24Logo from '../../../assets/solvlogo.png'
-import Solv24LogoWhite from '../../../assets/solvlogo-white.png'
-import SolvDeskLogo from '../../../assets/solvdesk-logo.png'
-import SolvDeskLogoWhite from '../../../assets/solvdesk-logo-white.png'
+import SolvLogo from '../../../assets/compressed/solv_logo.png'
+import Solv24Logo from '../../../assets/compressed/solvlogo.png'
+import Solv24LogoWhite from '../../../assets/compressed/solvlogo-white.png'
+import SolvDeskLogo from '../../../assets/compressed/solvdesk-logo.png'
+import SolvDeskLogoWhite from '../../../assets/compressed/solvdesk-logo-white.png'
 
 const ReusableNavbar = () => {
 
@@ -111,13 +111,13 @@ const ReusableNavbar = () => {
                                     <NavLinks exact to="/" scrolled={scrollValue}  onClick={closeMobileMenu} activeClassName="active">Home</NavLinks>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLinks exact to="/solution/solv-24" scrolled={scrollValue}  onClick={closeMobileMenu} activeClassName="active">Solv 24</NavLinks>
+                                    <NavLinks exact to="/solution/solv-24" scrolled={scrollValue}  onClick={closeMobileMenu} activeClassName="active">SOLV 24</NavLinks>
                                 </NavItem>
                                 <NavItem>
                                     <NavLinks exact to="/solution/sales-and-inventory" scrolled={scrollValue}  onClick={closeMobileMenu} activeClassName="active">Sales and Inventory System</NavLinks>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLinks  exact to="/solution/hr-solutions" scrolled={scrollValue}  onClick={closeMobileMenu} activeClassName="active">HR Solutions</NavLinks>
+                                    <NavLinks  exact to="/solution/hr-solutions" scrolled={scrollValue}  onClick={closeMobileMenu} activeClassName="active">Hr Solution</NavLinks>
                                 </NavItem>
                                 <NavItem>
                                     <NavLinks  exact to="/solution/accounting" scrolled={scrollValue} onClick={closeMobileMenu} activeClassName="active">Accounting</NavLinks>

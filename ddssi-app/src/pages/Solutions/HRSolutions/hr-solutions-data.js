@@ -1,4 +1,4 @@
-import UnoImg from '../../../assets/uno.png'
+import UnoImg from '../../../assets/compressed/uno.png'
 import GeoTagging from '../../../assets/new-images/geo-tagging.jpg'
 import EmployeeManagement from '../../../assets/new-images/employee-management.jpg'
 import PerformanceManagement from '../../../assets/new-images/performance-review.jpg'
@@ -280,8 +280,8 @@ export const data = [
         "description": "Flexibility for HR administrators to customize and manage deduction tables. Easy updates to adapt to changes in announced by relevant government agencies or company policies.",
         "img": Deductables,
         "reverse": false,
-        "background": "rgba(21, 149, 255, 0.1)",
-        "color": "#1D8DF9",
+        "background": "rgba(215, 177, 70, 0.1)",
+        "color": "#D7B146",
         "animation": "zoom-in-up"
     }
 
@@ -289,7 +289,7 @@ export const data = [
 
 export const hr_plan_data = [{
     "hr": {
-        "col": 5,
+        "col": 3,
         "list": [
             {
                 "hasDiscount": true,
@@ -297,7 +297,9 @@ export const hr_plan_data = [{
                 "title":"Starter",
                 "price":"₱69,000.00",
                 "color": "#1595FF", 
-                "description": "Hr Solution - Starter can accommodate up to 50 employees."
+                "description": "Hr Solution - Starter can accommodate up to 50 employees.",
+                "isAvailable": true,
+                "isSolv24": false
             },
             {
                 "hasDiscount":true,
@@ -305,7 +307,9 @@ export const hr_plan_data = [{
                 "title":"Basic",
                 "price":"₱99,000.00", 
                 "color": "#D7B146",
-                "description": "Hr Solution - Basic can accommodate 51 to 150 employees."
+                "description": "Hr Solution - Basic can accommodate 51 to 150 employees.",
+                "isAvailable": true,
+                "isSolv24": false
             },
             {
                 "hasDiscount": true,
@@ -313,7 +317,9 @@ export const hr_plan_data = [{
                 "title":"Intermediate", 
                 "price": "₱169,000.00", 
                 "color":"#5469AC",
-                "description":"Hr Solution - Intermediate can accomodate 151 to 300 employees."
+                "description":"Hr Solution - Intermediate can accomodate 151 to 300 employees.",
+                "isAvailable": true,
+                "isSolv24": false
             },
             {
                 "hasDiscount": true,
@@ -322,7 +328,9 @@ export const hr_plan_data = [{
                 "price":"₱269,000.00" ,
                 "inclusion":"Test" ,
                 "color":"#AD4742" ,
-                "description":"Hr Solution - Professional can accommodate 301 to 500 employees."
+                "description":"Hr Solution - Professional can accommodate 301 to 500 employees.",
+                "isAvailable": true,
+                "isSolv24": false
             },
             {
                 "hasDiscount":true, 
@@ -330,7 +338,9 @@ export const hr_plan_data = [{
                 "title":"Enterprise" ,
                 "price":"₱469,000.00" ,
                 "color":"#738A46" ,
-                "description":"Hr Solution - Intermediate can accomodate 151 to 300 employees."
+                "description":"Hr Solution - Intermediate can accomodate 151 to 300 employees.",
+                "isAvailable": true,
+                "isSolv24": false
             }
         ]
     }, 
@@ -343,7 +353,9 @@ export const hr_plan_data = [{
                 "title":"Lite" ,
                 "price":"₱39,000.00" ,
                 "color":"#1595FF", 
-                "description":"Payroll Lite can accommodate 100 employees."
+                "description":"Payroll Lite can accommodate 100 employees.",
+                "isAvailable": true,
+                "isSolv24": false
                 
             },
             {
@@ -352,7 +364,9 @@ export const hr_plan_data = [{
                 "title":"Pro", 
                 "price":"₱89,000.00", 
                 "color":"#D7B146", 
-                "description":"Payroll Pro can accommodate 400 employees."
+                "description":"Payroll Pro can accommodate 400 employees.",
+                "isAvailable": true,
+                "isSolv24": false
             },
             {
                 "hasDiscount":true, 
@@ -361,7 +375,9 @@ export const hr_plan_data = [{
                 "price":"₱149,000.00" ,
                 "inclusion":"Test" ,
                 "color":"#5469AC" ,
-                "description":"Payroll Max can accommodate 1000 employees."
+                "description":"Payroll Max can accommodate 1000 employees.",
+                "isAvailable": true,
+                "isSolv24": false
             }
         ]
     }

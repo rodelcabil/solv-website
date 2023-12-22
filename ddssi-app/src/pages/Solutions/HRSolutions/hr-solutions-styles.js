@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import bg from '../../../assets/hris-banner.jpg';
+import bg from '../../../assets/compressed/hris-banner.jpg';
 
 export const MainContainer = styled.div`
     
