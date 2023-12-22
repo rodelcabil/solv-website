@@ -8,7 +8,7 @@ import { Container } from '../../../globalStyles';
 export const Nav = styled.nav`
 ${'' /* background: rgb(4, 10, 14, 0.9); */}
 ${'' /*background:  ${({ theme, scrolled }) => (scrolled ? theme.navBg : 'none' )};*/}
-background: ${({ scrolled }) => (scrolled === 1 ? 'var(--bg-light-blur)' : 'var(--bg-light)' )};
+background: ${({ scrolled }) => (scrolled === 1 ? 'var(--bg-light-blur)' : 'transparent' )};
 display: flex;
 transition: all 0.3s ease;
 align-items: center;
@@ -218,7 +218,7 @@ height: 100%;
 font-weight: 500;
 font-size: 14px;
 transition: ${({ theme }) => theme.transition};
-color:  var(--text-secondary);
+color: ${({ scrolled }) => (scrolled === 1 ? 'var(--text-secondary)' : 'var(--text-light)')}; 
 
 
 .solv_logo{

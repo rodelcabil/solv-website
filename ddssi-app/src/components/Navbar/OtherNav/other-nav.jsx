@@ -17,9 +17,11 @@ import {
     NavItemBtn2,
 
 } from './other-nav-styles';
-import Logo from '../../../assets/ddssi-logo-black.png'
-import SolvLogo from '../../../assets/solv_logo.png'
-import SolvDeskLogo from '../../../assets/solvdesk-logo.png'
+import Logo from '../../../assets/compressed/ddssi-logo-black.png'
+import LogoWhite from '../../../assets/compressed/ddssi-logo-white.png'
+import SolvLogo from '../../../assets/compressed/solv_logo.png'
+import SolvDeskLogo from '../../../assets/compressed/solvdesk-logo.png'
+import SolvDeskLogoWhite from '../../../assets/compressed/solvdesk-logo-white.png'
 
 const OtherNavbar = () => {
 
@@ -89,7 +91,7 @@ const OtherNavbar = () => {
                     <NavbarContainer>
                         <NavLogo to="/" onClick={closeMobileMenu} scrolled={scrollValue}>
                             <div className="logoContainer">
-                                <img src={Logo} className="logo" alt="Logo"/> 
+                                <img src={scrollValue === 0 ? LogoWhite : Logo} className="logo" alt="Logo"/> 
                                 {/* <span>Digital Doors Software <br/>Solutions Inc.</span> */}
                               
                                 {/* <FaLaptopCode size="40" color="#2988B4" /> */}
@@ -102,12 +104,12 @@ const OtherNavbar = () => {
                         <div>
                             <NavMenu onClick={handleClick} click={click}>
                                 <NavItem >
-                                    <NavLinks exact to="/" onClick={closeMobileMenu} activeClassName="active">Home</NavLinks>
+                                    <NavLinks exact to="/" scrolled={scrollValue} onClick={closeMobileMenu} activeClassName="active">Home</NavLinks>
                                 </NavItem>
                                 <NavItem>
                                     <NavLinks  exact to="/" onClick={closeMobileMenu}  activeClassName="active">
                                       <div className='flex items-center gap-1'>
-                                        <img src={SolvDeskLogo} className="solv_logo" alt="Solv Logo" />
+                                        <img src={ scrollValue === 0 ? SolvDeskLogoWhite : SolvDeskLogo} className="solv_logo" alt="Solv Logo" />
                                       </div>
                                     </NavLinks>
                                 </NavItem>

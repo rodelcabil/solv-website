@@ -93,7 +93,7 @@ const ReusableNavbar = () => {
                     <NavbarContainer>
                         <NavLogo to="/" onClick={closeMobileMenu} scrolled={scrollValue}>
                             <div className="logoContainer">
-                                <img src={scrollValue == 0 ? Solv24LogoWhite : Solv24Logo} className="logo" alt="Logo"/> 
+                                <img src={scrollValue === 0 ? Solv24LogoWhite : Solv24Logo} className="logo" alt="Logo"/> 
                                 {/* <div className='page-name-container'>
                                     <span className="text-[#BD3200] italic text-sm">SOLV</span>
                                     <span className="text-[#001E5A] text-lg ml-[-3px]">24</span> 
