@@ -51,8 +51,8 @@ export const BodyContainer = styled.div`
     border-radius: 20px;
     margin-bottom: 20px;
 
-    @media screen and (max-width: 910px){
-        
+    @media screen and (max-width: 600px){
+        padding: 0px;
     }
 
 `;

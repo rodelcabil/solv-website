@@ -1,6 +1,6 @@
 import React from 'react'
 import { Divider, MainContainer } from './testimonial-card-styles'
-import qoute from '../../assets/qoute.png'
+import qoute from '../../assets/compressed/qoute.png'
 const TestimonialCard = ({companyName, comment, name, companyImg, height}) => {
   return (
     <MainContainer height={height}>

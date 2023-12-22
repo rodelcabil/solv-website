@@ -26,8 +26,8 @@ export const BodyContainer = styled.div`
     background: rgba(16, 46, 118, 0.2);
     border-radius: 20px;
 
-    @media screen and (max-width: 910px){
-        
+    @media screen and (max-width: 600px){
+        padding: 0px;
     }
 
 `;

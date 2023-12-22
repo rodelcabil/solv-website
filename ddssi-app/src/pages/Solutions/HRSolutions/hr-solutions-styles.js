@@ -54,6 +54,10 @@ export const BodyContainer = styled.div`
         gap: 50px;
     }
 
+    @media screen and (max-width: 600px){
+        padding: 0px;
+    }
+
 `;
 
 export const Banner = styled.div`

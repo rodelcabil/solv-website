@@ -1,6 +1,6 @@
 import React from 'react'
 import { MainContainer } from './page-not-found-styles'
-import PageNotFoundImg from '../../assets/page-not-found.png'
+import PageNotFoundImg from '../../assets/compressed/page-not-found.png'
 const PageNotFound = () => {
   return (
     <MainContainer>
