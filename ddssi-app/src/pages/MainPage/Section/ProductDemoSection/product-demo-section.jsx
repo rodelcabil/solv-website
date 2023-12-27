@@ -6,11 +6,6 @@ import SolvCommsVideo from '../../../../assets/videos/solv-comms.mp4'
 import SolvAccountingVideo from '../../../../assets/videos/solv-accounting.mp4'
 import HRSolutionVideo from '../../../../assets/videos/hr-solutions.mp4'
 import SalesAndInventoryVideo from '../../../../assets/videos/sales-and-inventory.mp4'
-import { useRef } from 'react';
-import { Waypoint } from 'react-waypoint';
-import { useDispatch } from 'react-redux';
-import { setActiveNav } from '../../../../redux/activeNavSlice';
-import { useInView } from 'react-intersection-observer';
 import SectionObserver from '../../../../functions/section-obeserver';
 
 const ProductDemoDection = () => {
@@ -66,7 +61,7 @@ const ProductDemoDection = () => {
         <MainContainer ref={ref} id="product-demo">
             <div className='flex flex-col items-center justify-center'>
                 <span className='text-4xl text-[#343434] font-normal text-center mb-2'>Our Product Demo</span>
-                <span className='text-1xl text-[#7A7A7A] font-normal text-center max-w-3xl'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+                <span className='text-1xl text-[#7A7A7A] font-normal text-center max-w-3xl'>Here's the walkthrough that showcases some of the features, functionality, and benefits of our products. </span>
             </div>
             <br /><br />
             <BodyContainer>

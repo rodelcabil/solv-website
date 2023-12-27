@@ -3,11 +3,7 @@ import { BodyContainer, MainContainer, LearnMoreButton } from './about-section-s
 import AboutImg1 from '../../../../assets/compressed/about-img-1.jpg'
 import AboutImg2 from '../../../../assets/compressed/about-img-2.jpg'
 import AboutImg3 from '../../../../assets/compressed/about-img-3.jpg'
-import { useRef } from 'react'
 import WhyDDSSISection from '../WhyDDSSISection/why-ddssi-section'
-import { Waypoint } from 'react-waypoint'
-import { useDispatch } from 'react-redux'
-import { setActiveNav } from '../../../../redux/activeNavSlice'
 import SectionObserver from '../../../../functions/section-obeserver'
 
 const AboutSection = () => {

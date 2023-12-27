@@ -3,7 +3,6 @@ import OtherNavbar from '../../../components/Navbar/OtherNav/other-nav'
 import ContactSection from '../../MainPage/Section/ContactSection/contact-section'
 import FooterSection from '../../MainPage/Section/Footer/footer-section'
 import { Banner, BodyContainer, MainContainer } from './ecommerce-styles'
-import CustomCard from '../../../components/CustomCard/custom-card'
 import ScrollToTopButton from '../../../components/ScrollToTopButton/scroll-to-top-button'
 import { Solv24Links } from '../../MainPage/Section/Footer/footer-data-links'
 

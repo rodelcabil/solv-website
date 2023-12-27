@@ -7,7 +7,7 @@ const SolvMeet = () => {
     const [isDisabled, setDisabled] = useState(true);
     const [meetingName, setMeetingName] = useState("");
     const [displayName, setDisplayName] = useState("");
-
+    const _VERSION = '4.0.0';
     useEffect(() => {
         handleDisabledButton();
     }, [meetingName,displayName,isDisabled])
@@ -66,7 +66,7 @@ const SolvMeet = () => {
                         {isDisabled ? <CreateButton disabled={isDisabled}>Start</CreateButton> : <CreateLink to={{ pathname: `/solv-meet/meeting/${meetingName}`, state: { roomName: meetingName, displayName: displayName } }} onClick={handleCreateMeeting}>Start</CreateLink>}
                     </div>
                 </BodyContainer>
-                <span className='flex w-full text-[#7a7a7a] justify-center text-center py-5'>© Copyright 2023 | Digital Doors Software Solutions Inc. | All rights reserved.</span>
+                <span className='flex w-full text-[#7a7a7a] justify-center text-center py-5'>© Copyright 2023 | Digital Doors Software Solutions Inc. | All rights reserved. | Version {_VERSION}</span>
             </MainContainer>
             
         </>

@@ -5,8 +5,6 @@ import { PiInstagramLogoFill } from "react-icons/pi";
 import { useForm } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
 import { notification } from 'antd';
-import { IoArrowBack } from "react-icons/io5";
-import BackFunction from '../../functions/go-back';
 
 const ContactPage = () => {
 
