@@ -56,14 +56,14 @@ export const BodyContainer = styled.div`
 
         .box{
             position: absolute;
-            top: 0;
-            right: 100px;
+            top: -50px;
+            right: 200px;
             height: 20px;
             width: 20px;
             background: green;
             opacity: 0.5;
             transform: rotate(45deg);
-
+             filter: blur(2px);
             @media screen and (max-width: 600px){
                 right: 0;
             }
@@ -71,7 +71,7 @@ export const BodyContainer = styled.div`
         }
     
         .triangle{
-            
+             filter: blur(2px);
             position: absolute;
             bottom: 65px;
             right: 550px;
@@ -92,7 +92,7 @@ export const BodyContainer = styled.div`
 
         }
         .triangle-2{
-            
+             filter: blur(2px);
             position: absolute;
             bottom: 75px;
             right: 550px;
@@ -121,12 +121,13 @@ export const BodyContainer = styled.div`
             border-radius: 500px;
             border: 3px solid #A62C17;
             opacity: 0.3;
-
+             filter: blur(2px);
             @media screen and (max-width: 500px){
                 top: 280px;
             }
         }
         .rings-2{
+             filter: blur(2px);
             position: absolute;
             top: 250px;
             right: 20px;

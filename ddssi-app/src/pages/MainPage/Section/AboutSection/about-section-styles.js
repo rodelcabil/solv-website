@@ -33,10 +33,7 @@ export const BodyContainer = styled.div`
 
         .row-container{
             width: 100%;
-
-            
         }
-
     }
 `;
 
