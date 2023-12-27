@@ -49,7 +49,7 @@ const SolvMeet = () => {
 
     return (
         <>
-            <OtherNavbar />
+            <OtherNavbar hasBanner={false}/>
             <MainContainer>
                 <BodyContainer>
                     <div className="meet-container flex flex-col gap-5">

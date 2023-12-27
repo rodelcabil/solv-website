@@ -11,7 +11,6 @@ const activeNavSlice = createSlice({
         setActiveNav(state, action) {
             state.active = action.payload;
         },
-        
     },
 });
 

@@ -5,7 +5,8 @@ import { PiInstagramLogoFill } from "react-icons/pi";
 import { useForm } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
 import { notification } from 'antd';
-
+import { IoArrowBack } from "react-icons/io5";
+import BackFunction from '../../functions/go-back';
 
 const ContactPage = () => {
 
@@ -42,7 +43,7 @@ const ContactPage = () => {
         <MainContainer id="contact">
            
             <BodyContainer>
-                <div className='flex flex-col  left-container'>
+                <div className='flex flex-col  left-container relative'>
                     <div data-aos="zoom-in" className='flex flex-col '>
                         <p className='left-header text-[#FFF] text-5xl font-normal'>We would love to hear it from you.</p>
                         <br />

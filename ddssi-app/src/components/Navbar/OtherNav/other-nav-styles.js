@@ -218,7 +218,7 @@ height: 100%;
 font-weight: 500;
 font-size: 14px;
 transition: ${({ theme }) => theme.transition};
-color: ${({ scrolled }) => (scrolled === 1 ? 'var(--text-secondary)' : 'var(--text-light)')}; 
+color: var(--text-secondary); 
 
 
 .solv_logo{

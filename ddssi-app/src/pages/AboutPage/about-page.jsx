@@ -15,7 +15,7 @@ import ScrollToTopButton from '../../components/ScrollToTopButton/scroll-to-top-
 const AboutPage = () => {
   return (
     <>
-      <OtherNavbar />
+      <OtherNavbar hasBanner={true}/>
       <MainContainer>
         <Banner>
           <p className='banner-header text-5xl text-[#fff] font-normal text-center'>Digital Doors Software Solutions, Inc</p><br />

@@ -68,7 +68,7 @@ const FooterSection = ({links}) => {
                         </div>
                         <div className='flex items-center gap-4'>
                             <MdLocalPhone size="25" className='text-[#7a7a7a]'/>
-                            <span className='text-[#7a7a7a]'>+63 2070060207</span>
+                            <span className='text-[#7a7a7a]'>+63 270060207</span>
                         </div>
                     </div>
                 </Row>

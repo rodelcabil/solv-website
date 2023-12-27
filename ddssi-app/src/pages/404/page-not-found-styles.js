@@ -11,3 +11,13 @@ export const MainContainer = styled.div`
     padding: 30px;
 
 `
+
+export const BackButton = styled.div`
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: var(--bg-primary);
+    display: flex;
+    align-items: center;
+    color: var(--text-light);
+    cursor: pointer;
+`
