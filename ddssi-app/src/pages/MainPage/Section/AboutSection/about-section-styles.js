@@ -8,8 +8,10 @@ export const MainContainer = styled.div`
     scroll-margin-top: 100%;
     background: var(--bg-light);
     background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)), url(${bg});
-    background-size: 100%~ 100%;
-
+    background-size: cover;
+    margin: auto;
+    height: calc(100vh - 60px);
+    display: flex;
     ${responsive};
 `;
 

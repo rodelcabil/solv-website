@@ -50,7 +50,6 @@ const FooterSection = ({links}) => {
                                 return <NavLink key={key} to={item.link} className='mb-[15px] no-underline text-[#7a7a7a] cursor-pointer hover:text-white'>{item.name}</NavLink> 
                             })
                         }
-                        
                     </div>
                 </Row>
                 <Row>
