@@ -8,6 +8,8 @@ import { NavLink } from 'react-router-dom'
 import { SiteInformationLinks } from './footer-data-links'
 
 const FooterSection = ({links}) => {
+
+    const _VERSION = '4.0.0';
     return (
         <MainContainer>
             <BodyContainer>
@@ -75,7 +77,7 @@ const FooterSection = ({links}) => {
             </BodyContainer>
             <br/><br/>
             <div className='flex items-center justify-between bg-[#262626] px-[60px] py-[30px] copyright-container'> 
-                <span className="text-white text-center text-sm whitespace-normal">© Copyright 2023 | Digital Doors Software Solutions Inc. | All rights reserved.</span> <br/> 
+                <span className="text-white text-center text-sm whitespace-normal">© Copyright 2023 | Digital Doors Software Solutions Inc. | All rights reserved. | Version {_VERSION}</span> <br/> 
                 <div className='flex flex-col gap-5'>
                     <div className='flex items-center gap-3'>
                         <a href="https://www.facebook.com/DDSSI/" target="_blank"><FaFacebook size={25} className='cursor-pointer text-[#fff] hover:text-white'/></a>
